@@ -8,11 +8,11 @@
 
 1. clone repo
 ```txt
-HTTPS  : git clone https://github.com/arcane-404/netflix-clone.git
+HTTPS  : git clone https://github.com/Arcane-404/netflix-clone.git
 
-SSH    : git clone git@github.com:arcane-404/netflix-clone.git
+SSH    : git clone git@github.com:Arcane-404/netflix-clone.git
 
-GH-CLI : gh repo clone arcane-404/netflix-clone
+GH-CLI : gh repo clone Arcane-404/netflix-clone
 ```
 2. `cd ./netflix-clone`
 3. `npm install`
