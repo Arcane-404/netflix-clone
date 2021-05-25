@@ -63,7 +63,7 @@ useCallback
 | **Michael F. Alvarez** | awwmicky   | [ ![GitHub][Badge-GitHub] ][Micky-GitHub] [ ![LinkedIn][Badge-LinkedIn] ][Micky-LinkedIn] |
 | **Herman Liu**         | hermsicle  | [ ![GitHub][Badge-GitHub] ][Herman-GitHub] [ ![LinkedIn][Badge-LinkedIn] ][Herman-LinkedIn] |
 | **Martin Nguyen**      | --- | [ ![GitHub][Badge-GitHub] ][Martin-GitHub] [ ![LinkedIn][Badge-LinkedIn] ][Martin-LinkedIn] |
-| **Adnan Diaz**         | adnanniaz77 | [ ![GitHub][Badge-GitHub] ][Adnan-GitHub] [ ![LinkedIn][Badge-LinkedIn] ][Adnan-LinkedIn] |
+| **Adnan Niaz**         | sanixstudio | [ ![GitHub][Badge-GitHub] ][Adnan-GitHub] [ ![LinkedIn][Badge-LinkedIn] ][Adnan-LinkedIn] |
 
 <!--  -->
 
@@ -117,8 +117,8 @@ useCallback
 [Herman-LinkedIn]: https://www.linkedin.com/in/hermanliu168/
 [Martin-GitHub]: https://github.com/Martinn80
 [Martin-LinkedIn]: https://www.linkedin.com/in/ngumartin/
-[Adnan-GitHub]: https://github.com/adnanniaz77
-[Adnan-LinkedIn]: https://www.linkedin.com/in/adnanniaz77/
+[Adnan-GitHub]: https://github.com/sanixstudio
+[Adnan-LinkedIn]: https://www.linkedin.com/in/sanixstudio/
 
 <!-- Contributors Badge -->
 [Badge-GitHub]: https://img.shields.io/badge/-GitHub-black.svg?style=for-the-badge&logo=GitHub&colorB=555
