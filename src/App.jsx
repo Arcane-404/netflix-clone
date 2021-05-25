@@ -4,12 +4,12 @@ import React from 'react'
 
 const App = () => {
 	return (
-		<>
+		<div>
   		<h1>TEST</h1>
 			{/* <img src={ image1 } alt="the-test-image" /> */}
 			<input type="text" placeholder="hello" />
 			<button type="submit">LOOK</button>
-		</>
+		</div>
 	)
 }
 
