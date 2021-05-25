@@ -1,16 +1,22 @@
 import React from 'react'
 // import { image1 } from '/public/image'
 // import image1 from '/public/image/initial-setup.png'
+import { Switch, Route } from 'react-router-dom'
+import { HomePage, LoginPage, SignupPage } from './pages/'
 
 const App = () => {
 	return (
-		<div>
-  		<h1>TEST</h1>
+		<>
 			{/* <img src={ image1 } alt="the-test-image" /> */}
-			<input type="text" placeholder="hello" />
-			<button type="submit">LOOK</button>
-		</div>
+			<Switch>
+				<Route exact path="/"> <HomePage/> </Route>
+				<Route path="/login"> <LoginPage/> </Route>
+				<Route path="/signup"> <SignupPage/> </Route>
+				<Route path="/browse"> </Route>
+			</Switch>
+		</>
 	)
 }
 
 export default App
+
