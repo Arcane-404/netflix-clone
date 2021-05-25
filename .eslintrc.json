@@ -1,0 +1,66 @@
+{
+  "settings": {
+    "react": { "version": "detect" }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    // "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    "no-var": "error",
+    "no-shadow": "error",
+    "max-len": ["error", { "code": 120 }],
+    "semi": ["error", "never"],
+    "indent": ["error", "tab"],
+    "comma-dangle": ["error", "never"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
+    "space-infix-ops": "error",
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "keyword-spacing": ["error", { "after": true }],
+    "key-spacing": ["error", { "mode": "minimum" }],
+    "space-before-blocks": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "always"],
+    "space-before-function-paren": ["error", "always"],
+    "template-tag-spacing": ["error", "never"],
+    // "template-curly-spacing": ["error", "always"],
+    // "comma-spacing": ["error", { "before": false, "after": true }]
+    // "computed-property-spacing": ["error", "always"],
+    // "space-in-parens": ["error", "always"],
+    "linebreak-style": 0,
+
+    // "react/jsx-curly-spacing": ["error", {
+    //   "when": "always",
+    //   "children": true,
+    //   "spacing": { "objectLiterals": "never" }}
+    // ],
+    "jsx-quotes": ["error", "prefer-double"],
+    "react/jsx-pascal-case": "error",
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-boolean-value": 0,
+    // "react/no-unused-prop-styles": "error"
+    // "react/require-default-props": "error"
+    // "react/deconstructing-assignment": "warn"
+    // "react/jsx-closing-bracket-location": [1, "line-aligned"],
+    "react/jsx-no-comment-textnodes": 0,
+
+    "react-hooks/rules-of-hooks": "error"
+    // "react-hooks/exhaustive-reps": "error"
+  }
+}

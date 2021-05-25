@@ -1,0 +1,30 @@
+{
+  "palettes": {
+    "primary"   : "hsl(240, 100%, 50%)",
+    "secondary" : "hsl(120, 100%, 25%)",
+    "tertiary"  : "hsl(0, 100%, 50%)",
+    "neutral"   : "hsl(0, 0%, 75%)",
+    "light"     : "hsl(0, 100%, 100%)",
+    "dark"      : "hsl(0, 100%, 0%)"
+  },
+  "typography": {},
+  "shadow": {},
+  "states": {},
+  "spacing": {
+    "normal": "1em",
+    "tight": "0.5em",
+    "loose": "1.5em"
+  },
+  "radius": {
+    "pill"    : "1.5em",
+    "round"   : "0.3em",
+    "circle"  : "50%"
+  },
+  "motion": {
+    "default": "0.3s ease"
+  },
+  "breakpoints": {
+    "tablet": "(min-width: 600px)",
+    "desktop": "(min-width: 1080px)"
+  }
+}
