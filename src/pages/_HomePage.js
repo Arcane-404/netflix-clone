@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBar } from '../components/'
+import { NavBar, Footer } from '../components/'
 import { Link } from 'react-router-dom'
 
 const logo = {
@@ -17,6 +17,9 @@ export default function HomePage () {
 					</Link>
 				</NavBar.Inner>
 			</NavBar>
+			<Footer>
+				Han Solo
+			</Footer>
 		</>
 	)
 }
