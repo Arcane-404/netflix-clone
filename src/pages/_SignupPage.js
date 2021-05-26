@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function SignupPage () {
+const SignupPage = () => {
 	return (
 		<>
 			<h1> Signup Page </h1>
 		</>
 	)
 }
+
+export default SignupPage
