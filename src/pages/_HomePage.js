@@ -1,6 +1,6 @@
 import React from 'react'
-import { NavBar, Jumbotron, PopupModal } from '../components/'
 import { Link } from 'react-router-dom'
+import { NavBar, Jumbotron, PopupModal, Footer } from '../components/'
 
 const logo = {
 	img: '/images/logo.svg'
@@ -26,6 +26,9 @@ const HomePage = () => {
 				</Jumbotron.Frame>
 			</Jumbotron>
 
+			<Footer>
+				Han Solo
+			</Footer>
 		</>
 	)
 }
