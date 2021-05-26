@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { HomePage, LoginPage, SignupPage } from './pages/'
+import { HomePage, LoginPage, SignupPage, BrowsePage } from './pages'
 
 const App = () => {
 	return (
@@ -9,7 +9,7 @@ const App = () => {
 				<Route exact path="/"> <HomePage/> </Route>
 				<Route path="/login"> <LoginPage/> </Route>
 				<Route path="/signup"> <SignupPage/> </Route>
-				<Route path="/browse"> </Route>
+				<Route path="/browse"> <BrowsePage/> </Route>
 			</Switch>
 		</>
 	)

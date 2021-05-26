@@ -22,7 +22,7 @@ const HomePage = () => {
 				the text here solo
 			</Wrapper>
 
-      <PopupModal>Popup Modal Card</PopupModal>
+			<PopupModal>Popup Modal Card</PopupModal>
 
 			<Jumbotron>
 				<Jumbotron.Frame>

@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 import { normalize } from 'styled-normalize'
-import { test } from './test.styles'
+// import { test } from './test.styles'
+// ${ test }
 
 const GlobalStyle = createGlobalStyle`
   ${ normalize }
-	${ test }
 
   * {
     margin: 0;
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
   html, body, #root {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     min-height: 100%;
     box-sizing: border-box;
   }

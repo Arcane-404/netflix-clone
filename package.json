@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "update": "git pull && npm install",
+    "update": "git pull && npm install --legacy-peer-deps",
     "git:add": "npm run lint:fix && git add *",
     "start": "react-scripts start",
     "build": "react-scripts build",
