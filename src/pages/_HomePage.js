@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBar, Jumbotron } from '../components/'
+import { NavBar, Jumbotron, PopupModal } from '../components/'
 import { Link } from 'react-router-dom'
 
 const logo = {
@@ -17,11 +17,15 @@ const HomePage = () => {
 					</Link>
 				</NavBar.Inner>
 			</NavBar>
+
+      <PopupModal>Popup Modal Card</PopupModal>
+
 			<Jumbotron>
 				<Jumbotron.Frame>
 					<h1>Jumbotron :D</h1>
 				</Jumbotron.Frame>
 			</Jumbotron>
+
 		</>
 	)
 }
