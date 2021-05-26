@@ -57,7 +57,7 @@
     - first-name (default) = develop
     - e.g. rubio/feat/set-up-page-routes
 - `git commit -m "[message format]"`
-  - commit message: `[key-type]: [title/description]`
+  - commit message: `[key-type]: [sub-task title]`
   - e.g. "feat: set up page routes"
 - key type list:
   - `feat` = feature task to complete
