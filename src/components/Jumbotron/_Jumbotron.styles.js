@@ -9,7 +9,9 @@ export const Frame = styled.div`
 	border: 10px solid green;
 `
 
-export const Inner = styled.div``
+export const Inner = styled.div`
+	border: 10px solid green;
+`
 
 export const Image = styled.img``
 
