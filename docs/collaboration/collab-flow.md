@@ -5,7 +5,6 @@
 1. go to terminal (in project)
 2. `git checkout -b [branch-name]`
 3. `git add .` > `git commit -m ""` > `git push origin [branch-name]`
-4. `git checkout [master/main]` > `git branch -D [branch-name]`
 - [read more for git name/message](#naming-convention)
 
 ## PART 2
@@ -20,7 +19,6 @@
 3. [read more for workflow (During)](#daily-workflow)
 
 ## PART 3
-
 1. they review code from `pull request` in GitHub
    - open link > click `add your review`
    - select `review changes` > add `comment & approve` > click `submit review`
@@ -29,9 +27,10 @@
 3. they `respond to message` back to the team member
    - they will response `@name + message` in messages
    - DONE
-4. update code from master/main
+4. `git checkout [master/main]` > `git branch -D [branch-name]`
+5. update code from master/main
    - go to terminal > `npm run update`
-5. create new branch
+6. create new branch
    - [repeat PART 1](#part-1)
 
 ## Daily Workflow

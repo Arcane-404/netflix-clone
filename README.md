@@ -15,7 +15,7 @@ SSH    : git clone git@github.com:Arcane-404/netflix-clone.git
 GH-CLI : gh repo clone Arcane-404/netflix-clone
 ```
 2. `cd ./netflix-clone`
-3. `npm install`
+3. `npm install --legacy-peer-dep`
 4. `npm start`
 
 ## Project Goals
