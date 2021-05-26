@@ -5,9 +5,8 @@
 1. go to terminal (in project)
 2. `git checkout -b [branch-name]`
 3. `git add .` > `git commit -m ""` > `git push origin [branch-name]`
-   - for commit messages, use action notes. quick & readable
-   - e.g. "[ past action ] topic" === "created file and folder structure"
 4. `git checkout [master/main]` > `git branch -D [branch-name]`
+- [read more for git name/message](#naming-convention)
 
 ## PART 2
 
@@ -18,7 +17,7 @@
    - copy URL link (from address bar)
    - send `@name + message + URL` in messages
    - DONE
-3. [check workflow (During)](#daily-workflow)
+3. [read more for workflow (During)](#daily-workflow)
 
 ## PART 3
 
@@ -49,6 +48,31 @@
     - then move card to `In-Progress`
     - if task is done, move card to `Done`
 
+## Naming Convention
+- make it quick, simple, & readable
+  - "[current action] [topic]"
+- Trello: new `[task name format]`
+  - e.g. set up page routes
+- `git checkout -b [branch name format]`
+  - branch name: `[first-name]/[key-type]/[new-change]`
+    - first-name (default) = develop
+    - e.g. rubio/feat/set-up-page-routes
+- `git commit -m "[message format]"`
+  - commit message: `[key-type]: [title/description]`
+  - e.g. "feat: set up page routes"
+- key type list:
+  - `feat` = feature task to complete
+  - `style` = styling feature related
+  - `fix` = bug/issue to resolved
+  - `docs` = document notes
+- example
+  1. Trello - `Handle Navbar` > move to `In-Progess`
+  2. Git Branch - `rubio/feat/handle-navbar`
+  3. Git Commit - `feat: create many components: Logo, Nav`
+  4. Trello - `Handle Navbar` > move to `Review`
+  5. Message PM/Reviewer
+  6. repeat 🔁
+
 ## Misc
 
 - GitHub Pull Request Color Key
@@ -58,5 +82,5 @@
 - Handling Git Conflicts...
   - message reviewer to meet up & resolve problem together
 - the only manual work to do...
-   - dev role will be completed after sending `pull request`
-   - test role will `review & merge` upcoming code
+  - dev role will be completed after sending `pull request`
+  - test role will `review & merge` upcoming code
