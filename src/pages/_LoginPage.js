@@ -1,14 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { NavBar, SigninForm } from '../components'
+import { Background, NavBar, SigninForm } from '../components'
 
 const logo = {
 	img: '/images/logo.svg'
 }
 
+const bg = {
+	img: '/images/home-bg.jpg'
+}
+
 const LoginPage = () => {
 	return (
-		<>
+		<Background>
 			<NavBar>
 				<NavBar.Inner>
 					<Link to="/">
@@ -30,13 +34,13 @@ const LoginPage = () => {
 							New to Netflix?
 						</SigninForm.Content>
 						<Link to="/">
-							<SigninForm.Link>Sign up now</SigninForm.Link>
+							<SigninForm.Link>Sign up now.</SigninForm.Link>
 						</Link>
 					</SigninForm.Frame>
 
 				</SigninForm.Inner>
 			</SigninForm>
-		</>
+		</Background>
 	)
 }
 
