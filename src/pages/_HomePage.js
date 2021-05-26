@@ -1,12 +1,12 @@
 import React from 'react'
-import { NavBar, Footer } from '../components/'
 import { Link } from 'react-router-dom'
+import { NavBar, Jumbotron, PopupModal, Footer } from '../components/'
 
 const logo = {
 	img: '/images/logo.svg'
 }
 
-export default function HomePage () {
+const HomePage = () => {
 	return (
 		<>
 			<NavBar>
@@ -17,9 +17,20 @@ export default function HomePage () {
 					</Link>
 				</NavBar.Inner>
 			</NavBar>
+
+      <PopupModal>Popup Modal Card</PopupModal>
+
+			<Jumbotron>
+				<Jumbotron.Frame>
+					<h1>Jumbotron :D</h1>
+				</Jumbotron.Frame>
+			</Jumbotron>
+
 			<Footer>
 				Han Solo
 			</Footer>
 		</>
 	)
 }
+
+export default HomePage
