@@ -12,7 +12,7 @@ App.jsx
 ```
 ```jsx
 // 0. create empty file
-'_*.stories.js' // _ + [ComponentName] + .stories.js
+'_Card.stories.js' // _ + [ComponentName] + .stories.js
 
 // 1. _Card.styles.js
 import styled from 'styled-components'

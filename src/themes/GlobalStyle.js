@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 import { normalize } from 'styled-normalize'
-// import { test } from './test.styles'
-// ${ test }
+// import { fontFace } from './fontFace' // ${ fontFace }
+// import { test } from './test.styles' // ${ test }
 
 const GlobalStyle = createGlobalStyle`
-  ${ normalize }
+	${ normalize }
 
   * {
     margin: 0;
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font:400 1rem/1.5 sans-serif;
+    font:400 1rem/1.5 'Gotham Book', sans-serif;
     letter-spacing: 0.025em;
   }
 
@@ -31,21 +31,15 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: unset;
   }
 
-  button {
-    border: unset;
-    background: unset;
-    font-family: inherit;
-    line-height: 1.15;
+	button {
+		border: unset;
     display: inline-block;
-    outline: unset;
     cursor: pointer;
   }
 
-  input {
-    border: unset;
-    font-family: inherit;
-    outline: unset;
-  }
+	button:focus,
+	input:focus
+	{ outline: unset; }
 `
 
 export default GlobalStyle

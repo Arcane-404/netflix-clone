@@ -1,17 +1,16 @@
 import { StrictMode } from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import GlobalStyle from './themes/GlobalStyle'
-import ThemesProvider from './themes/ThemesProvider'
+import GlobalThemeProvider from './themes/GlobalThemeProvider'
 import App from './App'
+import './assets/style.scss'
 
 render(
 	<StrictMode>
 		<BrowserRouter>
-			<ThemesProvider>
-				<GlobalStyle />
+			<GlobalThemeProvider>
 				<App />
-			</ThemesProvider>
+			</GlobalThemeProvider>
 		</BrowserRouter>
 	</StrictMode>,
 	document.getElementById('root')
