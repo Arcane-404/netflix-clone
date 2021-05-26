@@ -73,6 +73,7 @@ const Component = ({ num1, num2, num3 }) => {
     <div>
       <h2>Hooks Example: <code>{ count }</code></h2>
       <button onClick={ handleClick }>+</button>
+      <button onClick={ () => console.log('') }>+</button>
     </div>
   )
 }

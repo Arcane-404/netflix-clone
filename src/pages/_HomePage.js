@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { NavBar, Jumbotron, PopupModal, Footer } from '../components/'
+import { NavBar, Wrapper, Jumbotron, PopupModal, Footer } from '../components/'
 
 const logo = {
 	img: '/images/logo.svg'
@@ -17,6 +17,10 @@ const HomePage = () => {
 					</Link>
 				</NavBar.Inner>
 			</NavBar>
+
+			<Wrapper>
+				the text here solo
+			</Wrapper>
 
       <PopupModal>Popup Modal Card</PopupModal>
 
