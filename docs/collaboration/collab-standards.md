@@ -11,6 +11,9 @@
 App.jsx
 ```
 ```jsx
+// 0. create empty file
+'_*.stories.js' // _ + [ComponentName] + .stories.js
+
 // 1. _Card.styles.js
 import styled from 'styled-components'
 export const Frame = styled.div``
@@ -47,20 +50,23 @@ const App = () => {
 ```
 
 
-## Component Setup
+## General Component/Hook Setup
 ```jsx
 // rafce (shortcut)
 import React, { useState, useEffect } from 'react'
 
+const DESKTOP_SIZE = 1080
+
 const Component = ({ num1, num2, num3 }) => {
+
   const [ count, setCount ] = useState('')
 
-  function handleClick (e) {
+  const handleClick = () => {
     setCount(count + 1)
   }
 
   useEffect(() => {
-    console.log('check state update:',count)
+    console.log('check state update:', count)
   }, [ num1, num2, num3 ])
 
   return (
