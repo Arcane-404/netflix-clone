@@ -1,5 +1,5 @@
 {
-  "palettes": {
+  "colors": {
     "primary"   : "hsl(240, 100%, 50%)",
     "secondary" : "hsl(120, 100%, 25%)",
     "tertiary"  : "hsl(0, 100%, 50%)",
@@ -7,7 +7,12 @@
     "light"     : "hsl(0, 100%, 100%)",
     "dark"      : "hsl(0, 100%, 0%)"
   },
-  "typography": {},
+  "fonts": {
+    "headline" : "Gotham Bold",
+    "subhead"  : "Gotham Book",
+    "copy"     : "Gotham Book",
+    "cta"      : "Gotham Bold"
+  },
   "shadow": {},
   "states": {},
   "spacing": {
