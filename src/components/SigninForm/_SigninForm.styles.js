@@ -14,6 +14,7 @@ export const Inner = styled.form`
 	display: flex;
 	flex-direction: column;
 	border: 1px solid black;
+	border-radius: 0.5rem;
 
 	@media (min-width: 750px) {
 		max-width: 450px;
@@ -31,7 +32,7 @@ export const Input = styled.input`
 	padding: 1rem;
 	border-radius: 0.5rem;
 	background: #333;
-	margin: 1rem 0;
+	margin: 0.5rem 0;
 	color: #fff;
 `
 
@@ -42,7 +43,7 @@ export const Button = styled.button`
 	font-weight: 700;
 	color: #fff;
 	border-radius: 0.5rem;
-	margin-top: 1rem;
+	margin-top: 2rem;
 `
 
 export const Frame = styled.div`
