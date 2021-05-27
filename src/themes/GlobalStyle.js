@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font:400 1rem/1.5
+    font:400 1rem/1.25
 			'Gotham Book', 'Helvetica Neue',
 			Helvetica, Arial, sans-serif;
     letter-spacing: 0.025em;
