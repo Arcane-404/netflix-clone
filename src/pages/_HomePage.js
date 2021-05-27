@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { NavBar, Wrapper, Jumbotron, PopupModal, Footer } from '../components/'
+import { SignupFormContainer } from '../containers/'
 
 const logo = {
 	img: '/images/logo.svg'
@@ -17,6 +18,8 @@ const HomePage = () => {
 					</Link>
 				</NavBar.Inner>
 			</NavBar>
+
+			<SignupFormContainer/>
 
 			<Wrapper>
 				the text here solo
