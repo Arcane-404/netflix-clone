@@ -6,6 +6,7 @@ import { Icon } from './components'
 const App = () => {
 	return (
 		<>
+			<Icon.FaChevronRight />
 			<Icon.FaInfoCircle />
 			<Icon.InfoCircle />
 			<Switch>
