@@ -51,11 +51,14 @@ export const Button = styled.button`
 	color: white;
 	border-radius: 0.25rem;
 	margin: 1rem auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	@media (min-width: 750px){
 		margin: 0;
 		width: 40%;
-		font-size: 1.75rem;
+		font-size: 1.5rem;
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
 	}
