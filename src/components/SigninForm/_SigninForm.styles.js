@@ -59,3 +59,16 @@ export const Link = styled.p`
 	color: #fff;
 	margin-left: 0.5rem;
 `
+
+export const Checkbox = styled.input``
+
+export const CheckboxLabel = styled.label``
+
+export const ReCaptchaHeader = styled.p``
+
+export const LearnMoreLink = styled.p``
+
+export const ReCaptchaBody = styled.p``
+
+export const ReCaptchaLink = styled.a``
+

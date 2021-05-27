@@ -7,7 +7,13 @@ import {
 	Button,
 	Frame,
 	Content,
-	Link
+	Link,
+	Checkbox,
+	CheckboxLabel,
+	ReCaptchaHeader,
+	LearnMoreLink,
+	ReCaptchaBody,
+	ReCaptchaLink
 } from './_SigninForm.styles'
 
 export default function SigninForm ({ children, ...restProps }) {
@@ -55,5 +61,41 @@ SigninForm.Content = function SigninFormContent ({ children, ...restProps }) {
 SigninForm.Link = function SigninFormLink ({ children, ...restProps }) {
 	return (
 		<Link { ...restProps }> { children } </Link>
+	)
+}
+
+SigninForm.Checkbox = function SigninFormCheckbox ({ children, ...restProps }) {
+	return (
+		<Checkbox { ...restProps } />
+	)
+}
+
+SigninForm.CheckboxLabel = function SigninFormCheckboxLabel ({ children, ...restProps }) {
+	return (
+		<CheckboxLabel { ...restProps }> { children } </CheckboxLabel>
+	)
+}
+
+SigninForm.ReCaptchaHeader = function SigninFormReCaptchaHeader ({ children, ...restProps }) {
+	return (
+		<ReCaptchaHeader { ...restProps }> { children } </ReCaptchaHeader>
+	)
+}
+
+SigninForm.LearnMoreLink = function SigninFormLearnMoreLink ({ children, ...restProps }) {
+	return (
+		<LearnMoreLink { ...restProps }> { children } </LearnMoreLink>
+	)
+}
+
+SigninForm.ReCaptchaBody = function SigninFormReCaptchaBody ({ children, ...restProps }) {
+	return (
+		<ReCaptchaBody { ...restProps }> { children } </ReCaptchaBody>
+	)
+}
+
+SigninForm.ReCaptchaLink = function SigninFormReCaptchaLink ({ children, ...restProps }) {
+	return (
+		<ReCaptchaLink { ...restProps }> { children } </ReCaptchaLink>
 	)
 }
