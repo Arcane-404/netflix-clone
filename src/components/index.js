@@ -1,3 +1,4 @@
+export * as Icon from './Icon'
 export { default as NavBar } from './NavBar'
 export { default as Wrapper } from './Wrapper'
 export { default as Jumbotron } from './Jumbotron'
