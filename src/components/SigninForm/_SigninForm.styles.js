@@ -30,6 +30,7 @@ export const Title = styled.h1`
 export const Input = styled.input`
 	height: 50px;
 	padding: 1rem;
+	border: none;
 	border-radius: 0.5rem;
 	background: #333;
 	margin: 0.5rem 0;
@@ -48,7 +49,7 @@ export const Button = styled.button`
 
 export const Frame = styled.div`
 	display: flex;
-	margin-top: 50px;
+	margin-top: 30px;
 `
 
 export const Content = styled.p`
@@ -58,17 +59,51 @@ export const Content = styled.p`
 export const Link = styled.p`
 	color: #fff;
 	margin-left: 0.5rem;
+	position: relative;
+	:hover::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		border: 0.1px solid #fff;
+		top: 20px;
+	}
 `
 
-export const Checkbox = styled.input``
+export const Checkbox = styled.input`
+	margin: 1rem 0.5rem 0 0;
+`
 
-export const CheckboxLabel = styled.label``
+export const CheckboxLabel = styled.label`
+	color: #777;
+`
 
-export const ReCaptchaHeader = styled.p``
+export const ReCaptchaHeader = styled.p`
+	margin-top: 1rem;
+	color: #777;
+	font-size: 0.75rem;
+`
 
-export const LearnMoreLink = styled.p``
+export const LearnMoreLink = styled.span`
+	cursor: pointer;
+	color: #06e;
 
-export const ReCaptchaBody = styled.p``
+	:hover {
+		border-bottom: 1px solid #06e;
+	}
+`
 
-export const ReCaptchaLink = styled.a``
+export const ReCaptchaBody = styled.p`
+	margin-top: 1rem;
+	font-size: 0.75rem;
+	color: #777;
+`
+
+export const ReCaptchaLink = styled.a`
+	color: #06e;
+	cursor: pointer;
+
+	:hover {
+		border-bottom: 1px solid #06e;
+	}
+`
 
