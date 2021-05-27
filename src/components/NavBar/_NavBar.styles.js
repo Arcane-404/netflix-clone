@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
 	height: 80px;
 	width: 100%;
+	background: none;
+	/* position: absolute; */
 `
 
 export const Inner = styled.div`
@@ -12,11 +14,16 @@ export const Inner = styled.div`
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
+	padding: 1rem;
 `
 
 export const Logo = styled.img`
 	height: 100%;
-	width: 200px;
+	width: 100px;
+
+	@media (min-width: 750px) {
+		width: 200px;
+	}
 `
 
 export const Button = styled.button`
