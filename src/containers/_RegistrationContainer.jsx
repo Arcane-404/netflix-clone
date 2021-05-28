@@ -1,7 +1,16 @@
 import React from 'react'
 import { Registration } from '../components'
+import { useHistory } from 'react-router-dom'
 
 const RegistrationContainer = () => {
+
+	const history = useHistory()
+
+	const onContinue = () => {
+		console.log('testing')
+		history.push('/signup/regform')
+	}
+
 	return (
 		<Registration>
 
@@ -19,7 +28,11 @@ const RegistrationContainer = () => {
 				<Registration.SubTitle>
 					Netflix is personalized for you. Create a password to watch Netflix on any device at any time.
 				</Registration.SubTitle>
-				<Registration.Button>Continue</Registration.Button>
+				<Registration.Button
+					onClick={ onContinue }
+				>
+					Continue
+				</Registration.Button>
 			</Registration.Inner>
 
 		</Registration>
