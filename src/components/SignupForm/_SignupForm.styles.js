@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-	/* border: 1px solid black; */
 	margin: 0 auto;
 	width: 90%;
 	max-width: 800px;
@@ -17,6 +16,7 @@ export const Title = styled.h3`
 	max-width: 30ch;
 	text-align: center;
 	margin: 1rem;
+	color: #fff;
 
 	@media (min-width: 750px) {
 		max-width: 100%;
