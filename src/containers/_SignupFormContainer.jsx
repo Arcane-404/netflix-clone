@@ -29,6 +29,7 @@ const SignupFormContainer = () => {
 					placeholder="Email address"
 					value={email}
 					onChange={ handleChange }
+					required
 				/>
 				<SignupForm.Button>
 					Get Started <Icon.FaChevronRight />
