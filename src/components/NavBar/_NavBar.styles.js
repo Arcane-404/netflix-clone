@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-export const Container = styled.div`
+export const Container = styled.nav`
 	width: 100%;
 	padding: 0 5%;
 	position: absolute;
@@ -43,12 +44,13 @@ export const Logo = styled.img`
 	}
 `
 
-export const Button = styled.button`
+export const Button = styled(Link)`
 	border-radius: ${({ theme }) => theme.radius.round.sm };
 	background: ${({ theme }) => theme.colors.primary._400 };
 	color: ${({ theme }) => theme.colors.light };
 	font-size: 0.9rem;
 	padding: 0.4em;
+	align-self: center;
 
 	@media ${({ theme }) => theme.breakpoints.tablet.sm } {
 		font-size: inherit;

@@ -25,9 +25,9 @@ GH-CLI : gh repo clone Arcane-404/netflix-clone
 
 [ ![React][Badge-React] ][React]
 [ ![JavaScript][Badge-JavaScript] ][JavaScript]
+[ ![React-Router][Badge-React-Router] ][React-Router]
 [ ![Sass][Badge-Sass] ][Sass]
 [ ![Styled-Components][Badge-Styled-Components] ][Styled-Components]
-[ ![React-Router][Badge-React-Router] ][React-Router]
 [ ![Storybook][Badge-Storybook] ][Storybook]
 [ ![Firebase][Badge-Firebase] ][Firebase]
 - hooks:
@@ -80,20 +80,18 @@ useCallback
 <!-- Technology Link -->
 [React]: https://reactjs.org/
 [Sass]: https://sass-lang.com/
-[JavaScript]: http://vanilla-js.com/
-[TypeScript]: https://www.typescriptlang.org/
-[Styled-Components]: https://styled-components.com/
 [React-Router]: https://reactrouter.com/
+[JavaScript]: http://vanilla-js.com/
+[Styled-Components]: https://styled-components.com/
 [Storybook]: https://storybook.js.org/
 [Firebase]: https://firebase.google.com/
 
 <!-- Technology Badge -->
 [Badge-React]: https://img.shields.io/badge/-React-20232A.svg?&style=for-the-badge&logo=React&logoColor=61DAFB
-[Badge-Sass]: https://img.shields.io/badge/-Sass-hotpink.svg?&style=for-the-badge&logo=Sass&logoColor=FFF
 [Badge-JavaScript]: https://img.shields.io/badge/-JavaScript-323330.svg?&style=for-the-badge&logo=JavaScript&logoColor=F0DB4F
-[Badge-TypeScript]: https://img.shields.io/badge/-TypeScript-323330.svg?&style=for-the-badge&logo=TypeScript&logoColor=007ACC
-[Badge-Styled-Components]: https://img.shields.io/badge/-Styled_Components-DB7093.svg?&style=for-the-badge&logo=Styled-Components&logoColor=FFF
 [Badge-React-Router]: https://img.shields.io/badge/-React_Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=FFF
+[Badge-Sass]: https://img.shields.io/badge/-Sass-hotpink.svg?&style=for-the-badge&logo=Sass&logoColor=FFF
+[Badge-Styled-Components]: https://img.shields.io/badge/-Styled_Components-DB7093.svg?&style=for-the-badge&logo=Styled-Components&logoColor=FFF
 [Badge-Storybook]: https://img.shields.io/badge/-Storybook-F0608A.svg?&style=for-the-badge&logo=Storybook&logoColor=FFF
 [Badge-Firebase]: https://img.shields.io/badge/-Firebase-FFCB2B.svg?&style=for-the-badge&logo=Firebase&logoColor=333
 
