@@ -18,7 +18,8 @@ export const Title = styled.h3`
 	text-align: center;
 
 	@media (min-width: 750px) {
-		width: 100%;
+		max-width: 100%;
+		margin: 1rem;
 	}
 `
 
