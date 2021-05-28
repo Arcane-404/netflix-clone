@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Inner, Image, PreTitle, Title, SubTitle, Button } from './_Registration.styles'
+import { Container, Inner, Image, PreTitle, Span, Title, SubTitle, Button } from './_Registration.styles'
 
 export default function Registration ({ children, ...restProps }) {
 	return (
@@ -22,6 +22,12 @@ Registration.Image = function RegistrationImage ({ children, ...restProps }) {
 Registration.PreTitle = function RegistrationPreTitle ({ children, ...restProps }) {
 	return (
 		<PreTitle { ...restProps }> { children } </PreTitle>
+	)
+}
+
+Registration.Span = function RegistrationSpan ({ children, ...restProps }) {
+	return (
+		<Span { ...restProps }> { children } </Span>
 	)
 }
 
