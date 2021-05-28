@@ -77,6 +77,7 @@
   - `style` = styling feature related
 	- `wip` = work in progress
   - `fix` = bug/issue to resolved
+  - `test` = testing stuff
   - `docs` = document notes
 - example
   1. Trello - `Handle Navbar` > move to `In-Progess`

@@ -10,7 +10,7 @@ NavBar.Inner = function NavBarInner ({ children, ...restProps }) {
 }
 
 NavBar.Logo = function NavBarLogo ({ ...restProps }) {
-	return (<Logo {...restProps } />)
+	return (<Logo { ...restProps } />)
 }
 
 NavBar.Button = function NavBarButton ({ children, ...restProps }) {

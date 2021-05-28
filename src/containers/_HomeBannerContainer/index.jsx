@@ -11,7 +11,7 @@ const HomeBannerContainer = () => {
 				<Jumbotron.Inner>
 					<Jumbotron.Title>{ banner.title }</Jumbotron.Title>
 					<Jumbotron.Subtitle>{ banner.subtitle }</Jumbotron.Subtitle>
-					<Jumbotron.Image src={ banner.img } alt="banner-image" />
+					<Jumbotron.Image src={ banner.img } alt={ banner.alt } />
 					<SignupFormContainer />
 				</Jumbotron.Inner>
 			</Jumbotron>
