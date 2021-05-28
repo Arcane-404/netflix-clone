@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { SignupForm, Icon } from '../components'
 
 const SignupFormContainer = () => {
@@ -12,8 +12,9 @@ const SignupFormContainer = () => {
 
 	const history = useHistory()
 
-	const formSubmit = () => {
-		history.push('/signup')
+	const formSubmit = (e) => {
+		e.preventDefault()
+		history.push('/signup/registration')
 	}
 
 	return (
