@@ -4,7 +4,7 @@ export const Container = styled.div`
 	width: 100%;
 	display: grid;
 	place-content: center;
-	height: 60vh;
+	height: 800px;
 `
 
 export const Inner = styled.div`

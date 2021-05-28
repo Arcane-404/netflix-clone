@@ -4,16 +4,21 @@ export const Container = styled.div`
 	width: 100%;
 	display: grid;
 	place-content: center;
-	height: 60vh;
+	height: 800px;
 `
 
 export const Inner = styled.div`
 	max-width: 400px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 `
 
-export const Image = styled.image`
+export const Image = styled.img`
 	/* border: 1px solid black; */
+	width: 95px;
+	height: 80px;
 `
 
 export const PreTitle = styled.p`

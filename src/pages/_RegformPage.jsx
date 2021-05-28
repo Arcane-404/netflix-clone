@@ -1,9 +1,10 @@
 import React from 'react'
-import { RegFormContainer } from '../containers'
+import { RegFormContainer, NavBarContainer } from '../containers'
 
 const RegformPage = () => {
 	return (
 		<>
+			<NavBarContainer />
 			<RegFormContainer />
 		</>
 	)
