@@ -18,8 +18,8 @@ export const Inner = styled.div`
 `
 
 export const Logo = styled.img`
-	height: 100%;
-	width: 100px;
+	height: 1.5rem;
+	width: auto;
 
 	@media (min-width: 750px) {
 		width: 200px;
@@ -27,7 +27,8 @@ export const Logo = styled.img`
 `
 
 export const Button = styled.button`
-	background: red;
-	color: white;
-	padding: 10px 25px;
+	border-radius: ${({ theme }) => theme.radius.round.sm };
+	background: ${({ theme }) => theme.colors.primary._400 };
+	color: ${({ theme }) => theme.colors.light };
+	padding: 0.25em 0.5em;
 `
