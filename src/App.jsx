@@ -1,7 +1,8 @@
 import React from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import { HomePage, LoginPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
-import { Icon } from './components'
+// import { Icon } from './components'
+// <Icon.InfoCircle />
 
 const App = () => {
 
@@ -10,9 +11,6 @@ const App = () => {
 
 	return (
 		<>
-			<Icon.FaChevronRight />
-			<Icon.FaInfoCircle />
-			<Icon.InfoCircle />
 			<Switch>
 
 				<Route exact path="/">

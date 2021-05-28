@@ -1,3 +1,2 @@
-// import { FaInfoCircle } from 'react-icons/fa'
-export { FaInfoCircle, FaChevronRight } from 'react-icons/fa'
+export { FaSearch, FaInfoCircle, FaPlay, FaPlus, FaTimes, FaChevronDown, FaChevronRight, FaCaretDown } from 'react-icons/fa'
 export { InfoCircle } from './_Icon.styles'
