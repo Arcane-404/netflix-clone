@@ -9,7 +9,7 @@ const SignupContainer = () => {
 	return (
 		<Signup>
 			<Signup.Inner>
-				<Signup.Image src={img.src}/>
+				<Signup.Image src={img.src} alt="img"/>
 
 				<Signup.PreTitle>
 					STEP
