@@ -25,7 +25,7 @@
     "no-shadow": "error",
     // "max-len": ["error", { "code": 120 }],
     "semi": ["error", "never"],
-    "indent": ["error", "tab"],
+    "indent": ["error", "tab", { "MemberExpression": 0 }],
     "comma-dangle": ["error", "never"],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
@@ -44,21 +44,23 @@
     // "space-in-parens": ["error", "always"],
     "linebreak-style": 0,
 
-    // "react/jsx-curly-spacing": ["error", {
-    //   "when": "always",
-    //   "children": true,
-    //   "spacing": { "objectLiterals": "never" }}
-    // ],
+    "react/jsx-uses-vars": "error",
     "jsx-quotes": ["error", "prefer-double"],
     "react/jsx-pascal-case": "error",
     "react/prop-types": 0,
+    "react/require-default-props": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-boolean-value": 0,
     // "react/no-unused-prop-styles": "error"
-    // "react/require-default-props": "error"
-    // "react/deconstructing-assignment": "warn"
-    // "react/jsx-closing-bracket-location": [1, "line-aligned"],
-    "react/jsx-no-comment-textnodes": 0,
+    // "react/deconstructing-assignment": ["error", "always"]
+
+    // "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+    // "react/jsx-curly-spacing": ["error", {
+    //   "when": "never",
+    //   "attributes": { "when": "always" },
+    //   "spacing": { "objectLiterals": "never" }
+    //   ,"children": { "when": "always" }
+    // }],
 
     "react-hooks/rules-of-hooks": "error"
     // "react-hooks/exhaustive-reps": "error"

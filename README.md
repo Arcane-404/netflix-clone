@@ -16,7 +16,9 @@ GH-CLI : gh repo clone Arcane-404/netflix-clone
 ```
 2. `cd ./netflix-clone`
 3. `npm install --legacy-peer-deps`
-4. `npm start`
+4. create `.env`
+   - copy & paste `SKIP_PREFLIGHT_CHECK = true`
+5. `npm start`
 
 ## Project Goals
 ## Key Features
@@ -37,9 +39,9 @@ useContext /
 useCallback
 - other:
 [`normalize.css`][styled-normalize] /
+[`react-icon`][react-icon] /
 [`uuid`][uuid] /
 [`fusejs`][fusejs]
-<!-- [`remix-icon`][remix-icon] / -->
 
 ## Collaboration Tools
 
@@ -79,9 +81,9 @@ useCallback
 
 <!-- Technology Link -->
 [React]: https://reactjs.org/
-[Sass]: https://sass-lang.com/
-[React-Router]: https://reactrouter.com/
 [JavaScript]: http://vanilla-js.com/
+[React-Router]: https://reactrouter.com/
+[Sass]: https://sass-lang.com/
 [Styled-Components]: https://styled-components.com/
 [Storybook]: https://storybook.js.org/
 [Firebase]: https://firebase.google.com/
@@ -98,15 +100,17 @@ useCallback
 
 <!-- Other Technology Link & Badge -->
 [styled-normalize]: https://necolas.github.io/normalize.css/
-[remix-icon]: https://www.npmjs.com/package/remixicon-react
+[react-icon]: https://react-icons.github.io/react-icons/
 [uuid]: https://www.npmjs.com/package/uuid
 [fusejs]: https://fusejs.io/
+
 
 <!-- Productivity Tools Link -->
 [Trello]: https://trello.com/b/ua1epL8D/netflix-clone
 [Google-Docs]: https://docs.google.com/document/d/1cVYFRZrMNB_DM8Zqk7nY0m7LTcVHEGx03nTi7N7ifdo/edit?usp=sharing
 [Figma-Jam]: https://www.figma.com/file/uV72mjoGtFQXgk2wWZ6ImV/brainstorm-netflix-clone-app?node-id=0%3A1
 [Figma-Design]: https://www.figma.com/file/6Ckhfg9bMKDB2IP62qXCQa/design-netflix-clone-app?node-id=0%3A1
+
 
 <!-- Contributors Link -->
 [Micky-GitHub]: https://github.com/awwmicky
