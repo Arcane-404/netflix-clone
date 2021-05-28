@@ -4,6 +4,8 @@
 [ ![Contributors][Badge-Contributors] ](#Contributors)
 <!-- [ ![Netlify Status][Badge-Netlify] ][Netlify] -->
 
+Note: to Replicate, Refine, & Improve the current UI development
+
 ## Get Started
 
 1. clone repo
@@ -39,7 +41,7 @@ useContext /
 useCallback
 - other:
 [`normalize.css`][styled-normalize] /
-[`react-icon`][react-icon] /
+[`react-icons`][react-icons] /
 [`uuid`][uuid] /
 [`fusejs`][fusejs]
 
@@ -100,7 +102,7 @@ useCallback
 
 <!-- Other Technology Link & Badge -->
 [styled-normalize]: https://necolas.github.io/normalize.css/
-[react-icon]: https://react-icons.github.io/react-icons/
+[react-icons]: https://react-icons.github.io/react-icons/
 [uuid]: https://www.npmjs.com/package/uuid
 [fusejs]: https://fusejs.io/
 

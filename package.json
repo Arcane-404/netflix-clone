@@ -12,6 +12,7 @@
     "clean": "rimraf build",
     "lint": "npx eslint \"src/**/*.{js,jsx,md}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,md}\"",
+    "dev": "netlify dev",
     "dev:sb": "start-storybook -p 6006 -s public",
     "build:sb": "build-storybook -s public"
   },
@@ -45,6 +46,7 @@
     "eslint": "^7.27.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "netlify-cli": "^3.31.16",
     "rimraf": "^3.0.2",
     "storybook-react-router": "^1.0.8"
   },

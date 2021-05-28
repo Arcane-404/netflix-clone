@@ -12,6 +12,7 @@ package-lock.json
 /dist
 
 # misc
+/.netlify
 /.vscode
 .DS_Store
 .env
@@ -26,3 +27,5 @@ yarn-error.log*
 
 /temp
 /archive
+
+/functions
