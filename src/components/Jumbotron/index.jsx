@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-	Container,
-	Inner,
-	Title,
-	Subtitle,
-	Image
-} from './_Jumbotron.styles'
+import { Container, Inner, Title, Subtitle, Image } from './_Jumbotron.styles'
 
 export default function Jumbotron ({ children, ...restProps }) {
 	return (<Container {...restProps}> { children } </Container>)
