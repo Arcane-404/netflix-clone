@@ -15,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
   html, body, #root {
     width: 100%;
     /* height: 100%; */
-    min-height: 100%;
+    /* min-height: 100%; */
+    min-height: 100vh;
     box-sizing: border-box;
   }
 
@@ -32,6 +33,12 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
     text-decoration: unset;
   }
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
 
 	button {
 		border: unset;

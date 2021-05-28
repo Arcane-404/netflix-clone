@@ -1,16 +1,19 @@
 import React from 'react'
 import { NavBarContainer, SignupFormContainer } from '../'
 import { Fold, Jumbotron } from '../../components'
-import content from './content'
+import { banner } from './content'
 
 const HomeBannerContainer = () => {
 	return (
 		<Fold>
 			<NavBarContainer />
 			<Jumbotron>
-				<Jumbotron.Title>{ content.banner.title }</Jumbotron.Title>
-				<Jumbotron.Subtitle>{ content.banner.subtitle }</Jumbotron.Subtitle>
-				<SignupFormContainer />
+				<Jumbotron.Inner>
+					<Jumbotron.Title>{ banner.title }</Jumbotron.Title>
+					<Jumbotron.Subtitle>{ banner.subtitle }</Jumbotron.Subtitle>
+					<Jumbotron.Image src={ banner.img } alt="banner-image" />
+					<SignupFormContainer />
+				</Jumbotron.Inner>
 			</Jumbotron>
 		</Fold>
 	)

@@ -16,9 +16,19 @@
     "secondary" : "Gotham Book"
   },
   "fontSize": {
-    "headline" : "",
-    "subhead"  : "",
-    "copy"     : "",
+    "headline": {
+      "sm": "1.75rem",
+      "lg": "3.125rem"
+    },
+    "subhead": {
+      "sm": "1.25rem",
+      "lg": "1.625rem"
+    },
+    "copy": {
+      "sm": "1.125rem",
+      "lg": "1.438rem"
+    },
+    "link"     : "",
     "cta"      : "",
     "body"     : ""
   },
@@ -28,7 +38,11 @@
   "spacing": {
     "normal" : "1em",
     "tight"  : "0.5em",
-    "loose"  : "1.5em"
+    "loose"  : "1.5em",
+    "sm": "1em",
+    "md": "1.25em",
+    "lg": "1.5em",
+    "xlg": "2em"
   },
   "radius": {
     "pill"   : "1.5em",
@@ -45,7 +59,10 @@
   },
 
   "breakpoints": {
-    "tablet"  : "(min-width: 600px)",
-    "desktop" : "(min-width: 1080px)"
+    "tablet": {
+      "sm": "(min-width: 550px)",
+      "lg": "(min-width: 900px)"
+    },
+    "desktop": "(min-width: 1080px)"
   }
 }
