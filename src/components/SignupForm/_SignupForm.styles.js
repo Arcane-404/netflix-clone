@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	margin: 0 auto;
 	width: 90%;
 	max-width: 800px;
@@ -16,9 +16,10 @@ export const Title = styled.h3`
 	font-size: 1rem;
 	max-width: 30ch;
 	text-align: center;
+	margin: 1rem;
 
 	@media (min-width: 750px) {
-		width: 100%;
+		max-width: 100%;
 	}
 `
 

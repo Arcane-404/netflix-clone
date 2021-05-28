@@ -1,10 +1,10 @@
 import React from 'react'
-
+import { SignupContainer } from '../containers'
 
 const SignupPage = () => {
 	return (
 		<>
-			<h1> Signup Page </h1>
+			<SignupContainer/>
 		</>
 	)
 }
