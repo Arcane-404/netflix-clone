@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
 	display: grid;
 	place-content: center;
-	height: 80vh;
+	height: 800px;
+	/* border: 1px solid red; */
 `
 
 export const Inner = styled.div`

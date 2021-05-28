@@ -1,15 +1,19 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { Signup } from '../components'
 
-const img = {
-	src: '/images/check.png'
-}
-
 const SignupContainer = () => {
+
+	const history = useHistory()
+
+	const handleClick = () => {
+		history.push('/browse')
+	}
+
 	return (
 		<Signup>
 			<Signup.Inner>
-				<Signup.Image src={img.src} alt="img"/>
+				<Signup.Image src="/images/check.png"/>
 
 				<Signup.PreTitle>
 					STEP
@@ -20,7 +24,11 @@ const SignupContainer = () => {
 
 				<Signup.Title>Congratulations on signing up!</Signup.Title>
 				<Signup.SubTitle>Now you can access all of Netflix`s Features</Signup.SubTitle>
-				<Signup.Button> Continue to Browse </Signup.Button>
+				<Signup.Button
+					onClick={ handleClick }
+				>
+					Continue to Browse
+				</Signup.Button>
 			</Signup.Inner>
 		</Signup>
 	)

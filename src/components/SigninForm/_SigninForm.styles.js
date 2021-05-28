@@ -2,13 +2,15 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 	width: 100%;
+	height: 100%;
+	display: grid;
+	place-content: center;
 `
 
 //Form, Title, Input, button, content, signup
 
 export const Inner = styled.form`
 	width: 90%;
-	/* max-width: 450px; */
 	height: 660px;
 	margin: 0 auto;
 	display: flex;
