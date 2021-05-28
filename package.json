@@ -16,7 +16,7 @@
     "build:sb": "build-storybook -s public"
   },
   "dependencies": {
-    "firebase": "^8.6.2",
+    "firebase": "^8.6.3",
     "fuse.js": "^6.4.6",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
