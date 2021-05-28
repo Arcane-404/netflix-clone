@@ -1,9 +1,10 @@
 import React from 'react'
+import { RegFormContainer } from '../containers'
 
 const RegformPage = () => {
 	return (
 		<>
-			<h1>Regform Page</h1>
+			<RegFormContainer />
 		</>
 	)
 }

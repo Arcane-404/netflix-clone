@@ -7,7 +7,6 @@ const RegistrationContainer = () => {
 	const history = useHistory()
 
 	const onContinue = () => {
-		console.log('testing')
 		history.push('/signup/regform')
 	}
 
