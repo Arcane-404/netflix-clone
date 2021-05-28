@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from './Background.styles'
+import { Container } from './_Background.styles'
 
 export default function Background ({ children, ...restProps }) {
 	return (
