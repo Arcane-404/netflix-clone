@@ -9,9 +9,9 @@ storiesOf('Icons', module)
 .add('BiInfoCircle', 		() => <Icon.InfoCircle />)
 .add('HiSearch', 				() => <Icon.Search />)
 
-.add('IoIosPlay', 			() => <Icon.Play />)
-.add('IoIosMenu', 			() => <Icon.Menu />)
 .add('IoCheckmark', 		() => <Icon.Check />)
+.add('IoMenuOutline', 	() => <Icon.Menu />)
+.add('IoPlaySharp', 		() => <Icon.Play />)
 .add('IoAddOutline', 		() => <Icon.Plus />)
 .add('IoRemoveOutline', () => <Icon.Minus />)
 .add('IoCloseOutline',	() => <Icon.Close />)
@@ -21,14 +21,4 @@ storiesOf('Icons', module)
 .add('VscChevronRight', () => <Icon.ChevronRight />)
 .add('VscChevronDown', 	() => <Icon.ChevronDown />)
 .add('VscEyeClosed', 		() => <Icon.EyeClosed />)
-.add('VscEye', 					() => <Icon.Eye />)
-
-/*
-io
-IoIosClose
-IoMdClose
-IoMdPlay
-IoMdRemove
-IoMdAdd
-IoMdMenu
-*/
+.add('VscEye', 					() => <Icon.EyeOpen />)

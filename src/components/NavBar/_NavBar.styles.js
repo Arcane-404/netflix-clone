@@ -1,24 +1,25 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { screen } from '../_globals'
 
 export const Container = styled.nav`
 	width: 100%;
 	padding: 0 5%;
 	position: absolute;
 
-	@media ${({ theme }) => theme.breakpoints.tablet.sm } {
+	@media ${ screen.tablet.sm } {
 		padding: 0 2.812em;
 	}
 
-	@media ${({ theme }) => theme.breakpoints.tablet.lg } {
+	@media ${ screen.tablet.lg } {
 		padding: 0 3.5em;
 	}
 `
 
 export const Inner = styled.div`
 	max-width: 1920px;
-	margin: 0 auto;
 	height: 100%;
+	margin: 0 auto;
 	padding-top: 1.625em;
 	display: flex;
 	justify-content: space-between;
@@ -28,17 +29,17 @@ export const Logo = styled.img`
 	width: auto;
 	height: 1.5rem;
 
-	@media ${({ theme }) => theme.breakpoints.tablet.sm } {
+	@media ${ screen.tablet.sm } {
 		width: 6.75rem;
     height: 2rem;
 	}
 
-	@media ${({ theme }) => theme.breakpoints.tablet.lg } {
+	@media ${ screen.tablet.lg } {
 		width: 8.375rem;
     height: 2.25rem;
 	}
 
-	@media ${({ theme }) => theme.breakpoints.desktop } {
+	@media ${ screen.desktop } {
 		width: 10.4375rem;
     height: 2.8125rem;
 	}
@@ -52,7 +53,7 @@ export const Button = styled(Link)`
 	padding: 0.4em;
 	align-self: center;
 
-	@media ${({ theme }) => theme.breakpoints.tablet.sm } {
+	@media ${ screen.tablet.sm } {
 		font-size: inherit;
 		padding: 0.438em 1.062em;
 	}
