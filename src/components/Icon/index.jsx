@@ -1,5 +1,5 @@
 export {
 	InfoCircle,	Search,
-	Check, Play, Menu, Plus, Minus, Close,
-	CaretUp, CaretDown, ChevronRight, ChevronDown, EyeClosed, Eye
+	Check, Menu, Play, Plus, Minus, Close,
+	CaretUp, CaretDown, ChevronRight, ChevronDown, EyeClosed, EyeOpen
 } from './_Icon.styles'
