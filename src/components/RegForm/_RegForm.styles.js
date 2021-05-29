@@ -34,16 +34,19 @@ export const SubTitle = styled.h2`
 
 export const Frame = styled.div`
 	position: relative;
-	height: 50px;
+	height: 60px;
 	width: 100%;
 	background: transparent;
+	margin-bottom: 1.5rem;
 `
 
 export const Label = styled.label`
 	position: absolute;
 	z-index: -5;
-	top: 1rem;
+	/* top: 1rem; */
+	transform: translateY(100%);
 	margin-left: 0.5rem;
+	color: #8c8c8c;
 
 	${ ({ focus }) => {
 		if (focus) {
@@ -53,11 +56,13 @@ export const Label = styled.label`
 
 				@keyframes moveFocus {
 					from {
-						top: 1rem;
+						transform: translateY(100%);
 					}
 					to {
-						top: 0.25rem;
+						transform: translateY(30%);
 						font-size: 0.8rem;
+						font-family: ${ ({ theme }) =>  theme.fontFamily.primary };
+						font-weight: 500;
 					}
 				}
 			`

@@ -8,7 +8,8 @@ const RegFormContainer = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		history.push('/signup')
+		// history.push('/signup')
+		console.log(email, password)
 	}
 
 	const [ email, setEmail ] = useState('')
@@ -41,7 +42,11 @@ const RegFormContainer = () => {
 						>
 							Email
 						</RegForm.Label>
-						<RegForm.Input type="text" />
+						<RegForm.Input
+							type="text"
+							value={ email }
+							onChange={ ({ target }) => setEmail(target.value) }
+						/>
 					</RegForm.Frame>
 
 					<RegForm.Frame onClick={ () => setPasswordFocus(true) } >
@@ -50,12 +55,16 @@ const RegFormContainer = () => {
 						>
 							Add a password
 						</RegForm.Label>
-						<RegForm.Input type="text" />
+						<RegForm.Input
+							type="password"
+							value={ password }
+							onChange={ ({ target }) => setPassword(target.value)  }
+						/>
 					</RegForm.Frame>
 
-					{/* <RegForm.Button>
+					<RegForm.Button>
 						Continue
-					</RegForm.Button> */}
+					</RegForm.Button>
 				</RegForm.Inner>
 			</RegForm>
 		</div>
