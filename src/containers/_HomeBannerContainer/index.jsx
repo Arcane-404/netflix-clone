@@ -10,7 +10,7 @@ const HomeBannerContainer = () => {
 			<Jumbotron>
 				<Jumbotron.Inner>
 					<Jumbotron.Title>{ banner.title }</Jumbotron.Title>
-					<Jumbotron.Subtitle>{ banner.subtitle }</Jumbotron.Subtitle>
+					<Jumbotron.SubTitle>{ banner.subtitle }</Jumbotron.SubTitle>
 					<Jumbotron.Image src={ banner.img } alt={ banner.alt } />
 					<SignupFormContainer />
 				</Jumbotron.Inner>

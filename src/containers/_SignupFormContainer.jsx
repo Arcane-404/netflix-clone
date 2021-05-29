@@ -5,6 +5,7 @@ import { SignupForm, Icon } from '../components'
 const SignupFormContainer = () => {
 
 	const [ email, setEmail ] = useState('')
+	const [ error, setError ] = useState('')
 
 	const handleChange = (e) => {
 		setEmail(e.target.value)
@@ -18,24 +19,39 @@ const SignupFormContainer = () => {
 	}
 
 	return (
-		<SignupForm>
+		<SignupForm onSubmit={ formSubmit }>
 			<SignupForm.Title>
 				Ready to watch? Enter your email to create or restart your membership.
 			</SignupForm.Title>
 
-			<SignupForm.Form onSubmit={ formSubmit }>
-				<SignupForm.Input
-					type="text"
-					placeholder="Email address"
-					value={email}
-					onChange={ handleChange }
-					required
-				/>
-				<SignupForm.Button>
-					Get Started <Icon.FaChevronRight />
-				</SignupForm.Button>
-			</SignupForm.Form>
+			<SignupForm.Inner>
+				<SignupForm.Frame>
+					<SignupForm.Input
+						type="text"
+						id="email"
+						// placeholder="Email address"
+						placeholder=" "
+						value={ email }
+						onChange={ handleChange }
+						required
+						error={ error ? error : '' }
+					/>
 
+					<SignupForm.Label htmlFor="email">
+						Email Address
+					</SignupForm.Label>
+
+					{error && (
+						<SignupForm.Error>
+							{ error || 'Email is required!' }
+						</SignupForm.Error>
+					)}
+				</SignupForm.Frame>
+
+				<SignupForm.Button>
+					Get Started <Icon.ChevronRight />
+				</SignupForm.Button>
+			</SignupForm.Inner>
 		</SignupForm>
 	)
 }

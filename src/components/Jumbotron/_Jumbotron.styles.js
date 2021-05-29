@@ -2,15 +2,18 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 	height: 100%;
+	padding: 0 5%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 5%;
+	background-image: ${({ theme }) => theme.gradient.banner };
+	/* background-blend-mode: overlay; */
 `
 
 export const Inner = styled.div`
-	border: 3px solid red;
-	max-width: 950px;
+	/* border: 3px solid red; */
+	width: 100%;
+	max-width: 550px;
 	margin: 0 auto;
 	padding: 0.938em 0;
 
@@ -18,11 +21,10 @@ export const Inner = styled.div`
 		padding: 1.875em 0;
 	}
 
-	@media ${({ theme }) => theme.breakpoints.tablet.sm } {
+	@media ${({ theme }) => theme.breakpoints.tablet.lg } {
 		padding: 4.688em 0;
+		max-width: 770px;
 	}
-	/* 4.688em */
-	/* padding: 3.125em 0; */
 `
 
 export const Title = styled.h1`
@@ -33,13 +35,17 @@ export const Title = styled.h1`
 	text-align: center;
 
 	@media ${({ theme }) => theme.breakpoints.tablet.sm } {
-		font-size: ${({ theme }) => theme.fontSize.headline.lg };
+		font-size: ${({ theme }) => theme.fontSize.headline.md };
 		max-width: 16ch;
 		margin: 0 auto;
 	}
+
+	@media ${({ theme }) => theme.breakpoints.desktop } {
+		font-size: ${({ theme }) => theme.fontSize.headline.lg };
+	}
 `
 
-export const Subtitle = styled.h2`
+export const SubTitle = styled.h2`
 	color: ${({ theme }) => theme.colors.light };
 	font-size: ${({ theme }) => theme.fontSize.subhead.sm };
 	margin: 1em auto;

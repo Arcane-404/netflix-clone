@@ -1,16 +1,19 @@
 {
   "colors": {
-    "primary"   : {
+    "primary": {
       "_300": "#f40612",
       "_400": "#E50914",
       "_600": "#B20710",
       "_700": "#85050B"
     },
-    "secondary" : "hsl(120, 100%, 25%)",
-    "tertiary"  : "hsl(0, 100%, 50%)",
-    "neutral"   : "hsl(0, 0%, 75%)",
-    "light"     : "hsl(0, 100%, 100%)",
-    "dark"      : "hsl(0, 100%, 0%)"
+    "neutral": {
+      "_400": "hsl(0, 0%, 75%)",
+      "_600": "#8C8C8C"
+    },
+    "blue"    : "#0071EB",
+    "orange"  : "#FFA00A",
+    "light"   : "hsl(0, 100%, 100%)",
+    "dark"    : "hsl(0, 100%, 0%)"
   },
   "fontFamily": {
     "primary"   : "Gotham Bold",
@@ -19,7 +22,8 @@
   "fontSize": {
     "headline": {
       "sm": "1.75rem",
-      "lg": "3.125rem"
+      "md": "3.125rem",
+      "lg": "4rem"
     },
     "subhead": {
       "sm": "1.25rem",
@@ -34,12 +38,14 @@
     "body"     : ""
   },
 
-  "gradient": {},
-  "shadow": {},
+  "gradient": {
+    "banner": "linear-gradient(to top,rgba(0,0,0,.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0,.8) 100%)"
+  },
+  "shadow": {
+    "btn": "0 1px 0 rgb(0 0 0 / 45%)"
+  },
   "spacing": {
-    "normal" : "1em",
-    "tight"  : "0.5em",
-    "loose"  : "1.5em",
+    "xsm": "0.125em",
     "sm": "1em",
     "md": "1.25em",
     "lg": "1.5em",
