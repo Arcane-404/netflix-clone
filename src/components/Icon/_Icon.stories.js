@@ -5,12 +5,30 @@ storiesOf('Icons', module)
 .add('All', () => (
 	<>{	Object.values(Icon).map((Item, id) => (<Item key={ id } />)) }</>
 ))
-.add('FaCheck', () => <Icon.FaCheck />)
-.add('FaSearch', () => <Icon.FaSearch />)
-.add('FaInfoCircle', () => <Icon.FaInfoCircle />)
-.add('FaPlay', () => <Icon.FaPlay />)
-.add('FaPlus', () => <Icon.FaPlus />)
-.add('FaTimes', () => <Icon.FaTimes />)
+
+.add('BiInfoCircle', 		() => <Icon.InfoCircle />)
+.add('HiSearch', 				() => <Icon.Search />)
+
+.add('IoIosPlay', 			() => <Icon.Play />)
+.add('IoIosMenu', 			() => <Icon.Menu />)
+.add('IoCheckmark', 		() => <Icon.Check />)
+.add('IoAddOutline', 		() => <Icon.Plus />)
+.add('IoRemoveOutline', () => <Icon.Minus />)
+.add('IoCloseOutline',	() => <Icon.Close />)
+
+.add('VscTriangleUp', 	() => <Icon.CaretUp />)
+.add('VscTriangleDown',	() => <Icon.CaretDown />)
 .add('VscChevronRight', () => <Icon.ChevronRight />)
-.add('FaChevronDown', () => <Icon.FaChevronDown />)
-.add('FaCaretDown', () => <Icon.FaCaretDown />)
+.add('VscChevronDown', 	() => <Icon.ChevronDown />)
+.add('VscEyeClosed', 		() => <Icon.EyeClosed />)
+.add('VscEye', 					() => <Icon.Eye />)
+
+/*
+io
+IoIosClose
+IoMdClose
+IoMdPlay
+IoMdRemove
+IoMdAdd
+IoMdMenu
+*/
