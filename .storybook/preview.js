@@ -7,6 +7,7 @@ import StoryRouter from 'storybook-react-router'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../src/themes/GlobalStyle'
 import theme from '../src/themes/theme'
+import '../src/assets/style.scss'
 
 addDecorator((Story) => (
   <ThemeProvider theme={ theme }>
