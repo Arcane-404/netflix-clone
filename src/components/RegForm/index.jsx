@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Inner, PreTitle, Span, Title, SubTitle, Input, Button } from './_RegForm.styles'
+import { Container, Inner, PreTitle, Span, Title, SubTitle, Frame, Label, Input, Button } from './_RegForm.styles'
 
 export default function RegForm ({ children, ...restProps }) {
 	return (
@@ -35,6 +35,18 @@ RegForm.Title = function RegFormTitle ({ children, ...restProps }) {
 RegForm.SubTitle = function RegFormSubTitle ({ children, ...restProps }) {
 	return (
 		<SubTitle { ...restProps }> { children } </SubTitle>
+	)
+}
+
+RegForm.Frame = function RegFormFrame ({ children, ...restProps }) {
+	return (
+		<Frame { ...restProps }> { children } </Frame>
+	)
+}
+
+RegForm.Label = function RegFormLabel ({ children, ...restProps }) {
+	return (
+		<Label { ...restProps }> { children } </Label>
 	)
 }
 
