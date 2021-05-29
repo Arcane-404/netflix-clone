@@ -1,8 +1,6 @@
 import React from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import { HomePage, LoginPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
-// import { Icon } from './components'
-// <Icon.InfoCircle />
 
 const App = () => {
 
