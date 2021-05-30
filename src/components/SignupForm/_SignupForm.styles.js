@@ -94,9 +94,9 @@ export const Error = styled.span`
 	}
 `
 
-export const Button = styled.button.attrs(({ type }) => ({
-	type: type || 'submit'
-}))`
+export const Button = styled.button.attrs({
+	type: 'submit'
+})`
 	padding: 0.625em 1em;
 	background: ${({ theme }) => theme.colors.primary._400 };
 	color: ${({ theme }) => theme.colors.light };

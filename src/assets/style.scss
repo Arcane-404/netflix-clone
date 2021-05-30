@@ -15,3 +15,12 @@
     local('Gotham Book'),
     url('./fonts/Gotham Book.otf') format('OpenType');
 }
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    local('Helvetica Neue Regular'),
+    url('./fonts/Helvetica Neue Regular.otf') format('OpenType');
+}
