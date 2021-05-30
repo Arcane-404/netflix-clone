@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react'
 // import { text, boolean } from '@storybook/addon-knobs'
 import NavBar from './'
 
+// import data from '../../containers/_GeneralNavBarContainer/content'
+
 const logo = { img: '/images/logo.svg' }
 
 storiesOf('Navbar', module)
