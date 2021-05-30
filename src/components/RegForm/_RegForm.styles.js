@@ -56,8 +56,7 @@ export const Label = styled.label`
 	${ ({ focus }) => {
 		if (focus) {
 			return css`
-				animation: moveFocus ease-in-out 0.25s;
-				animation-fill-mode: forwards;
+				animation: moveFocus ease-in-out 0.25s forwards;
 
 				@keyframes moveFocus {
 					from {
