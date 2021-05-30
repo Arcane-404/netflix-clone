@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import { RegForm } from '../components'
+import { EmailContext } from '../custom/EmailContext'
 
 const RegFormContainer = () => {
 
+	const { signupEmail } = useContext( EmailContext )
 	const history = useHistory()
-	const [ email, setEmail ] = useState('')
+
+	const [ email, setEmail ] = useState(signupEmail)
 	const [ password, setPassword ] = useState('')
 	const [ emailFocus, setEmailFocus ] = useState(false)
 	const [ passwordFocus, setPasswordFocus ] = useState(false)
@@ -35,7 +38,7 @@ const RegFormContainer = () => {
 	}, [ email, password ])
 
 	return (
-		<div>
+		<>
 			<RegForm>
 				<RegForm.Inner onSubmit={ handleSubmit }>
 					<RegForm.PreTitle>
@@ -53,44 +56,46 @@ const RegFormContainer = () => {
 						Just a few more steps and you`re done! We hate paperwork, too.
 					</RegForm.SubTitle>
 
-					<RegForm.Frame onClick={ () => setEmailFocus(true) } >
-						<RegForm.Label
-							htmlFor="email"
-							focus={ emailFocus ? true : false }
-						>
-							Email
-						</RegForm.Label>
+					<RegForm.Frame>
 						<RegForm.Input
 							type="text"
 							id="email"
+							placeholder=" "
 							value={ email }
 							onChange={ ({ target }) => setEmail(target.value) }
 							error={ emailError ? true : false }
 						/>
+						<RegForm.Label
+							htmlFor="email"
+						>
+							Email
+						</RegForm.Label>
 						{ emailError && <p>Email is required!</p> }
 					</RegForm.Frame>
 
-					{/* <RegForm.Frame onClick={ () => setPasswordFocus(true) } >
-						<RegForm.Label
-							focus={ passwordFocus ? true : false }
-						>
-							Add a password
-						</RegForm.Label>
+					<RegForm.Frame>
 						<RegForm.Input
 							type="password"
+							id="password"
+							placeholder= " "
 							value={ password }
 							onChange={ ({ target }) => setPassword(target.value)  }
 							error={ passwordError ? true : false }
 						/>
+						<RegForm.Label
+							htmlFor="password"
+						>
+							Add a password
+						</RegForm.Label>
 						{ passwordError && <p>Password is required!</p>}
-					</RegForm.Frame> */}
+					</RegForm.Frame>
 
 					<RegForm.Button>
 						Continue
 					</RegForm.Button>
 				</RegForm.Inner>
 			</RegForm>
-		</div>
+		</>
 	)
 }
 

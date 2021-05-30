@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import { SignupForm, Icon } from '../components'
+import { EmailContext } from '../custom/EmailContext'
 
 const SignupFormContainer = () => {
 
 	const [ email, setEmail ] = useState('')
 	const [ error, setError ] = useState('')
+
+	const { setSignupEmail } = useContext( EmailContext )
 
 	const handleChange = (e) => {
 		setEmail(e.target.value)
@@ -15,8 +18,12 @@ const SignupFormContainer = () => {
 
 	const formSubmit = (e) => {
 		e.preventDefault()
+		setSignupEmail(email)
+		console.log(email)
 		history.push('/signup/registration')
 	}
+
+
 
 	return (
 		<SignupForm onSubmit={ formSubmit }>

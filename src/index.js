@@ -4,12 +4,15 @@ import { BrowserRouter } from 'react-router-dom'
 import GlobalThemeProvider from './themes/GlobalThemeProvider'
 import App from './App'
 import './assets/style.scss'
+import { EmailContextProvider } from './custom/EmailContext'
 
 render(
 	<StrictMode>
 		<BrowserRouter>
 			<GlobalThemeProvider>
-				<App />
+				<EmailContextProvider>
+					<App />
+				</EmailContextProvider>
 			</GlobalThemeProvider>
 		</BrowserRouter>
 	</StrictMode>,

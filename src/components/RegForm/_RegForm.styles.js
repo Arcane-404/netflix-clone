@@ -48,11 +48,12 @@ export const Frame = styled.div`
 export const Label = styled.label`
 	position: absolute;
 	z-index: -5;
+	left: 0;
 	transform: translateY(100%);
 	margin-left: 0.5rem;
 	color: #8c8c8c;
 
-	${ ({ focus }) => {
+	/* ${ ({ focus }) => {
 		if (focus) {
 			return css`
 				animation: moveFocus ease-in-out 0.1s forwards;
@@ -70,7 +71,7 @@ export const Label = styled.label`
 				}
 			`
 		}
-	}}
+	}} */
 `
 
 export const Input = styled.input`
@@ -83,6 +84,22 @@ export const Input = styled.input`
 
 	&:focus {
 		border: 1px solid #0071eb;
+	}
+
+	&:focus + label,
+	&:not(:placeholder-shown) + label {
+		animation: moveFocus ease-in-out 0.1s forwards;
+		@keyframes moveFocus {
+			from {
+				transform: translateY(100%);
+			}
+			to {
+				transform: translateY(30%);
+				font-size: 0.8rem;
+				font-family: ${ ({ theme }) =>  theme.fontFamily.primary };
+				font-weight: 500;
+			}
+		}
 	}
 
 	${ ({ error }) => {
