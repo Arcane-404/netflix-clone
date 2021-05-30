@@ -58,3 +58,22 @@ export const Button = styled(Link)`
 		padding: 0.438em 1.062em;
 	}
 `
+
+export const Anchor = styled(Link)`
+	color: #333;
+	font-size: 0.875rem;
+	font-weight: 700;
+
+	&:hover {
+		text-decoration: underline;
+		/* text-decoration-color: #333; */
+	}
+
+	@media ${ screen.tablet.sm } {
+		font-size: 1rem;
+	}
+
+	@media ${ screen.tablet.lg } {
+		font-size: 1.1875rem;
+	}
+`

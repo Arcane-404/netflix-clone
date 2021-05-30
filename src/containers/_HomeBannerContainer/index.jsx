@@ -1,12 +1,12 @@
 import React from 'react'
-import { NavBarContainer, SignupFormContainer } from '../'
+import { GeneralNavBarContainer, SignupFormContainer } from '../'
 import { Fold, Jumbotron } from '../../components'
 import { banner } from './content'
 
 const HomeBannerContainer = () => {
 	return (
 		<Fold>
-			<NavBarContainer />
+			<GeneralNavBarContainer />
 			<Jumbotron>
 				<Jumbotron.Inner>
 					<Jumbotron.Title>{ banner.title }</Jumbotron.Title>

@@ -1,10 +1,10 @@
 import React from 'react'
-import { SignupContainer, NavBarContainer } from '../containers'
+import { SignupContainer, GeneralNavBarContainer } from '../containers'
 
 const SignupPage = () => {
 	return (
 		<>
-			<NavBarContainer/>
+			<GeneralNavBarContainer />
 			<SignupContainer/>
 		</>
 	)

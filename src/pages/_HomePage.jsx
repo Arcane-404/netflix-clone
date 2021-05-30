@@ -5,6 +5,12 @@ const HomePage = () => {
 	return (
 		<>
 			<HomeBannerContainer />
+			{/*
+			- AboutUsContainer
+			- FaqContainer
+			- SignupFormConatainer
+			- FooterContainer
+			*/}
 		</>
 	)
 }
