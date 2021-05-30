@@ -19,7 +19,7 @@ const SigninFormContainer = () => {
 				<SigninForm.Input type="password" placeholder="Password"/>
 				<SigninForm.Button> Sign In </SigninForm.Button>
 
-				<SigninForm.CheckboxLabel for="rememberMe">
+				<SigninForm.CheckboxLabel htmlFor="rememberMe">
 					<SigninForm.Checkbox type="checkbox" id="rememberMe"/>
 					Remember me
 				</SigninForm.CheckboxLabel>
