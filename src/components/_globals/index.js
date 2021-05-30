@@ -4,22 +4,22 @@ export const fontFamily = {
 }
 
 export const fontSize = {
-    headline: {
-      sm: '',
-      md: '',
-      lg: ''
-    },
-    subhead: {
-      sm: '',
-      lg: ''
-    },
-    copy: {
-      sm: '',
-      lg: ''
-    },
-    link     : '',
-    cta      : '',
-    body     : ''
+	headline: {
+		sm: '',
+		md: '',
+		lg: ''
+	},
+	subhead: {
+		sm: '',
+		lg: ''
+	},
+	copy: {
+		sm: '',
+		lg: ''
+	},
+	link: '',
+	cta: '',
+	body: ''
 }
 
 export const screen = {
