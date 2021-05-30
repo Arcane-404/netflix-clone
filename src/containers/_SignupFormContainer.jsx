@@ -3,6 +3,11 @@ import { useHistory } from 'react-router-dom'
 import { SignupForm, Icon } from '../components'
 import { EmailContext } from '../custom/EmailContext'
 
+const signup = {
+	title: 'Ready to watch? Enter your email to create or restart your membership.',
+	label: 'Email Address'
+}
+
 const SignupFormContainer = () => {
 
 	const [ email, setEmail ] = useState('')
@@ -23,29 +28,25 @@ const SignupFormContainer = () => {
 		history.push('/signup/registration')
 	}
 
-
-
 	return (
 		<SignupForm onSubmit={ formSubmit }>
 			<SignupForm.Title>
-				Ready to watch? Enter your email to create or restart your membership.
+				{ signup.title }
 			</SignupForm.Title>
 
 			<SignupForm.Inner>
 				<SignupForm.Frame>
 					<SignupForm.Input
-						type="text"
 						id="email"
-						// placeholder="Email address"
 						placeholder=" "
 						value={ email }
 						onChange={ handleChange }
 						required
-						error={ error ? error : '' }
+						error={ error }
 					/>
 
 					<SignupForm.Label htmlFor="email">
-						Email Address
+						{ signup.label }
 					</SignupForm.Label>
 
 					{error && (
@@ -56,7 +57,7 @@ const SignupFormContainer = () => {
 				</SignupForm.Frame>
 
 				<SignupForm.Button>
-					Get Started <Icon.ChevronRight />
+					Get Started <SignupForm.Icon />
 				</SignupForm.Button>
 			</SignupForm.Inner>
 		</SignupForm>

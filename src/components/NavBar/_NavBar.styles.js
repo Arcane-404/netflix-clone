@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { screen } from '../_globals'
 
@@ -6,6 +6,13 @@ export const Container = styled.nav`
 	width: 100%;
 	padding: 0 5%;
 	position: absolute;
+	top: 0;
+
+	${({ browse, theme }) => browse && css`
+		background: #141414;
+		background-image: ${ theme.gradient.navbar.browse };
+		position: sticky;
+	`}
 
 	@media ${ screen.tablet.sm } {
 		padding: 0 2.812em;
@@ -29,20 +36,22 @@ export const Logo = styled.img`
 	width: auto;
 	height: 1.5rem;
 
-	@media ${ screen.tablet.sm } {
-		width: 6.75rem;
-    height: 2rem;
-	}
+	${({ general }) => general && css`
+		@media ${ screen.tablet.sm } {
+			width: 6.75rem;
+			height: 2rem;
+		}
 
-	@media ${ screen.tablet.lg } {
-		width: 8.375rem;
-    height: 2.25rem;
-	}
+		@media ${ screen.tablet.lg } {
+			width: 8.375rem;
+			height: 2.25rem;
+		}
 
-	@media ${ screen.desktop } {
-		width: 10.4375rem;
-    height: 2.8125rem;
-	}
+		@media ${ screen.desktop } {
+			width: 10.4375rem;
+			height: 2.8125rem;
+		}
+	`}
 `
 
 export const Button = styled(Link)`

@@ -1,11 +1,19 @@
 import React from 'react'
-import { CardsContainer } from '../containers/'
+import { CardsContainer, BrowseNavBarContainer } from '../containers/'
 
 const BrowsePage = () => {
 	return (
 		<>
-			<h1> Browse Page </h1>
-			<CardsContainer />
+			{/* <CardsContainer /> */}
+			<BrowseNavBarContainer />
+			{/*
+			- BrowseNavBarContainer
+			- BrowseBannerContainer
+			- CardOneContainer
+			- CardTwoContainer
+			- Footer
+			*/}
+			<div style={{ height: '100vh', background: 'lightgray' }}></div>
 		</>
 	)
 }

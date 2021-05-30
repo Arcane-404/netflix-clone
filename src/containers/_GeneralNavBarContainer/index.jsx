@@ -11,7 +11,7 @@ const GeneralNavBarContainer = ({ path = '' }) => {
 	return (
 		<NavBar>
 			<NavBar.Inner>
-				<NavBar.Logo src={ logo.img } alt={ logo.alt } to={ isNotHomePage } />
+				<NavBar.Logo general src={ logo.img } alt={ logo.alt } to={ isNotHomePage } />
 				{(path === '/')
 					? <NavBar.Button to="/login"> Sign In </NavBar.Button>
 					: (path !== '/login')

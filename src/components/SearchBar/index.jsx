@@ -1,3 +1,4 @@
+import React from 'react'
 import { Container, Input } from './_SearchBar.styles'
 import { Icon } from '../'
 
