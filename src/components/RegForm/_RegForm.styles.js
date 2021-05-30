@@ -48,7 +48,6 @@ export const Frame = styled.div`
 export const Label = styled.label`
 	position: absolute;
 	z-index: -5;
-	/* top: 1rem; */
 	transform: translateY(100%);
 	margin-left: 0.5rem;
 	color: #8c8c8c;
@@ -56,7 +55,7 @@ export const Label = styled.label`
 	${ ({ focus }) => {
 		if (focus) {
 			return css`
-				animation: moveFocus ease-in-out 0.25s forwards;
+				animation: moveFocus ease-in-out 0.1s forwards;
 
 				@keyframes moveFocus {
 					from {
@@ -71,7 +70,7 @@ export const Label = styled.label`
 				}
 			`
 		}
-	} }
+	}}
 `
 
 export const Input = styled.input`
@@ -82,11 +81,11 @@ export const Input = styled.input`
 	background: transparent;
 	border: 1px solid gray;
 
-	:focus {
+	&:focus {
 		border: 1px solid #0071eb;
 	}
 
-	${ ({ error, emailRequiredMessage, passwordRequiredMessage }) => {
+	${ ({ error }) => {
 		if (error) {
 			return css`
 				border: 1px solid red;
@@ -102,8 +101,12 @@ export const Button = styled.button`
 	color: #fff;
 	margin-top: 1rem;
 
-	:hover {
+	&:hover {
 		background: ${ ({ theme }) => theme.colors.primary._300 };
+	}
+
+	&:active {
+		background: ${({ theme }) => theme.colors.primary._600 };
 	}
 `
 

@@ -55,12 +55,14 @@ const RegFormContainer = () => {
 
 					<RegForm.Frame onClick={ () => setEmailFocus(true) } >
 						<RegForm.Label
+							htmlFor="email"
 							focus={ emailFocus ? true : false }
 						>
 							Email
 						</RegForm.Label>
 						<RegForm.Input
 							type="text"
+							id="email"
 							value={ email }
 							onChange={ ({ target }) => setEmail(target.value) }
 							error={ emailError ? true : false }
@@ -68,7 +70,7 @@ const RegFormContainer = () => {
 						{ emailError && <p>Email is required!</p> }
 					</RegForm.Frame>
 
-					<RegForm.Frame onClick={ () => setPasswordFocus(true) } >
+					{/* <RegForm.Frame onClick={ () => setPasswordFocus(true) } >
 						<RegForm.Label
 							focus={ passwordFocus ? true : false }
 						>
@@ -81,7 +83,7 @@ const RegFormContainer = () => {
 							error={ passwordError ? true : false }
 						/>
 						{ passwordError && <p>Password is required!</p>}
-					</RegForm.Frame>
+					</RegForm.Frame> */}
 
 					<RegForm.Button>
 						Continue
