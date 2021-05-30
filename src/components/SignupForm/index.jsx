@@ -6,29 +6,29 @@ export default function SignupForm ({ children, ...restProps }) {
 }
 
 SignupForm.Inner = function SignupFormInner ({ children, ...restProps }) {
-	return (<Inner { ...restProps }> { children } </Inner>)
+	return <Inner { ...restProps }> { children } </Inner>
 }
 
 SignupForm.Frame = function SignupFormFrame ({ children, ...restProps }) {
-	return (<Frame { ...restProps }> { children } </Frame>)
+	return <Frame { ...restProps }> { children } </Frame>
 }
 
 SignupForm.Title = function SignupFormTitle ({ children, ...restProps }) {
-	return (<Title { ...restProps }> { children } </Title>)
+	return <Title { ...restProps }> { children } </Title>
 }
 
 SignupForm.Input = function SignupFormInput ({ ...restProps }) {
-	return (<Input { ...restProps } />)
+	return <Input { ...restProps } />
 }
 
 SignupForm.Label = function SignupFormLabel ({ children, ...restProps }) {
-	return (<Label { ...restProps }> { children } </Label>)
+	return <Label { ...restProps }> { children } </Label>
 }
 
 SignupForm.Error = function SignupFormError ({ children, ...restProps }) {
-	return (<Error { ...restProps }> { children } </Error>)
+	return <Error { ...restProps }> { children } </Error>
 }
 
 SignupForm.Button = function SignupFormButton ({ children, ...restProps }) {
-	return (<Button { ...restProps }> { children } </Button>)
+	return <Button { ...restProps }> { children } </Button>
 }

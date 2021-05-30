@@ -1,4 +1,5 @@
 import styled,{ css } from 'styled-components'
+import { screen } from '../_globals'
 
 export const Container = styled.form`
 	width: 100%;
@@ -10,7 +11,7 @@ export const Container = styled.form`
 
 export const Inner = styled.div`
 	width: 100%;
-	@media ${({ theme }) => theme.breakpoints.tablet.lg } {
+	@media ${ screen.tablet.lg } {
 		display: flex;
 	}
 `
@@ -28,11 +29,11 @@ export const Title = styled.h3`
 	max-width: 30ch;
 	margin-bottom: 0.5em;
 
-	@media ${({ theme }) => theme.breakpoints.tablet.sm } {
+	@media ${ screen.tablet.sm } {
 		/* font-size: ${({ theme }) => theme.fontSize.copy.lg }; */
 		max-width: 100%;
 	}
-	@media ${({ theme }) => theme.breakpoints.tablet.lg } {
+	@media ${ screen.tablet.lg } {
 		margin-bottom: 1.25em;
 	}
 `
@@ -55,13 +56,14 @@ export const Input = styled.input`
 		font-size: 0.6875rem;
 		font-weight: 700;
 		top: 20%;
+		transform: translateY(0);
 	}
 
 	${({ error }) => error && css`
 		border-bottom: 2px solid ${({ theme }) => theme.colors.orange };
 	`}
 
-	@media ${({ theme }) => theme.breakpoints.tablet.lg } {
+	@media ${ screen.tablet.lg } {
 		height: 100%;
 	}
 `
@@ -86,7 +88,7 @@ export const Error = styled.span`
 	top: 105%;
 	left: 0;
 
-	@media ${({ theme }) => theme.breakpoints.tablet.lg } {
+	@media ${ screen.tablet.lg } {
 		top: 110%;
 		left: 1%;
 	}
@@ -122,7 +124,7 @@ export const Button = styled.button.attrs(({ type }) => ({
 		& svg { transform: translateX(0); }
 	}
 
-	@media ${({ theme }) => theme.breakpoints.tablet.lg } {
+	@media ${ screen.tablet.lg } {
 		font-size: 1.625rem;
 		/* font-size: 1.5rem; */
 		/* font-weight: 600; */
@@ -135,7 +137,7 @@ export const Button = styled.button.attrs(({ type }) => ({
 		border-bottom-left-radius: 0;
 	}
 
-	@media ${({ theme }) => theme.breakpoints.desktop } {
+	@media ${ screen.desktop } {
 		font-size: 1.875rem;
 		width: 53%;
 	}

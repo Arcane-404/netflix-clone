@@ -54,7 +54,7 @@ export const Button = styled(Link)`
 	align-self: center;
 
 	@media ${ screen.tablet.sm } {
-		font-size: inherit;
+		font-size: 1rem;
 		padding: 0.438em 1.062em;
 	}
 `

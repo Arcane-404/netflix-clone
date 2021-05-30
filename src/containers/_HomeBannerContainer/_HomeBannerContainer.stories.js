@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
-import { NavBarContainer, SignupFormContainer, HomeBannerContainer } from '../'
+import { GeneralNavBarContainer, SignupFormContainer, HomeBannerContainer } from '../'
 
 storiesOf('Home Banner', module)
 .add('All', () => <HomeBannerContainer />)
-.add('NavBar', () => <NavBarContainer />)
+.add('NavBar', () => <GeneralNavBarContainer />)
 .add('Signup Form', () => <SignupFormContainer />)
