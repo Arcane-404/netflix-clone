@@ -1,19 +1,20 @@
 import React from 'react'
 import { useRouteMatch } from 'react-router-dom'
-import { NavBar } from '../../components/'
-import { navbar } from './content'
+import { NavBar } from '../../components'
+import { logo } from '../../json'
 
-const GeneralNavBarContainer = () => {
+const GeneralNavBarContainer = ({ path = '' }) => {
 	const { url } = useRouteMatch()
-	const isNotHomePage = url !== '/' && '/'
+	path = path || url
+	const isNotHomePage = path !== '/' && '/'
 
 	return (
 		<NavBar>
 			<NavBar.Inner>
-				<NavBar.Logo src={ navbar.img } alt={ navbar.alt } to={ isNotHomePage } />
-				{(url === '/')
+				<NavBar.Logo src={ logo.img } alt={ logo.alt } to={ isNotHomePage } />
+				{(path === '/')
 					? <NavBar.Button to="/login"> Sign In </NavBar.Button>
-					: (url !== '/login')
+					: (path !== '/login')
 						? <NavBar.Anchor to="/login"> Sign In </NavBar.Anchor>
 						: null}
 			</NavBar.Inner>

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { fontFamily, screen } from '../_globals'
 
 export const Container = styled.div`
@@ -17,6 +17,8 @@ export const Inner = styled.div`
 	max-width: 550px;
 	margin: 0 auto;
 	padding: 0.938em 0;
+
+	${({ dark }) => dark && css`background: #000;`}
 
 	@media ${	screen.tablet.sm } {
 		padding: 1.875em 0;
