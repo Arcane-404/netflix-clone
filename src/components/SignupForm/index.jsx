@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Inner, Frame, Title, Input, Label, Error, Button } from './_SignupForm.styles'
+import { Icon } from '../'
 
 export default function SignupForm ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children }</Container>
@@ -31,4 +32,8 @@ SignupForm.Error = function SignupFormError ({ children, ...restProps }) {
 
 SignupForm.Button = function SignupFormButton ({ children, ...restProps }) {
 	return <Button { ...restProps }> { children } </Button>
+}
+
+SignupForm.Icon = function SignupFormIcon ({ ...restProps }) {
+	return <Icon.ChevronRight { ...restProps } />
 }

@@ -7,6 +7,8 @@ export const Container = styled.form`
 	display: flex;
 	flex-flow: column;
 	/* align-items: center; */
+
+	${({ dark }) => dark && css`background: #000;`}
 `
 
 export const Inner = styled.div`
@@ -38,7 +40,9 @@ export const Title = styled.h3`
 	}
 `
 
-export const Input = styled.input`
+export const Input = styled.input.attrs({
+	type: 'text'
+})`
 	border: 1px solid ${({ theme }) => theme.colors.neutral._600 };
 	border-radius: ${({ theme }) => theme.radius.xsm };
 	width: 100%;
@@ -94,9 +98,9 @@ export const Error = styled.span`
 	}
 `
 
-export const Button = styled.button.attrs(({ type }) => ({
-	type: type || 'submit'
-}))`
+export const Button = styled.button.attrs({
+	type: 'submit'
+})`
 	padding: 0.625em 1em;
 	background: ${({ theme }) => theme.colors.primary._400 };
 	color: ${({ theme }) => theme.colors.light };

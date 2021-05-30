@@ -1,6 +1,6 @@
 import React from 'react'
 import { GeneralNavBarContainer, SignupFormContainer } from '../'
-import { Fold, Jumbotron } from '../../components'
+import { Jumbotron } from '../../components'
 import { home } from '../../json'
 
 const HomeBannerContainer = () => {

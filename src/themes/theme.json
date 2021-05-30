@@ -38,8 +38,8 @@
   },
 
   "fontFamily": {
-    "primary"   : "Gotham Bold",
-    "secondary" : "Gotham Book"
+    "primary"   : "'Gotham Bold', 'Helvetica Neue', sans-serif",
+    "secondary" : "'Gotham Book', 'Helvetica Neue', sans-serif"
   },
 
   "fontSize": {
@@ -73,14 +73,17 @@
   },
 
   "gradient": {
-    "navbar": "linear-gradient(to bottom,rgba(0,0,0, 0.7) 10%,rgba(0,0,0,0))",
+    "navbar": {
+      "general": "linear-gradient(to bottom,rgba(0,0,0, 0.7) 10%,rgba(0,0,0,0) 100%)",
+      "browse": "linear-gradient(to bottom, rgba(0,0,0, 0.72) 0%, rgba(0,0,0, 0.45) 41%, rgba(0,0,0, 0.14) 81%, rgba(0,0,0, 0.14) 100%)"
+    },
     "card": "0px 3px 10px rgba(0,0,0, 0.75)",
     "banner": {
       "home": {
         "100": "linear-gradient(to top,rgba(0,0,0, 0.8) 0,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 75%,rgba(0,0,0, 0.8) 100%)",
         "200": "linear-gradient(to top,rgba(0,0,0, 0.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0, 0.8) 100%)"
       },
-      "browse": "linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20, 0.15) 15%,rgba(20,20,20, 0.35) 29%,rgba(20,20,20, 0.58) 44%,#141414 68%,#141414 100%);"
+      "browse": "linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20, 0.15) 15%,rgba(20,20,20, 0.35) 29%,rgba(20,20,20, 0.58) 44%,#141414 68%,#141414 100%)"
     }
   },
 
