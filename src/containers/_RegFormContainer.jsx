@@ -1,21 +1,38 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { RegForm } from '../components'
 
 const RegFormContainer = () => {
 
 	const history = useHistory()
-
-	const handleSubmit = (e) => {
-		e.preventDefault()
-		// history.push('/signup')
-		console.log(email, password)
-	}
-
 	const [ email, setEmail ] = useState('')
 	const [ password, setPassword ] = useState('')
 	const [ emailFocus, setEmailFocus ] = useState(false)
 	const [ passwordFocus, setPasswordFocus ] = useState(false)
+	const [ emailError, setEmailError ] = useState(false)
+	const [ passwordError, setPasswordError ] = useState(false)
+
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		// history.push('/signup')
+		if (email === '') {
+			setEmailError(true)
+			console.log('Email is required!')
+		}
+		if (password === '') {
+			setPasswordError(true)
+			console.log('Password is required!')
+		}
+	}
+
+	useEffect( () => {
+		if ( password !== '' ) {
+			setPasswordError(false)
+		}
+		if ( email !== '' ) {
+			setEmailError(false)
+		}
+	}, [ email, password ])
 
 	return (
 		<div>
@@ -46,7 +63,9 @@ const RegFormContainer = () => {
 							type="text"
 							value={ email }
 							onChange={ ({ target }) => setEmail(target.value) }
+							error={ emailError ? true : false }
 						/>
+						{ emailError && <p>Email is required!</p> }
 					</RegForm.Frame>
 
 					<RegForm.Frame onClick={ () => setPasswordFocus(true) } >
@@ -59,7 +78,9 @@ const RegFormContainer = () => {
 							type="password"
 							value={ password }
 							onChange={ ({ target }) => setPassword(target.value)  }
+							error={ passwordError ? true : false }
 						/>
+						{ passwordError && <p>Password is required!</p>}
 					</RegForm.Frame>
 
 					<RegForm.Button>
