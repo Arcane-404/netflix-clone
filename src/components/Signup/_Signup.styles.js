@@ -27,6 +27,7 @@ export const PreTitle = styled.p`
 `
 
 export const Span = styled.span`
+	font-family: ${ ({ theme }) =>  theme.fontFamily.primary };
 	font-weight: 900;
 `
 

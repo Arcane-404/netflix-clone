@@ -26,7 +26,8 @@ export const PreTitle = styled.p`
 `
 
 export const Span = styled.span`
-	font-weight: 700;
+	font-family: ${ ({ theme }) =>  theme.fontFamily.primary };
+	font-weight: 900;
 `
 
 export const Title = styled.h1`
@@ -45,5 +46,9 @@ export const Button = styled.button`
 	height: 50px;
 	background: ${ ({ theme }) => theme.colors.primary._400 };
 	color: #fff;
+
+	:hover {
+		background: ${ ({ theme }) => theme.colors.primary._300 };
+	}
 `
 
