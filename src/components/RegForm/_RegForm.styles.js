@@ -38,6 +38,11 @@ export const Frame = styled.div`
 	width: 100%;
 	background: transparent;
 	margin-bottom: 1.5rem;
+
+	p {
+		color: red;
+		font-size: 0.8rem;
+	}
 `
 
 export const Label = styled.label`
@@ -51,8 +56,7 @@ export const Label = styled.label`
 	${ ({ focus }) => {
 		if (focus) {
 			return css`
-				animation: moveFocus ease-in-out 0.25s;
-				animation-fill-mode: forwards;
+				animation: moveFocus ease-in-out 0.25s forwards;
 
 				@keyframes moveFocus {
 					from {
@@ -81,6 +85,14 @@ export const Input = styled.input`
 	:focus {
 		border: 1px solid #0071eb;
 	}
+
+	${ ({ error, emailRequiredMessage, passwordRequiredMessage }) => {
+		if (error) {
+			return css`
+				border: 1px solid red;
+			`
+		}
+	}}
 `
 
 export const Button = styled.button`
@@ -88,6 +100,7 @@ export const Button = styled.button`
 	height: 50px;
 	background: ${ ({ theme }) => theme.colors.primary._400 };
 	color: #fff;
+	margin-top: 1rem;
 
 	:hover {
 		background: ${ ({ theme }) => theme.colors.primary._300 };
