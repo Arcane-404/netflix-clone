@@ -46,5 +46,9 @@ export const Button = styled.button`
 	height: 50px;
 	background: ${ ({ theme }) => theme.colors.primary._400 };
 	color: #fff;
+
+	&:active {
+		background: ${({ theme }) => theme.colors.primary._600 };
+	}
 `
 

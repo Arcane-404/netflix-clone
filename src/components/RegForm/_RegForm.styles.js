@@ -48,15 +48,15 @@ export const Frame = styled.div`
 export const Label = styled.label`
 	position: absolute;
 	z-index: -5;
-	/* top: 1rem; */
+	left: 0;
 	transform: translateY(100%);
 	margin-left: 0.5rem;
 	color: #8c8c8c;
 
-	${ ({ focus }) => {
+	/* ${ ({ focus }) => {
 		if (focus) {
 			return css`
-				animation: moveFocus ease-in-out 0.25s forwards;
+				animation: moveFocus ease-in-out 0.1s forwards;
 
 				@keyframes moveFocus {
 					from {
@@ -71,7 +71,7 @@ export const Label = styled.label`
 				}
 			`
 		}
-	} }
+	}} */
 `
 
 export const Input = styled.input`
@@ -82,11 +82,27 @@ export const Input = styled.input`
 	background: transparent;
 	border: 1px solid gray;
 
-	:focus {
+	&:focus {
 		border: 1px solid #0071eb;
 	}
 
-	${ ({ error, emailRequiredMessage, passwordRequiredMessage }) => {
+	&:focus + label,
+	&:not(:placeholder-shown) + label {
+		animation: moveFocus ease-in-out 0.1s forwards;
+		@keyframes moveFocus {
+			from {
+				transform: translateY(100%);
+			}
+			to {
+				transform: translateY(30%);
+				font-size: 0.8rem;
+				font-family: ${ ({ theme }) =>  theme.fontFamily.primary };
+				font-weight: 500;
+			}
+		}
+	}
+
+	${ ({ error }) => {
 		if (error) {
 			return css`
 				border: 1px solid red;
@@ -102,8 +118,12 @@ export const Button = styled.button`
 	color: #fff;
 	margin-top: 1rem;
 
-	:hover {
+	&:hover {
 		background: ${ ({ theme }) => theme.colors.primary._300 };
+	}
+
+	&:active {
+		background: ${({ theme }) => theme.colors.primary._600 };
 	}
 `
 

@@ -47,8 +47,12 @@ export const Button = styled.button`
 	background: ${ ({ theme }) => theme.colors.primary._400 };
 	color: #fff;
 
-	:hover {
+	&:hover {
 		background: ${ ({ theme }) => theme.colors.primary._300 };
+	}
+
+	&:active {
+		background: ${({ theme }) => theme.colors.primary._600 };
 	}
 `
 
