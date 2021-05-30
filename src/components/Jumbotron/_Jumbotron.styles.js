@@ -2,20 +2,25 @@ import styled, { css } from 'styled-components'
 import { fontFamily, screen } from '../_globals'
 
 export const Container = styled.div`
-	height: 100%;
+	height: 70vh;
 	padding: 0 5%;
+	position: relative;
 	display: flex;
+	flex-flow: column;
 	align-items: center;
-	justify-content: center;
-	background-image: ${({ theme }) => theme.gradient.banner };
-	/* background-blend-mode: overlay; */
+	background-image: ${({ theme }) => theme.gradient.banner.home[100] };
+
+	@media ${ screen.tablet.sm } {
+		height: 100vh;
+		background-image: ${({ theme }) => theme.gradient.banner.home[200] };
+	}
 `
 
 export const Inner = styled.div`
 	/* border: 3px solid red; */
 	width: 100%;
 	max-width: 550px;
-	margin: 0 auto;
+	margin: auto;
 	padding: 0.938em 0;
 
 	${({ dark }) => dark && css`background: #000;`}

@@ -95,10 +95,9 @@ useCallback
 [Badge-JavaScript]: https://img.shields.io/badge/-JavaScript-323330.svg?&style=for-the-badge&logo=JavaScript&logoColor=F0DB4F
 [Badge-React-Router]: https://img.shields.io/badge/-React_Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=FFF
 [Badge-Sass]: https://img.shields.io/badge/-Sass-hotpink.svg?&style=for-the-badge&logo=Sass&logoColor=FFF
-[Badge-Styled-Components]: https://img.shields.io/badge/-Styled_Components-DB7093.svg?&style=for-the-badge&logo=Styled-Components&logoColor=FFF
+[Badge-Styled-Components]: https://img.shields.io/badge/-Styled_Components-DB748E.svg?&style=for-the-badge&logo=Styled-Components&logoColor=FFF
 [Badge-Storybook]: https://img.shields.io/badge/-Storybook-F0608A.svg?&style=for-the-badge&logo=Storybook&logoColor=FFF
 [Badge-Firebase]: https://img.shields.io/badge/-Firebase-FFCB2B.svg?&style=for-the-badge&logo=Firebase&logoColor=333
-
 
 <!-- Other Technology Link & Badge -->
 [styled-normalize]: https://necolas.github.io/normalize.css/
