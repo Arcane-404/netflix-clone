@@ -22,11 +22,12 @@ function Footer() {
                     <Footer.Link href="#">Coporate Information</Footer.Link>
                     <Footer.Link href="#">Netflix Originals</Footer.Link>
                 </Footer.Column>
-                
+
             </Footer.Row>
 
         </Footer>
     )
 }
+
 
 export default Footer
