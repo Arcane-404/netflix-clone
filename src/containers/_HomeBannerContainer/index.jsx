@@ -1,7 +1,7 @@
 import React from 'react'
 import { GeneralNavBarContainer, SignupFormContainer } from '../'
 import { Fold, Jumbotron } from '../../components'
-import { banner } from './content'
+import { home } from '../../json'
 
 const HomeBannerContainer = () => {
 	return (
@@ -9,9 +9,9 @@ const HomeBannerContainer = () => {
 			<GeneralNavBarContainer />
 			<Jumbotron>
 				<Jumbotron.Inner>
-					<Jumbotron.Title>{ banner.title }</Jumbotron.Title>
-					<Jumbotron.SubTitle>{ banner.subtitle }</Jumbotron.SubTitle>
-					<Jumbotron.Image src={ banner.img } alt={ banner.alt } />
+					<Jumbotron.Title>{ home.banner.title }</Jumbotron.Title>
+					<Jumbotron.SubTitle>{ home.banner.subtitle }</Jumbotron.SubTitle>
+					<Jumbotron.Image src={ home.banner.img } alt={ home.banner.alt } />
 					<SignupFormContainer />
 				</Jumbotron.Inner>
 			</Jumbotron>

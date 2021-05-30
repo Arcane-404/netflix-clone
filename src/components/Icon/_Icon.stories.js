@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import * as Icon from './'
 
-storiesOf('Icons', module)
+storiesOf('Components/Icons', module)
 .add('All', () => (
 	<>{	Object.values(Icon).map((Item, id) => (<Item key={ id } />)) }</>
 ))
