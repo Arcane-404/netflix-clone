@@ -27,7 +27,9 @@ const App = () => {
 					<RegformPage/>
 				</Route>
 
-				<Route path="/browse"> <BrowsePage/> </Route>
+				<Route path="/browse">
+					<BrowsePage/>
+				</Route>
 			</Switch>
 		</>
 	)
