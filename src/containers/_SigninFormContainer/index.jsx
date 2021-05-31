@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Signin } from '../../components'
 
 const SigninFormContainer = () => {
 
 	const [ toggle, setToggle ] = useState(false)
-	const [ emailToggle, setEmailToggle ] = useState(false)
+	const [ email, setEmail ] = useState('')
+	const [ password, setPassword ] = useState('')
+	const [ emailError, setEmailError ] = useState(false)
+	const [ passwordError, setPasswordError ] = useState(false)
 
 	const toggleLearnMore = () => {
 		setToggle( !toggle )
@@ -13,7 +16,22 @@ const SigninFormContainer = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
+		if ( email === '' ) {
+			setEmailError(true)
+		}
+		if ( password === '' ) {
+			setPasswordError(true)
+		}
 	}
+
+	useEffect( () => {
+		if ( email !== '' ) {
+			setEmailError(false)
+		}
+		if ( password !== '' ) {
+			setPasswordError(false)
+		}
+	}, [ email, password ])
 
 	return (
 		<Signin>
@@ -26,12 +44,15 @@ const SigninFormContainer = () => {
 						type="text"
 						placeholder=" "
 						id="email"
+						value={ email }
+						onChange={ ({ target }) => setEmail( target.value )}
 					/>
 					<Signin.Label
 						for="email"
 					>
 						Email of phone number
 					</Signin.Label>
+					{ emailError && <Signin.Error>Please enter a valid email or phone number.</Signin.Error> }
 				</Signin.InputFrame>
 
 				<Signin.InputFrame>
@@ -39,12 +60,15 @@ const SigninFormContainer = () => {
 						type="password"
 						placeholder=" "
 						id="password"
+						value={ password }
+						onChange={ ({ target }) => setPassword( target.value ) }
 					/>
 					<Signin.Label
 						for="password"
 					>
 						Password
 					</Signin.Label>
+					{ passwordError && <Signin.Error>Your password must contain between 4 and 60 characters.</Signin.Error> }
 				</Signin.InputFrame>
 
 				<Signin.Button> Sign In </Signin.Button>

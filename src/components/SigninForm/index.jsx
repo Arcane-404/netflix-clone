@@ -6,6 +6,7 @@ import {
 	InputFrame,
 	Label,
 	Input,
+	Error,
 	Button,
 	Frame,
 	Content,
@@ -51,6 +52,12 @@ Signin.Label = function SigninLabel ({ children, ...restProps }) {
 Signin.Input = function SigninInput ({ children, ...restProps }) {
 	return (
 		<Input { ...restProps } />
+	)
+}
+
+Signin.Error = function SigninError ({ children, ...restProps }) {
+	return (
+		<Error { ...restProps }> { children } </Error>
 	)
 }
 

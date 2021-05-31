@@ -63,6 +63,17 @@ export const Input = styled.input`
 	}
 `
 
+export const Error = styled.p`
+	color: ${ ({ theme }) => theme.colors.orange };
+	font-size: 0.7rem;
+	border-top: 1px solid ${ ({ theme }) => theme.colors.orange };
+	position: absolute;
+	bottom: -15px;
+	width: 100%;
+	height: 15px;
+	padding-top: 0.25rem;
+`
+
 export const Button = styled.button`
 	height: 50px;
 	padding: 1rem;
@@ -70,7 +81,7 @@ export const Button = styled.button`
 	font-weight: 700;
 	color: #fff;
 	border-radius: 0.5rem;
-	margin-top: 1rem;
+	margin-top: 2rem;
 `
 
 export const Frame = styled.div`
