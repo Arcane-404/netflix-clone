@@ -1,5 +1,7 @@
 export { default as NavBarContainer } from './_NavBarContainer'
-export { default as GeneralNavBarContainer } from './_GeneralNavBarContainer'
+export { default as HomeNavBarContainer } from './_HomeNavBarContainer'
+export { default as LoginNavBarContainer } from './_LoginNavBarContainer'
+export { default as SignupNavBarContainer } from './_SignupNavBarContainer'
 export { default as BrowseNavBarContainer } from './_BrowseNavBarContainer'
 export { default as HomeBannerContainer } from './_HomeBannerContainer'
 export { default as SignupFormContainer } from './_SignupFormContainer'

@@ -1,24 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SearchBarContainer } from '../'
-import { NavBar, Box } from '../../components'
+import { NavBar } from '../../components'
 import { logo } from '../../json'
 
 const BrowseNavBarContainer = () => {
+
+	const [ menu, setMenu ] = useState(true)
+	const handleToggle = () => setMenu(!menu)
+
 	return (
 		<NavBar browse>
 			<NavBar.Inner>
-				<Box>
+				<NavBar.Box>
+					{(menu)
+						? <NavBar.Menu onClick={ handleToggle } />
+						: <NavBar.Close onClick={ handleToggle } />
+					}
 					<NavBar.Logo src={ logo.img } alt={ logo.alt } to="/browse" />
-				</Box>
-				<Box>
+					{/* BrowseFilter */}
+				</NavBar.Box>
+
+				<NavBar.Box>
 					<SearchBarContainer />
-				</Box>
+					{/* ProfileOption */}
+				</NavBar.Box>
 			</NavBar.Inner>
-			{/*
-			- MenuBar
-			- BrowserFilter
-			- ProfileOption
-			*/}
 		</NavBar>
 	)
 }

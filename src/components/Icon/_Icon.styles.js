@@ -1,14 +1,14 @@
 import styled from 'styled-components'
-import { BiInfoCircle } from 'react-icons/bi'
+import { BiInfoCircle, BiMenu } from 'react-icons/bi'
 import { HiSearch } from 'react-icons/hi'
-import { IoCheckmark, IoMenuOutline, IoPlaySharp, IoAddOutline, IoRemoveOutline, IoCloseOutline } from 'react-icons/io5'
+import { IoCheckmark, IoPlaySharp, IoAddOutline, IoRemoveOutline, IoCloseOutline } from 'react-icons/io5'
 import { VscTriangleUp, VscTriangleDown, VscChevronRight, VscChevronDown, VscEyeClosed, VscEye } from 'react-icons/vsc'
 
 export const InfoCircle = styled(BiInfoCircle)``
+export const Menu = styled(BiMenu)``
 export const Search = styled(HiSearch)``
 
 export const Check = styled(IoCheckmark)``
-export const Menu = styled(IoMenuOutline)``
 export const Play = styled(IoPlaySharp)``
 export const Plus = styled(IoAddOutline)``
 export const Minus = styled(IoRemoveOutline)``

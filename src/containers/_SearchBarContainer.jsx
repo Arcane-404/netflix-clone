@@ -12,6 +12,7 @@ const SearchBarContainer = () => {
 	return (
 		<SearchBar>
 			<SearchBar.Input
+				placeholder="Search"
 				value={ search }
 				onChange={ handleChange }
 			/>

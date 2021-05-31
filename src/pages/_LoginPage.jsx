@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Background, NavBar } from '../components'
-import { SigninFormContainer, GeneralNavBarContainer } from '../containers'
+import React from 'react'
+import { Background } from '../components'
+import { SigninFormContainer, LoginNavBarContainer } from '../containers'
 
 const LoginPage = () => {
 	return (
 		<Background>
-			<GeneralNavBarContainer/>
+			<LoginNavBarContainer/>
 			<SigninFormContainer/>
 		</Background>
 	)
