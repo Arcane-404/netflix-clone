@@ -7,10 +7,10 @@ storiesOf('Components/Icons', module)
 ))
 
 .add('BiInfoCircle', 		() => <Icon.InfoCircle />)
+.add('BiMenu', 					() => <Icon.Menu />)
 .add('HiSearch', 				() => <Icon.Search />)
 
 .add('IoCheckmark', 		() => <Icon.Check />)
-.add('IoMenuOutline', 	() => <Icon.Menu />)
 .add('IoPlaySharp', 		() => <Icon.Play />)
 .add('IoAddOutline', 		() => <Icon.Plus />)
 .add('IoRemoveOutline', () => <Icon.Minus />)

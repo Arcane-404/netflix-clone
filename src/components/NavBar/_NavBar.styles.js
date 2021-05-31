@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
-import { screen } from '../_globals'
+import { Icon } from '../'
+import { screen, colors } from '../_globals'
 
 export const Container = styled.nav`
 	width: 100%;
@@ -8,11 +9,17 @@ export const Container = styled.nav`
 	position: absolute;
 	top: 0;
 
-	${({ browse, theme }) => browse && css`
-		background: #141414;
-		background-image: ${ theme.gradient.navbar.browse };
-		position: sticky;
-	`}
+	${({ browse, signup, theme }) => {
+		if (signup) return css`
+			border-bottom: 1px solid #E6E6E6;
+		`
+
+		if (browse) return css`
+			background: #141414;
+			background-image: ${ theme.gradient.navbar.browse };
+			position: sticky;
+		`
+	}}
 
 	@media ${ screen.tablet.sm } {
 		padding: 0 2.812em;
@@ -32,11 +39,37 @@ export const Inner = styled.div`
 	justify-content: space-between;
 `
 
+export const Box = styled.div`
+	display: flex;
+`
+
+export const Menu = styled(Icon.Menu)`
+	color: ${ colors.light };
+	font-size: 2rem;
+	margin-right: 0.563em;
+	cursor: pointer;
+
+	@media ${ screen.tablet.lg } {
+		display: none;
+	}
+`
+
+export const Close = styled(Icon.Close)`
+	color: ${ colors.light };
+	font-size: 2rem;
+	margin-right: 0.563em;
+	cursor: pointer;
+
+	@media ${ screen.tablet.lg } {
+		display: none;
+	}
+`
+
 export const Logo = styled.img`
 	width: auto;
 	height: 1.5rem;
 
-	${({ general }) => general && css`
+	${({ grow }) => grow && css`
 		@media ${ screen.tablet.sm } {
 			width: 6.75rem;
 			height: 2rem;

@@ -1,3 +1,8 @@
+export const colors = {
+	light: ({ theme }) => theme.colors.light,
+	dark: ({ theme }) => theme.colors.dark
+}
+
 export const fontFamily = {
 	primary: ({ theme }) => theme.fontFamily.primary,
 	secondary: ({ theme }) => theme.fontFamily.secondary

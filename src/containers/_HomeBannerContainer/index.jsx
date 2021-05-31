@@ -1,12 +1,12 @@
 import React from 'react'
-import { GeneralNavBarContainer, SignupFormContainer } from '../'
+import { HomeNavBarContainer, SignupFormContainer } from '../'
 import { Jumbotron } from '../../components'
 import { home } from '../../json'
 
 const HomeBannerContainer = () => {
 	return (
 		<Jumbotron>
-			<GeneralNavBarContainer />
+			<HomeNavBarContainer />
 
 			<Jumbotron.Inner>
 				<Jumbotron.Title>{ home.banner.title }</Jumbotron.Title>

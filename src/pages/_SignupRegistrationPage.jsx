@@ -1,11 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { RegistrationContainer, GeneralNavBarContainer } from '../containers'
+import { RegistrationContainer, SignupNavBarContainer } from '../containers'
 
 const SignupRegistrationPage = () => {
 	return (
 		<>
-			<GeneralNavBarContainer />
+			<SignupNavBarContainer />
 			<RegistrationContainer/>
 		</>
 	)

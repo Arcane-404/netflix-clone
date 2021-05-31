@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Inner, Logo,	Button, Anchor } from './_NavBar.styles'
+import { Container, Inner, Box, Menu, Close, Logo,	Button, Anchor } from './_NavBar.styles'
 
 export default function NavBar ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>
@@ -8,6 +8,18 @@ export default function NavBar ({ children, ...restProps }) {
 
 NavBar.Inner = function NavBarInner ({ children, ...restProps }) {
 	return <Inner { ...restProps } > { children } </Inner>
+}
+
+NavBar.Box = function NavBarBox ({ children, ...restProps }) {
+	return <Box { ...restProps } > { children } </Box>
+}
+
+NavBar.Menu = function NavBarMenu ({ ...restProps }) {
+	return <Menu { ...restProps } />
+}
+
+NavBar.Close = function NavBarMenu ({ ...restProps }) {
+	return <Close { ...restProps } />
 }
 
 NavBar.Logo = function NavBarLogo ({ to = '', ...restProps }) {
