@@ -34,6 +34,11 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: unset;
   }
 
+	ul, ol {
+		padding-left: unset;
+		list-style: none;
+	}
+
 	img {
 		display: block;
 		width: 100%;

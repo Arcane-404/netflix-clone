@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
-export default function useEventListener (
+const useEventListener = (
 	eventName, handler, element = window
-) {
+) => {
 	const savedHandler = useRef()
 	useEffect(() => { savedHandler.current = handler }, [ handler ])
 
@@ -14,3 +14,5 @@ export default function useEventListener (
 		return () => element.removeEventListener(eventName, eventListener)
 	}, [ element,eventName ])
 }
+
+export default useEventListener

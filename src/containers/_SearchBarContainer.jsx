@@ -1,22 +1,33 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { SearchBar } from '../components'
+import { useMediaQuery, useInput } from '../custom'
+
+/*
+- desktop
+	- shrink search bar
+	- keep search icon
+	- click/focus
+		- grow & show search bar
+*/
 
 const SearchBarContainer = () => {
+	const [ search, handleChange ] = useInput('')
+	const isDesktop = useMediaQuery('desktop')
+	const placeholder = (isDesktop) ? 'Title, people, genres' : 'Search'
 
-	const [ search, setSearch ] = useState('')
-
-	const handleChange = (e) => {
-		setSearch(e.target.value)
+	const handleSubmit = (e) => {
+		e.preventDefault()
+		console.log('HELL the SEARCH')
 	}
 
 	return (
-		<SearchBar>
+		<SearchBar onSubmit={ handleSubmit }>
+			{ isDesktop && <SearchBar.Icon /> }
 			<SearchBar.Input
-				placeholder="Search"
+				placeholder={ placeholder }
 				value={ search }
 				onChange={ handleChange }
 			/>
-			{/* <SearchBar.Icon /> */}
 		</SearchBar>
 	)
 }
