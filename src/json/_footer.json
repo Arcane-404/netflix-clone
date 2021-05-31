@@ -24,7 +24,7 @@
   "column4": [
     { "text": "Media Center", "link": "https://help.netflix.com/en/node/412" },
     { "text": "Buy Gift Cards", "link": "https://www.netflix.com/gift-cards" },
-    { "text": "Cookie Preferences", "link": "url:com" },
+    { "text": "Cookie Preferences", "link": "https://www.netflix.com/Cookies" },
     { "text": "Legal Notices", "link": "https://help.netflix.com/legal/notices" }
   ]
 
