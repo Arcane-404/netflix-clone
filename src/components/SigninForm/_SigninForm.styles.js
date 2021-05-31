@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
 	width: 100%;
@@ -7,9 +7,7 @@ export const Container = styled.div`
 	place-content: center;
 `
 
-//Form, Title, Input, button, content, signup
-
-export const Inner = styled.form`
+export const Form = styled.form`
 	width: 90%;
 	height: 660px;
 	margin: 0 auto;
@@ -27,16 +25,82 @@ export const Inner = styled.form`
 
 export const Title = styled.h1`
 	color: #fff;
+	font-family: ${ ({ theme }) => theme.fontFamily.primary } ;
+`
+export const InputFrame = styled.div`
+	position: relative;
+	width: 100%;
+	height: 60px;
+	margin-bottom: 2rem;
+`
+
+export const Label = styled.label`
+	color: ${ ({ theme }) => theme.colors.neutral._600 };
+	position: absolute;
+	display: flex;
+	top: 0;
+	margin-left: 1rem;
+	cursor: text;
+	transition: 0.1s ease-in;
+	transform: translateY(100%);
 `
 
 export const Input = styled.input`
-	height: 50px;
-	padding: 1rem;
+	height: 100%;
+	width: 100%;
+	padding: 1.75rem 0 1rem 1rem;
 	border: none;
 	border-radius: 0.5rem;
 	background: #333;
-	margin: 0.5rem 0;
 	color: #fff;
+	z-index: 1;
+
+	&:focus {
+		background: #444;
+	}
+
+	&:focus + label,
+	&:not(:placeholder-shown) + label {
+		transform: translateY(30%);
+		transition: 0.1s ease-in-out;
+		font-size: 0.7rem;
+	}
+`
+
+export const Error = styled.p`
+	color: ${ ({ theme }) => theme.colors.orange };
+	font-size: 0.7rem;
+	border-top: 2px solid ${ ({ theme }) => theme.colors.orange };
+	position: absolute;
+	bottom: -15px;
+	width: 95%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	height: 15px;
+	padding-top: 0.25rem;
+
+	&::after {
+		content: ' ';
+		border-bottom: 2px solid ${ ({ theme }) => theme.colors.orange };
+		border-bottom-left-radius: 0.5rem;
+		height: 10px;
+		width: 10px;
+		position: absolute;
+		top: -12px;
+		left: -7px;
+	}
+
+	&::before {
+		content: ' ';
+		border-bottom: 2px solid ${ ({ theme }) => theme.colors.orange };
+		border-bottom-right-radius: 0.5rem;
+		height: 10px;
+		width: 10px;
+		position: absolute;
+		top: -12px;
+		right: -7px;
+	}
 `
 
 export const Button = styled.button`
