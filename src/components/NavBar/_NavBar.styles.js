@@ -49,9 +49,9 @@ export const Menu = styled(Icon.Menu)`
 	margin-right: 0.563em;
 	cursor: pointer;
 
-	@media ${ screen.tablet.lg } {
+	/* @media ${ screen.tablet.lg } {
 		display: none;
-	}
+	} */
 `
 
 export const Close = styled(Icon.Close)`
@@ -60,9 +60,9 @@ export const Close = styled(Icon.Close)`
 	margin-right: 0.563em;
 	cursor: pointer;
 
-	@media ${ screen.tablet.lg } {
+	/* @media ${ screen.tablet.lg } {
 		display: none;
-	}
+	} */
 `
 
 export const Logo = styled.img`
@@ -85,6 +85,29 @@ export const Logo = styled.img`
 			height: 2.8125rem;
 		}
 	`}
+`
+
+export const FilterBox = styled.ul`
+	border: 3px solid red;
+	display: flex;
+	margin-left: 1em;
+`
+
+export const Text = styled.li`
+	border: 2px solid pink;
+	color: #FFF;
+	font-size: 0.875rem;
+	cursor: pointer;
+
+	transition: 0.4s ease;
+	transition-property: color;
+
+	&:hover { color: #B3B3B3; }
+	& + li { margin-left: 1em; }
+
+	${({ primary }) => primary && css`color: red; `}
+	${({ bold }) => bold && css`font-weight: 600; `}
+
 `
 
 export const Button = styled(Link)`

@@ -115,6 +115,7 @@
   },
 
   "breakpoints": {
+    "mobile": "(max-width: 549px)",
     "tablet": {
       "sm": "(min-width: 550px)",
       "lg": "(min-width: 900px)"
