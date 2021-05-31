@@ -55,6 +55,10 @@ export const Input = styled.input`
 	color: #fff;
 	z-index: 1;
 
+	&:focus {
+		background: #444;
+	}
+
 	&:focus + label,
 	&:not(:placeholder-shown) + label {
 		transform: translateY(30%);
