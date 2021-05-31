@@ -31,7 +31,7 @@ export const InputFrame = styled.div`
 	position: relative;
 	width: 100%;
 	height: 60px;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 `
 
 export const Label = styled.label`
@@ -66,12 +66,37 @@ export const Input = styled.input`
 export const Error = styled.p`
 	color: ${ ({ theme }) => theme.colors.orange };
 	font-size: 0.7rem;
-	border-top: 1px solid ${ ({ theme }) => theme.colors.orange };
+	border-top: 2px solid ${ ({ theme }) => theme.colors.orange };
 	position: absolute;
 	bottom: -15px;
-	width: 100%;
+	width: 95%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
 	height: 15px;
 	padding-top: 0.25rem;
+
+	&::after {
+		content: ' ';
+		border-bottom: 2px solid ${ ({ theme }) => theme.colors.orange };
+		border-bottom-left-radius: 0.5rem;
+		height: 10px;
+		width: 10px;
+		position: absolute;
+		top: -12px;
+		left: -7px;
+	}
+
+	&::before {
+		content: ' ';
+		border-bottom: 2px solid ${ ({ theme }) => theme.colors.orange };
+		border-bottom-right-radius: 0.5rem;
+		height: 10px;
+		width: 10px;
+		position: absolute;
+		top: -12px;
+		right: -7px;
+	}
 `
 
 export const Button = styled.button`
