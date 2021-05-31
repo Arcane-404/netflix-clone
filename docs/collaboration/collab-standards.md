@@ -1,6 +1,7 @@
 # Collaboration Standards
 
-## Component Structure
+## Component/Container Structure
+
 ```md
 /components
   /Card
@@ -10,56 +11,23 @@
   index.js
 App.jsx
 ```
-```jsx
-// 0. create empty file
-'_Card.stories.js' // _ + [ComponentName] + .stories.js
-
-// 1. _Card.styles.js
-import styled from 'styled-components'
-export const Frame = styled.div``
-export const Image = styled.img``
-export const Title = styled.h2``
-
-// 2. index.jsx
-import { Frame, Image, Title } from './_Card.styles'
-export default function Card ({ children, ...props }) {
-  return (<Frame { ...props }>{ children }</Frame>)
-}
-Card.Image = function CardImage ({ ...props }) {
-  return (<Image { ...props } />)
-}
-Card.Title = function CardTitle ({ children, ...props }) {
-  return (<Title { ...props }>{ children }</Title>)
-}
-
-// 3. index.js
-export { default as Card } from './Card'
-
-// 4. App.jsx / other
-import React from 'react'
-import { Card } from './components'
-
-const App = () => {
-  return (
-    <Card>
-      <Card.Image src="" alt="image-name" />
-      <Card.Title>The Magic Card</Card.Title>
-    </Card>
-  )
-}
-```
-
 
 ## General Component/Hook Setup
+
 ```jsx
 // rafce (shortcut)
 import React, { useState, useEffect } from 'react'
+import { uuid4 as uuid } from 'uuid'
+import { Button } from './components'
 
 const DESKTOP_SIZE = 1080
+const arrList = [ 'a', 'b', 'c' ]
 
 const Component = ({ num1, num2, num3 }) => {
 
   const [ count, setCount ] = useState('')
+
+  // const handleClick = () => setCount(count + 1)
 
   const handleClick = () => {
     setCount(count + 1)
@@ -73,7 +41,18 @@ const Component = ({ num1, num2, num3 }) => {
     <div>
       <h2>Hooks Example: <code>{ count }</code></h2>
       <button onClick={ handleClick }>+</button>
-      <button onClick={ () => console.log('') }>+</button>
+      <button onClick={ () => console.log('') }>++</button>
+
+			{ arrayList.length && arrayList.map((item) => (
+				<Button key={ uuid() }>{ item }</Button>
+			))}
+
+			{arrayList.length && (
+				<>
+					<Button>OPEN</Button>
+					<Button>CLOSE</Button>
+				</>
+			)}
     </div>
   )
 }

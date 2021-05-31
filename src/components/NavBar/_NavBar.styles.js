@@ -48,10 +48,6 @@ export const Menu = styled(Icon.Menu)`
 	font-size: 2rem;
 	margin-right: 0.563em;
 	cursor: pointer;
-
-	/* @media ${ screen.tablet.lg } {
-		display: none;
-	} */
 `
 
 export const Close = styled(Icon.Close)`
@@ -59,10 +55,6 @@ export const Close = styled(Icon.Close)`
 	font-size: 2rem;
 	margin-right: 0.563em;
 	cursor: pointer;
-
-	/* @media ${ screen.tablet.lg } {
-		display: none;
-	} */
 `
 
 export const Logo = styled.img`
