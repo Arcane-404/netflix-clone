@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.div`
 	width: 100%;
@@ -7,9 +7,7 @@ export const Container = styled.div`
 	place-content: center;
 `
 
-//Form, Title, Input, button, content, signup
-
-export const Inner = styled.form`
+export const Form = styled.form`
 	width: 90%;
 	height: 660px;
 	margin: 0 auto;
@@ -27,16 +25,42 @@ export const Inner = styled.form`
 
 export const Title = styled.h1`
 	color: #fff;
+	font-family: ${ ({ theme }) => theme.fontFamily.primary } ;
+`
+export const InputFrame = styled.div`
+	position: relative;
+	width: 100%;
+	height: 60px;
+	margin-bottom: 1.5rem;
+`
+
+export const Label = styled.label`
+	color: ${ ({ theme }) => theme.colors.neutral._600 };
+	position: absolute;
+	display: flex;
+	top: 0;
+	margin-left: 1rem;
+	cursor: text;
+	transition: 0.1s ease-in;
+	transform: translateY(100%);
 `
 
 export const Input = styled.input`
-	height: 50px;
-	padding: 1rem;
+	height: 100%;
+	width: 100%;
+	padding: 1.75rem 0 1rem 1rem;
 	border: none;
 	border-radius: 0.5rem;
 	background: #333;
-	margin: 0.5rem 0;
 	color: #fff;
+	z-index: 1;
+
+	&:focus + label,
+	&:not(:placeholder-shown) + label {
+		transform: translateY(30%);
+		transition: 0.1s ease-in-out;
+		font-size: 0.7rem;
+	}
 `
 
 export const Button = styled.button`
@@ -46,7 +70,7 @@ export const Button = styled.button`
 	font-weight: 700;
 	color: #fff;
 	border-radius: 0.5rem;
-	margin-top: 2rem;
+	margin-top: 1rem;
 `
 
 export const Frame = styled.div`

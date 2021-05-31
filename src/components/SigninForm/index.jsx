@@ -1,8 +1,10 @@
 import React from 'react'
 import {
 	Container,
-	Inner,
+	Form,
 	Title,
+	InputFrame,
+	Label,
 	Input,
 	Button,
 	Frame,
@@ -16,85 +18,97 @@ import {
 	ReCaptchaLink
 } from './_SigninForm.styles'
 
-export default function SigninForm ({ children, ...restProps }) {
+export default function Signin ({ children, ...restProps }) {
 	return (
 		<Container { ...restProps }> { children } </Container>
 	)
 }
 
-SigninForm.Inner = function SigninFormInner ({ children, ...restProps }) {
+Signin.Form = function SigninForm ({ children, ...restProps }) {
 	return (
-		<Inner { ...restProps }> { children } </Inner>
+		<Form { ...restProps }> { children } </Form>
 	)
 }
 
-SigninForm.Title = function SigninFormTitle ({ children, ...restProps }) {
+Signin.Title = function SigninTitle ({ children, ...restProps }) {
 	return (
 		<Title { ...restProps }> { children } </Title>
 	)
 }
 
-SigninForm.Input = function SigninFormInput ({ children, ...restProps }) {
+Signin.InputFrame = function SigninInputFrame ({ children, ...restProps }) {
+	return (
+		<InputFrame { ...restProps }> { children } </InputFrame>
+	)
+}
+
+Signin.Label = function SigninLabel ({ children, ...restProps }) {
+	return (
+		<Label { ...restProps }> { children } </Label>
+	)
+}
+
+Signin.Input = function SigninInput ({ children, ...restProps }) {
 	return (
 		<Input { ...restProps } />
 	)
 }
 
-SigninForm.Button = function SigninFormButton ({ children, ...restProps }) {
+Signin.Button = function SigninButton ({ children, ...restProps }) {
 	return (
 		<Button { ...restProps }> { children } </Button>
 	)
 }
 
-SigninForm.Frame = function SigninFormFrame ({ children, ...restProps }) {
+Signin.Frame = function SigninFrame ({ children, ...restProps }) {
 	return (
 		<Frame { ...restProps }> { children } </Frame>
 	)
 }
 
-SigninForm.Content = function SigninFormContent ({ children, ...restProps }) {
+Signin.Content = function SigninContent ({ children, ...restProps }) {
 	return (
 		<Content { ...restProps }> { children } </Content>
 	)
 }
 
-SigninForm.Link = function SigninFormLink ({ children, ...restProps }) {
+Signin.Link = function SigninLink ({ children, ...restProps }) {
 	return (
 		<Link { ...restProps }> { children } </Link>
 	)
 }
 
-SigninForm.Checkbox = function SigninFormCheckbox ({ children, ...restProps }) {
+Signin.Checkbox = function SigninCheckbox ({ children, ...restProps }) {
 	return (
 		<Checkbox { ...restProps } />
 	)
 }
 
-SigninForm.CheckboxLabel = function SigninFormCheckboxLabel ({ children, ...restProps }) {
+Signin.CheckboxLabel = function SigninCheckboxLabel ({ children, ...restProps }) {
 	return (
 		<CheckboxLabel { ...restProps }> { children } </CheckboxLabel>
 	)
 }
 
-SigninForm.ReCaptchaHeader = function SigninFormReCaptchaHeader ({ children, ...restProps }) {
+Signin.ReCaptchaHeader = function SigninReCaptchaHeader ({ children, ...restProps }) {
 	return (
 		<ReCaptchaHeader { ...restProps }> { children } </ReCaptchaHeader>
 	)
 }
 
-SigninForm.LearnMoreLink = function SigninFormLearnMoreLink ({ children, ...restProps }) {
+Signin.LearnMoreLink = function SigninLearnMoreLink ({ children, ...restProps }) {
 	return (
 		<LearnMoreLink { ...restProps }> { children } </LearnMoreLink>
 	)
 }
 
-SigninForm.ReCaptchaBody = function SigninFormReCaptchaBody ({ children, ...restProps }) {
+Signin.ReCaptchaBody = function SigninReCaptchaBody ({ children, ...restProps }) {
 	return (
 		<ReCaptchaBody { ...restProps }> { children } </ReCaptchaBody>
 	)
 }
 
-SigninForm.ReCaptchaLink = function SigninFormReCaptchaLink ({ children, ...restProps }) {
+Signin.ReCaptchaLink = function SigninReCaptchaLink ({ children, ...restProps }) {
 	return (
 		<ReCaptchaLink { ...restProps }> { children } </ReCaptchaLink>
 	)
