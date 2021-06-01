@@ -8,6 +8,7 @@ export const Container = styled.div`
 `
 
 export const Inner = styled.form`
+width: 90%;
 	max-width: 400px;
 	margin: 0 auto;
 	/* border: 1px solid black; */

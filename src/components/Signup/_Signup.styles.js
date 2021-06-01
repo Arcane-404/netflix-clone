@@ -8,7 +8,9 @@ export const Container = styled.div`
 `
 
 export const Inner = styled.div`
+	width: 90%;
 	max-width: 400px;
+	margin: 0 auto;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
