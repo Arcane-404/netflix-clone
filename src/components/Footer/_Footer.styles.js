@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+		background: black;
     display: flex;
     padding: 70px 56px;
     margin: auto;
-    max-width: 1080px;
+    max-width: 100vw;
     flex-direction: column;
-    
+
     @media (max-width: 1080px) {
         padding: 70px 30px;
     }
@@ -20,11 +21,11 @@ export const Column = styled.div`
 
 export const Row = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     grid-gap: 15px;
 
     @media (max-width: 1080px) {
-        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr))
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
     }
 `
 
