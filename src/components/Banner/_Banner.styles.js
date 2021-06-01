@@ -11,6 +11,10 @@ export const Container = styled.div`
 	background-image: ${({ theme }) => theme.gradient.banner.home[100] };
 
 	@media ${ screen.tablet.sm } {
+		height: 80vh;
+	}
+
+	@media ${ screen.desktop } {
 		height: 100vh;
 		background-image: ${({ theme }) => theme.gradient.banner.home[200] };
 	}
@@ -56,6 +60,7 @@ export const Title = styled.h1`
 export const SubTitle = styled.h2`
 	color: ${({ theme }) => theme.colors.light };
 	font-size: ${({ theme }) => theme.fontSize.subhead.sm };
+	font-weight: 400;
 	margin: 1em auto;
 	text-align: center;
 

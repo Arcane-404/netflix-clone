@@ -50,11 +50,13 @@
       "lg": "4rem"
     },
     "subhead": {
-      "sm": "1.25rem",
+      "sm": "1.125rem",
+      "md": "1.25rem",
       "lg": "1.625rem"
     },
     "copy": {
       "sm": "1.125rem",
+      "md": "1.2rem",
       "lg": "1.438rem"
     },
     "link": "",
