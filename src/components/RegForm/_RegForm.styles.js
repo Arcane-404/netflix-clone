@@ -53,7 +53,6 @@ export const Label = styled.label`
 	transform: translateY(100%);
 	margin-left: 0.5rem;
 	color: #8c8c8c;
-
 `
 
 export const Input = styled.input`

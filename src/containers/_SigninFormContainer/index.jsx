@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Signin } from '../../components'
+import { useInput } from '../../custom/'
 
 const SigninFormContainer = () => {
 
 	const [ toggle, setToggle ] = useState(false)
-	const [ email, setEmail ] = useState('')
+	const [ email, handleEmailChange ] = useInput('')
 	const [ password, setPassword ] = useState('')
 	const [ emailError, setEmailError ] = useState(false)
 	const [ passwordError, setPasswordError ] = useState(false)
@@ -45,7 +46,7 @@ const SigninFormContainer = () => {
 						placeholder=" "
 						id="email"
 						value={ email }
-						onChange={ ({ target }) => setEmail( target.value )}
+						onChange={ handleEmailChange }
 					/>
 					<Signin.Label
 						for="email"
