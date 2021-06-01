@@ -98,7 +98,7 @@ const HomePage = () => {
     <>
       <HeaderContainer />
       <CardContainer />
-  	  <FooterContainer />
+			<FooterContainer />
     </>
   )
 }

@@ -32,10 +32,11 @@ export const Title = styled.h3`
 	margin-bottom: 0.5em;
 
 	@media ${ screen.tablet.sm } {
-		/* font-size: ${({ theme }) => theme.fontSize.copy.lg }; */
+		font-size: ${({ theme }) => theme.fontSize.copy.lg };
 		max-width: 100%;
 	}
 	@media ${ screen.tablet.lg } {
+		font-size: ${({ theme }) => theme.fontSize.copy.md };
 		margin-bottom: 1.25em;
 	}
 `
@@ -58,8 +59,7 @@ export const Input = styled.input.attrs({
 	&:not(:placeholder-shown) + label
 	{
 		font-size: 0.6875rem;
-		font-weight: 700;
-		top: 20%;
+		top: 7%;
 		transform: translateY(0);
 	}
 
@@ -69,15 +69,25 @@ export const Input = styled.input.attrs({
 
 	@media ${ screen.tablet.lg } {
 		height: 100%;
+
+		&:focus + label,
+		&:not(:placeholder-shown) + label
+		{
+			font-weight: 700;
+			top: 10%;
+		}
 	}
 `
 
 export const Label = styled.label`
-	color: ${({ theme }) => theme.colors._ || '#8C8C8C' };
+	color: #8C8C8C;
 	font-size: 0.875rem;
+	/* margin-left: 1px; */
+	margin-left: 0.938em;
 	position: absolute;
 	top: 50%;
-	left: 2%;
+	/* left: 3%; */
+	left: 0;
 	cursor: text;
 	transform: translateY(-50%);
 	transition: ${({ theme }) => theme.motion.default };
