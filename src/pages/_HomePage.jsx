@@ -1,6 +1,5 @@
 import React from 'react'
-
-import { FooterContainer, HomeBannerContainer } from '../containers/'
+import { HomeBannerContainer, FooterContainer } from '../containers'
 
 const HomePage = () => {
 	return (

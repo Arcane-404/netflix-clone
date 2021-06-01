@@ -3,11 +3,9 @@ import { SearchBar } from '../components'
 import { useMediaQuery, useInput } from '../custom'
 
 /*
-- desktop
-	- shrink search bar
-	- keep search icon
-	- click/focus
-		- grow & show search bar
+- shrink search bar
+- click/focus
+	- grow & show search bar
 */
 
 const SearchBarContainer = () => {

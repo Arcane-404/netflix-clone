@@ -95,11 +95,11 @@ import { HeaderContainer, FooterContainer, CardContainer } from '../containers'
 
 const HomePage = () => {
   return (
-		<>
-			<HeaderContainer />
-			<CardContainer />
-			<FooterContainer />
-		</>
+    <>
+      <HeaderContainer />
+      <CardContainer />
+  	  <FooterContainer />
+    </>
   )
 }
 

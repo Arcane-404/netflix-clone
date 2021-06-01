@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardsContainer, BrowseNavBarContainer } from '../containers/'
+import { CardsContainer, BrowseNavBarContainer } from '../containers'
 
 const BrowsePage = () => {
 	return (
@@ -11,7 +11,7 @@ const BrowsePage = () => {
 			- BrowseBannerContainer
 			- CardOneContainer
 			- CardTwoContainer
-			- Footer
+			- FooterContainer
 			*/}
 			<div style={{ height: '100vh', background: 'lightgray' }}></div>
 		</>
