@@ -49,7 +49,7 @@ const SigninFormContainer = () => {
 						onChange={ handleEmailChange }
 					/>
 					<Signin.Label
-						for="email"
+						htmlFor="email"
 					>
 						Email of phone number
 					</Signin.Label>
@@ -65,7 +65,7 @@ const SigninFormContainer = () => {
 						onChange={ ({ target }) => setPassword( target.value ) }
 					/>
 					<Signin.Label
-						for="password"
+						htmlFor="password"
 					>
 						Password
 					</Signin.Label>

@@ -20,6 +20,7 @@ export const Inner = styled.div`
 
 export const Image = styled.img`
 	width: 100%;
+	margin-bottom: 2rem;
 `
 
 export const PreTitle = styled.p`

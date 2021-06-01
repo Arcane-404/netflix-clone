@@ -13,7 +13,7 @@ const SignupContainer = () => {
 	return (
 		<Signup>
 			<Signup.Inner>
-				<Signup.Image src="/images/check.png"/>
+				<Signup.Image src="/images/Checkmark.png"/>
 
 				<Signup.PreTitle>
 					STEP
