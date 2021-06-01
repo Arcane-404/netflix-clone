@@ -4,6 +4,11 @@ import { NavBar } from '../../components'
 import { logo } from '../../json'
 import { useMediaQuery } from '../../custom'
 
+/*
+- nav active ft
+- search bar motion
+*/
+
 const BrowseNavBarContainer = () => {
 
 	const [ menu, setMenu ] = useState(true)
@@ -30,7 +35,7 @@ const BrowseNavBarContainer = () => {
 							)}
 							{isDesktop && (
 								<>
-									<NavBar.Text bold>Home</NavBar.Text>
+									<NavBar.Text className={ 'active' }>Home</NavBar.Text>
 									<NavBar.Text>TV Shows</NavBar.Text>
 									<NavBar.Text>Movies</NavBar.Text>
 								</>

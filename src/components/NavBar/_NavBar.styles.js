@@ -87,19 +87,23 @@ export const FilterBox = styled.ul`
 
 export const Text = styled.li`
 	border: 2px solid pink;
-	color: #FFF;
+	color: #E5E5E5;
 	font-size: 0.875rem;
 	cursor: pointer;
-
 	transition: 0.4s ease;
 	transition-property: color;
 
-	&:hover { color: #B3B3B3; }
+	&.active {
+		color: #FFF;
+		font-weight: 700;
+	}
+	&:not(.active):hover { color: #B3B3B3; }
 	& + li { margin-left: 1em; }
 
-	${({ primary }) => primary && css`color: red; `}
-	${({ bold }) => bold && css`font-weight: 600; `}
-
+	${({ primary }) => primary && css`
+		color: red;
+		font-size: 1rem;
+	`}
 `
 
 export const Button = styled(Link)`
