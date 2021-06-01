@@ -10,21 +10,17 @@ const RegFormContainer = () => {
 
 	const [ email, setEmail ] = useState(signupEmail)
 	const [ password, setPassword ] = useState('')
-	const [ emailFocus, setEmailFocus ] = useState(false)
-	const [ passwordFocus, setPasswordFocus ] = useState(false)
 	const [ emailError, setEmailError ] = useState(false)
 	const [ passwordError, setPasswordError ] = useState(false)
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		// history.push('/signup')
-		if (email === '') {
+		if (email === '' || email === undefined ) {
 			setEmailError(true)
-			console.log('Email is required!')
 		}
 		if (password === '') {
 			setPasswordError(true)
-			console.log('Password is required!')
 		}
 	}
 
