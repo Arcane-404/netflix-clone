@@ -5,7 +5,7 @@ const SignupPage = () => {
 	return (
 		<>
 			<SignupNavBarContainer />
-			<SignupContainer/>
+			<SignupContainer />
 		</>
 	)
 }

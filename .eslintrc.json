@@ -54,13 +54,13 @@
     // "react/no-unused-prop-styles": "error"
     // "react/deconstructing-assignment": ["error", "always"]
 
-    // "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
-    // "react/jsx-curly-spacing": ["error", {
-    //   "when": "never",
-    //   "attributes": { "when": "always" },
-    //   "spacing": { "objectLiterals": "never" }
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+    "react/jsx-curly-spacing": ["error", {
+      "when": "never",
+      "attributes": { "when": "always" },
+      "spacing": { "objectLiterals": "never" }
     //   ,"children": { "when": "always" }
-    // }],
+    }],
 
     "react-hooks/rules-of-hooks": "error"
     // "react-hooks/exhaustive-reps": "error"

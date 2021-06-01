@@ -5,8 +5,8 @@ import { SigninFormContainer, LoginNavBarContainer } from '../containers'
 const LoginPage = () => {
 	return (
 		<Background>
-			<LoginNavBarContainer/>
-			<SigninFormContainer/>
+			<LoginNavBarContainer />
+			<SigninFormContainer />
 		</Background>
 	)
 }

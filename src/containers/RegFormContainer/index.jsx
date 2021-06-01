@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { RegForm } from '../components'
-import { EmailContext } from '../custom/EmailContext'
+import { RegForm } from '../../components'
+import { EmailContext } from '../../custom/EmailContext'
 
 const RegFormContainer = () => {
 

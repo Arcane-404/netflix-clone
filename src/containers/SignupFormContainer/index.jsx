@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { SignupForm, Icon } from '../components'
-import { EmailContext } from '../custom/EmailContext'
+import { SignupForm, Icon } from '../../components'
+import { EmailContext } from '../../custom/EmailContext'
 
 const signup = {
 	title: 'Ready to watch? Enter your email to create or restart your membership.',

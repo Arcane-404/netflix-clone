@@ -1,6 +1,6 @@
 import React from 'react'
-import { Registration } from '../components'
 import { useHistory } from 'react-router-dom'
+import { Registration } from '../../components'
 
 const RegistrationContainer = () => {
 
@@ -14,7 +14,7 @@ const RegistrationContainer = () => {
 		<Registration>
 
 			<Registration.Inner>
-				<Registration.Image src="/images/registration.png" alt="registration"/>
+				<Registration.Image src="/images/registration.png" alt="registration" />
 
 				<Registration.PreTitle>
 					STEP

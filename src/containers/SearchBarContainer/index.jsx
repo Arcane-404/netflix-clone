@@ -1,6 +1,6 @@
 import React from 'react'
-import { SearchBar } from '../components'
-import { useMediaQuery, useInput } from '../custom'
+import { SearchBar } from '../../components'
+import { useMediaQuery, useInput } from '../../custom'
 
 /*
 - shrink search bar

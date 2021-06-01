@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { Signup } from '../components'
+import { Signup } from '../../components'
 
 const SignupContainer = () => {
 
@@ -13,7 +13,7 @@ const SignupContainer = () => {
 	return (
 		<Signup>
 			<Signup.Inner>
-				<Signup.Image src="/images/check.png"/>
+				<Signup.Image src="/images/check.png" />
 
 				<Signup.PreTitle>
 					STEP
