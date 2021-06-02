@@ -1,21 +1,21 @@
 import React from 'react'
 import { HomeNavBarContainer, SignupFormContainer } from '../'
-import { Banner } from '../../components'
+import { Hero } from '../../components'
 import { home } from '../../json'
 
 const HomeBannerContainer = () => {
 	return (
-		<Banner>
+		<Hero>
 			<HomeNavBarContainer />
 
-			<Banner.Inner>
-				<Banner.Title>{ home.banner.title }</Banner.Title>
-				<Banner.SubTitle>{ home.banner.subtitle }</Banner.SubTitle>
+			<Hero.Inner>
+				<Hero.Title>{ home.banner.title }</Hero.Title>
+				<Hero.SubTitle>{ home.banner.subtitle }</Hero.SubTitle>
 				<SignupFormContainer />
-			</Banner.Inner>
+			</Hero.Inner>
 
-			<Banner.Image src={ home.banner.img } alt={ home.banner.alt } />
-		</Banner>
+			<Hero.Image src={ home.banner.img } alt={ home.banner.alt } />
+		</Hero>
 	)
 }
 

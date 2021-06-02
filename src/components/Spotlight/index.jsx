@@ -33,6 +33,6 @@ Spotlight.Button = function SpotlightButton ({ children, ...restProps }) {
 	return <Button { ...restProps }> { children } </Button>
 }
 
-Spotlight.Image = function SpotlightImage ({ children, ...restProps }) {
-	return <Image { ...restProps }> { children } </Image>
+Spotlight.Image = function SpotlightImage ({ ...restProps }) {
+	return <Image { ...restProps } />
 }
