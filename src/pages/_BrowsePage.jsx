@@ -1,10 +1,9 @@
 import React from 'react'
-import { CardsContainer, BrowseNavBarContainer, BrowseBannerContainer } from '../containers'
+import { BrowseNavBarContainer, BrowseBannerContainer } from '../containers'
 
 const BrowsePage = () => {
 	return (
 		<>
-			{/* <CardsContainer /> */}
 			<BrowseNavBarContainer />
 			<BrowseBannerContainer />
 			{/*
