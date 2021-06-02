@@ -1,6 +1,7 @@
 //Create our firebase context here
 import React, { createContext } from 'react'
-import firebase from 'firebase/app'
+import * as firebase from 'firebase'
+
 
 const FirebaseContext = React.createContext(null)
 
@@ -14,7 +15,7 @@ const config = {
 	appId: '1:321602914795:web:aa124ab9c7f565514db1ae'
 }
 
-const fb = firebase.initializeApp(config)
+const fb = firebase.default.initializeApp(config)
 
 const FirebaseContextProvider = ({ children }) => {
 	return (
