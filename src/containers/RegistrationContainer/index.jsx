@@ -14,7 +14,7 @@ const RegistrationContainer = () => {
 		<Registration>
 
 			<Registration.Inner>
-				<Registration.Image src="/images/registration.png" alt="registration" />
+				<Registration.Image src="/images/Devices.png" alt="registration" />
 
 				<Registration.PreTitle>
 					STEP

@@ -13,6 +13,8 @@ export const Inner = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 90%;
+	margin: 0 auto;
 `
 
 export const Image = styled.img`

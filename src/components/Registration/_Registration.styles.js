@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Inner = styled.div`
 	margin: 0 auto;
 	max-width: 400px;
+	width: 90%;
 	/* border: 1px solid black; */
 	text-align: center;
 	display: flex;
@@ -19,6 +20,7 @@ export const Inner = styled.div`
 
 export const Image = styled.img`
 	width: 100%;
+	margin-bottom: 2rem;
 `
 
 export const PreTitle = styled.p`

@@ -2,22 +2,22 @@ import React, { useState, useEffect, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import { RegForm } from '../../components'
 import { EmailContext } from '../../custom/EmailContext'
+import { FirebaseContext } from '../../custom/_firebaseContext'
 
 const RegFormContainer = () => {
 
 	const { signupEmail } = useContext( EmailContext )
+	const { firebase } = useContext( FirebaseContext )
 	const history = useHistory()
 
 	const [ email, setEmail ] = useState(signupEmail)
 	const [ password, setPassword ] = useState('')
-	const [ emailFocus, setEmailFocus ] = useState(false)
-	const [ passwordFocus, setPasswordFocus ] = useState(false)
 	const [ emailError, setEmailError ] = useState(false)
 	const [ passwordError, setPasswordError ] = useState(false)
+	const [ error, setError ] = useState('')
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		// history.push('/signup')
 		if (email === '') {
 			setEmailError(true)
 			console.log('Email is required!')
@@ -25,6 +25,22 @@ const RegFormContainer = () => {
 		if (password === '') {
 			setPasswordError(true)
 			console.log('Password is required!')
+		}
+		else {
+			firebase.auth().createUserWithEmailAndPassword( email, password )
+			.then( result =>
+				result.user.updateProfile({
+					displayName: email
+				})
+				.then( () => {
+					history.push('/signup')
+				})
+			)
+			.catch( ( err ) => {
+				setEmail('')
+				setPassword('')
+				console.log(err.message)
+			})
 		}
 	}
 
