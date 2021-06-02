@@ -3,7 +3,7 @@ import React, { createContext } from 'react'
 import * as firebase from 'firebase'
 
 
-const FirebaseContext = React.createContext(null)
+const FirebaseContext = createContext(null)
 
 const config = {
 	apiKey: 'AIzaSyAZ5YWzDlh0mFck4DarSAe35YGXLlBXtow',

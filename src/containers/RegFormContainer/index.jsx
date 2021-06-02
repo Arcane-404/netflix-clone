@@ -18,7 +18,6 @@ const RegFormContainer = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		// history.push('/signup')
 		if (email === '') {
 			setEmailError(true)
 			console.log('Email is required!')
