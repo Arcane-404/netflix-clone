@@ -2,21 +2,21 @@ import styled, { css } from 'styled-components'
 import { fontFamily, screen } from '../_globals'
 
 export const Container = styled.div`
+	background-image: ${({ theme }) => theme.gradient.banner.home[100] };
 	height: 70vh;
 	padding: 0 5%;
 	position: relative;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	background-image: ${({ theme }) => theme.gradient.banner.home[100] };
 
 	@media ${ screen.tablet.sm } {
 		height: 80vh;
 	}
 
 	@media ${ screen.desktop } {
-		height: 100vh;
 		background-image: ${({ theme }) => theme.gradient.banner.home[200] };
+		height: 100vh;
 	}
 `
 
