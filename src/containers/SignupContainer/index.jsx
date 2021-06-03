@@ -23,7 +23,7 @@ const SignupContainer = () => {
 				</Signup.PreTitle>
 
 				<Signup.Title>Congratulations on signing up!</Signup.Title>
-				<Signup.SubTitle>Now you can access all of Netflix`s Features</Signup.SubTitle>
+				<Signup.SubTitle>Now you can access all of Netflix's Features</Signup.SubTitle>
 				<Signup.Button
 					onClick={ handleClick }
 				>

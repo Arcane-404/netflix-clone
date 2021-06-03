@@ -84,6 +84,7 @@ export const ImageBox = styled.div`
 		width: var(--size);
 		height: var(--size);
 		position: absolute;
+		/* z-index: -1; */
 	}
 
 	@media ${ screen.desktop } {

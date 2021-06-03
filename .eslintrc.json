@@ -27,7 +27,7 @@
     "semi": ["error", "never"],
     "indent": ["error", "tab", { "MemberExpression": 0 }],
     "comma-dangle": ["error", "never"],
-    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
     "space-infix-ops": "error",
     "arrow-spacing": ["error", { "before": true, "after": true }],
@@ -54,6 +54,7 @@
     // "react/no-unused-prop-styles": "error"
     // "react/deconstructing-assignment": ["error", "always"]
 
+    "react/no-unescaped-entities": ["error", { "forbid": ["<", ">", "{", "}"] }],
     "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
     "react/jsx-curly-spacing": ["error", {
       "when": "never",
