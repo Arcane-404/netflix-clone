@@ -8,19 +8,15 @@ dotenv.config()
 
 const { REACT_APP_API_KEY, REACT_APP_APP_ID } = process.env
 
-console.log(process.env.REACT_APP_API_KEY)
-
-console.log(REACT_APP_API_KEY, REACT_APP_APP_ID)
-
 const FirebaseContext = createContext(null)
 
 const config = {
 	apiKey: REACT_APP_API_KEY,
-	authDomain: 'arcane404-netflix-clone.firebaseapp.com',
-	databaseURL: 'arcane404-netflix-clone.firebaseio.com',
-	projectId: 'arcane404-netflix-clone',
-	storageBucket: 'arcane404-netflix-clone.appspot.com',
-	messagingSenderId: '793275128541',
+	authDomain: 'project-1-ea220.firebaseapp.com',
+	databaseURL: 'https://project-1-ea220.firebaseio.com',
+	projectId: 'project-1-ea220',
+	storageBucket: 'project-1-ea220.appspot.com',
+	messagingSenderId: '22912965609',
 	appId: REACT_APP_APP_ID
 }
 

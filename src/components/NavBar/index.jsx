@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Inner, Box, FilterBox, Menu, Close, Logo, Text,	Button, Anchor } from './_NavBar.styles'
+import { Container, Inner, Box, FilterBox, Menu, Close, Logo, Text,	Button, Anchor, Logout } from './_NavBar.styles'
 
 export default function NavBar ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>
@@ -41,4 +41,8 @@ NavBar.Button = function NavBarButton ({ children, ...restProps }) {
 
 NavBar.Anchor = function NavBarAnchor ({ children, ...restProps }) {
 	return <Anchor { ...restProps }> { children } </Anchor>
+}
+
+NavBar.Logout = function NavBarLogout ({ children, ...restProps }) {
+	return <Logout { ...restProps }> { children } </Logout>
 }

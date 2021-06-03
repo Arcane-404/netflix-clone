@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
 import { SearchBarContainer } from '../'
 import { NavBar } from '../../components'
 import { logo } from '../../json'
 import { useMediaQuery } from '../../custom'
-
+import { FirebaseContext } from '../../custom/_firebaseContext'
 /*
 - nav active ft
 - search bar motion
@@ -16,6 +17,14 @@ const BrowseNavBarContainer = () => {
 	const isMobile = useMediaQuery('mobile')
 	const isTablet = useMediaQuery('tablet')
 	const isDesktop = useMediaQuery('desktop')
+	const history = useHistory()
+	const { firebase } = useContext(FirebaseContext)
+	console.log(firebase.auth)
+
+	const logoutUser = () => {
+		firebase.auth().signOut()
+		history.push('/logout')
+	}
 
 	return (
 		<NavBar browse>
@@ -47,6 +56,7 @@ const BrowseNavBarContainer = () => {
 				<NavBar.Box>
 					<SearchBarContainer />
 					{/* ProfileOption */}
+					<NavBar.Logout onClick={ logoutUser }>Log out</NavBar.Logout>
 				</NavBar.Box>
 			</NavBar.Inner>
 		</NavBar>

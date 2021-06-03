@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import { HomePage, LoginPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
+import { HomePage, LoginPage, LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
 
 const App = () => {
 	return (
@@ -13,6 +13,10 @@ const App = () => {
 
 				<Route path="/login">
 					<LoginPage />
+				</Route>
+
+				<Route path="/logout">
+					<LogoutPage />
 				</Route>
 
 				<Route exact path="/signup">
