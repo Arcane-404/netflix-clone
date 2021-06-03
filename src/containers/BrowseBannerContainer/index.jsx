@@ -5,6 +5,7 @@ import temp from '../../json/temp'
 
 const BrowseBannerContainer = () => {
 	const isMobile = useMediaQuery('mobile')
+	const isDesktop = useMediaQuery('desktop')
 
 	return (
 		<Spotlight>
@@ -21,8 +22,15 @@ const BrowseBannerContainer = () => {
 					{ !isMobile && <Spotlight.Description>{ temp.description }</Spotlight.Description> }
 
 					<Spotlight.CtaBox>
-						<Spotlight.Button primary>Play</Spotlight.Button>
-						{/* <Spotlight.Button>Info</Spotlight.Button> */}
+						<Spotlight.Button primary>
+							{ isDesktop && <Spotlight.Play /> }
+							<Spotlight.Text>Play</Spotlight.Text>
+						</Spotlight.Button>
+
+						<Spotlight.Button secondary>
+							{ isDesktop && <Spotlight.InfoCircle /> }
+							<Spotlight.Text>More Info</Spotlight.Text>
+						</Spotlight.Button>
 					</Spotlight.CtaBox>
 				</Spotlight.Box>
 			</Spotlight.Inner>

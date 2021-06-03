@@ -111,18 +111,18 @@ export const Error = styled.span`
 export const Button = styled.button.attrs({
 	type: 'submit'
 })`
-	padding: 0.625em 1em;
+	border-radius: ${({ theme }) => theme.radius.round.xsm };
 	background: ${({ theme }) => theme.colors.primary._400 };
 	color: ${({ theme }) => theme.colors.light };
-	border-radius: ${({ theme }) => theme.radius.xsm };
 	margin: 0 auto;
 	margin-top: 1em;
+	padding: 0.625em 1em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: ${({ theme }) => theme.shadow.btn };
+	/* box-shadow: ${({ theme }) => theme.shadow.btn }; */
 
-	& svg {
+	& > svg {
 		margin-left: 0.2em;
 		transition: ${({ theme }) => theme.motion.default };
 		transition-property: transform;

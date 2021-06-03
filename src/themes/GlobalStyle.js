@@ -50,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
 
 	button {
 		border: unset;
+		line-height: initial;
     display: inline-block;
     cursor: pointer;
   }
