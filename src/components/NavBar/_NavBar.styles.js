@@ -1,49 +1,48 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Icon } from '../'
-import { screen, colors } from '../_globals'
-
-const zIndex = 5
+import { sides, stateChangePrimary, screen, colors, fontFamily } from '../_globals'
 
 export const Container = styled.nav`
+	${ sides }
+
 	width: 100%;
-	padding: 0 5%;
+	min-height: 45px;
+	display: flex;
+	align-items: center;
 	position: absolute;
 	top: 0;
+	z-index: 5;
 
-	${({ browse, signup, theme }) => {
-		if (signup) return css`
-			border-bottom: 1px solid #E6E6E6;
-		`
+	${({ page }) => (page === 'home') && css`
+		padding-top: 1.75em !important;
+	`}
 
-		if (browse) return css`
-			background: #141414;
-			background-image: ${ theme.gradient.navbar.browse };
-			position: sticky;
-			z-index: ${ zIndex };
-		`
-	}}
+	${({ page }) => (page === 'signup') && css`
+		border-bottom: 1px solid #E6E6E6;
+	`}
 
-	@media ${ screen.tablet.sm } {
-		padding: 0 2.812em;
-	}
-
-	@media ${ screen.tablet.lg } {
-		padding: 0 3.5em;
-	}
+	${({ page, theme }) => (page === 'browse') && css`
+		background: #141414;
+		background-image: ${ theme.gradient.navbar.browse };
+		position: static;
+	`}
 `
 
 export const Inner = styled.div`
+	/* border: 3px solid red; */
+	width: 100%;
 	max-width: 1920px;
 	height: 100%;
 	margin: 0 auto;
-	padding-top: 1.625em;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 `
 
 export const Box = styled.div`
 	display: flex;
+	align-items: center;
 `
 
 export const Menu = styled(Icon.Menu)`
@@ -61,36 +60,50 @@ export const Close = styled(Icon.Close)`
 `
 
 export const Logo = styled.img`
-	width: auto;
-	height: 1.5rem;
-	z-index: ${ zIndex };
+	width: 85px;
 
-	${({ grow }) => grow && css`
-		@media ${ screen.tablet.sm } {
-			width: 6.75rem;
-			height: 2rem;
-		}
+	${({ page }) => {
+		if (page === 'home') return css`width: 85px;`
+		if (page === 'signup') return css`width: 75px; padding: 1em 0;`
+		if (page === 'login') return css`width: 75px; padding: 1em 0;`
+		if (page === 'browse') return css`width: 85px;`
+		return css`background: red;`
+	}}
 
-		@media ${ screen.tablet.lg } {
-			width: 8.375rem;
-			height: 2.25rem;
-		}
+	@media ${ screen.tablet.sm } {
+	${({ page }) => {
+		if (page === 'home') return css`width: 120px;`
+		if (page === 'signup') return css`width: 165px;`
+		if (page === 'login') return css`width: 165px;`
+		if (page === 'browse') return css`width: 120px; padding: 1.25em 0;`
+	}}
+	}
 
-		@media ${ screen.desktop } {
-			width: 10.4375rem;
-			height: 2.8125rem;
-		}
-	`}
+	@media ${ screen.tablet.lg } {
+	${({ page }) => {
+		console.log(page)
+		if (page === 'home') return css`width: 135px;`
+		if (page === 'signup') return css`padding: 1.5em 0;`
+		if (page === 'login') return css`padding: 1.5em 0;`
+	}}
+	}
+
+	@media ${ screen.tablet.lg } {
+	${({ page }) => {
+		if (page === 'home') return css`width: 165px;`
+		if (page === 'browse') return css`width: 90px;`
+	}}
+	}
 `
 
 export const FilterBox = styled.ul`
-	border: 3px solid red;
+	/* border: 3px solid red; */
 	display: flex;
-	margin-left: 1em;
+	margin-left: 3.25em;
 `
 
 export const Text = styled.li`
-	border: 2px solid pink;
+	/* border: 2px solid pink; */
 	color: #E5E5E5;
 	font-size: 0.875rem;
 	cursor: pointer;
@@ -102,22 +115,24 @@ export const Text = styled.li`
 		font-weight: 700;
 	}
 	&:not(.active):hover { color: #B3B3B3; }
-	& + li { margin-left: 1em; }
+	& + li { margin-left: 1.125em; }
 
 	${({ primary }) => primary && css`
-		color: red;
+		color: ${({ theme }) => theme.colors.primary._400 };
 		font-size: 1rem;
+		&:hover { color: red !important; }
 	`}
 `
 
 export const Button = styled(Link)`
+	${ stateChangePrimary }
+
 	border-radius: ${({ theme }) => theme.radius.round.sm };
-	background: ${({ theme }) => theme.colors.primary._400 };
 	color: ${({ theme }) => theme.colors.light };
 	font-size: 0.9rem;
-	padding: 0.4em;
-	align-self: center;
-	z-index: ${ zIndex };
+	padding: 0.2625em 0.5em;
+	/* align-self: top; */
+	align-self: baseline;
 
 	@media ${ screen.tablet.sm } {
 		font-size: 1rem;
@@ -127,6 +142,7 @@ export const Button = styled(Link)`
 
 export const Anchor = styled(Link)`
 	color: #333;
+	font-family: ${ fontFamily.primary };
 	font-size: 0.875rem;
 	font-weight: 700;
 

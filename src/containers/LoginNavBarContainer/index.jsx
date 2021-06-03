@@ -6,7 +6,12 @@ const LoginNavBarContainer = () => {
 	return (
 		<NavBar>
 			<NavBar.Inner>
-				<NavBar.Logo src={ logo.img } alt={ logo.alt } to="/" />
+				<NavBar.Logo
+					page={ 'login' }
+					src={ logo.img }
+					alt={ logo.alt }
+					to="/"
+				/>
 			</NavBar.Inner>
 		</NavBar>
 	)

@@ -4,10 +4,10 @@ import { logo } from '../../json'
 
 const HomeNavBarContainer = () => {
 	return (
-		<NavBar>
+		<NavBar page={ 'home' }>
 			<NavBar.Inner>
-				<NavBar.Logo grow src={ logo.img } alt={ logo.alt } />
-				<NavBar.Button to="/login"> Sign In </NavBar.Button>
+				<NavBar.Logo page={ 'home' } src={ logo.img } alt={ logo.alt } />
+				<NavBar.Button to="/login">Sign In</NavBar.Button>
 			</NavBar.Inner>
 		</NavBar>
 	)
