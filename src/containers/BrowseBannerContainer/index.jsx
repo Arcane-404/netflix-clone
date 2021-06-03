@@ -37,6 +37,8 @@ const BrowseBannerContainer = () => {
 				</Spotlight.Box>
 			</Spotlight.Inner>
 
+			<Spotlight.Maturity>{ temp.maturity }</Spotlight.Maturity>
+
 			<Spotlight.ImageBox>
 				<Spotlight.Image src={ temp.img } alt={ temp.alt } />
 			</Spotlight.ImageBox>

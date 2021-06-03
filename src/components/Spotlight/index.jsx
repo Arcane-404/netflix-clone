@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Inner, Box, Title, Description, InfoBox, Info, CtaBox, Button, Text, Play, InfoCircle, ImageBox, Image } from './_Spotlight.styles'
+import { Container, Inner, Box, Title, Description, InfoBox, Info, CtaBox, Button, Text, Play, InfoCircle, Maturity, ImageBox, Image } from './_Spotlight.styles'
 
 export default function Spotlight ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>
@@ -47,6 +47,10 @@ Spotlight.Play = function SpotlightPlay ({ ...restProps }) {
 
 Spotlight.InfoCircle = function SpotlightInfoCircle ({ ...restProps }) {
 	return <InfoCircle { ...restProps } />
+}
+
+Spotlight.Maturity = function SpotlightMaturity ({ children, ...restProps }) {
+	return <Maturity { ...restProps }> { children } </Maturity>
 }
 
 Spotlight.ImageBox = function SpotlightImageBox ({ children, ...restProps }) {

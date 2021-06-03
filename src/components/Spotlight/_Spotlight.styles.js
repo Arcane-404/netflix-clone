@@ -146,6 +146,19 @@ export const InfoCircle = styled(Icon.InfoCircle)`
 	vertical-align: middle;
 `
 
+export const Maturity = styled.span`
+	border-left: 3px solid #DCDCDC;
+	background: rgba(51,51,51, 0.6);
+	color: #FFF;
+	font-size: 1rem;
+	width: 120px;
+	padding: 0.625em 0.8em;
+	display: inline-block;
+	position: absolute;
+	top: 56.75%;
+	right: 0;
+`
+
 export const ImageBox = styled.div`
 	--size: 100%;
 
@@ -183,4 +196,3 @@ export const Image = styled.img`
 	object-fit: cover;
 	object-position: top;
 `
-
