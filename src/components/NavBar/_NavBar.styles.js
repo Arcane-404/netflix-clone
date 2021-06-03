@@ -1,28 +1,10 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Icon } from '../'
-import { screen, colors } from '../_globals'
+import { screen, colors, fontFamily } from '../_globals'
 
-const zIndex = 5
-
-export const Container = styled.nav`
-	width: 100%;
+const sides = css`
 	padding: 0 5%;
-	position: absolute;
-	top: 0;
-
-	${({ browse, signup, theme }) => {
-		if (signup) return css`
-			border-bottom: 1px solid #E6E6E6;
-		`
-
-		if (browse) return css`
-			background: #141414;
-			background-image: ${ theme.gradient.navbar.browse };
-			position: sticky;
-			z-index: ${ zIndex };
-		`
-	}}
 
 	@media ${ screen.tablet.sm } {
 		padding: 0 2.812em;
@@ -33,12 +15,40 @@ export const Container = styled.nav`
 	}
 `
 
+export const Container = styled.nav`
+	${ sides }
+
+	width: 100%;
+	min-height: 45px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	z-index: 5;
+
+	${({ page }) => (page === 'home') && css`
+		padding-top: 1.625em !important;
+	`}
+
+	${({ page }) => (page === 'signup') && css`
+		border-bottom: 1px solid #E6E6E6;
+	`}
+
+	${({ page, theme }) => (page === 'browse') && css`
+		background: #141414;
+		background-image: ${ theme.gradient.navbar.browse };
+		position: fixed;
+	`}
+`
+
 export const Inner = styled.div`
+	/* border: 3px solid red; */
+	width: 100%;
 	max-width: 1920px;
 	height: 100%;
 	margin: 0 auto;
-	padding-top: 1.625em;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 `
 
@@ -61,26 +71,37 @@ export const Close = styled(Icon.Close)`
 `
 
 export const Logo = styled.img`
-	width: auto;
-	height: 1.5rem;
-	z-index: ${ zIndex };
+	width: 85px;
 
-	${({ grow }) => grow && css`
-		@media ${ screen.tablet.sm } {
-			width: 6.75rem;
-			height: 2rem;
-		}
+	${({ page }) => {
+		if (page === 'home') return css`width: 85px; padding: 0em 0;`
+		if (page === 'signup') return css`width: 75px; padding: 1em 0;`
+		if (page === 'login') return css`width: 75px; padding: 1em 0;`
+		if (page === 'browse') return css`width: 85px; padding: 0em 0;`
+		return css`background: red;`
+	}}
 
-		@media ${ screen.tablet.lg } {
-			width: 8.375rem;
-			height: 2.25rem;
-		}
+	@media ${ screen.tablet.sm } {
+	${({ page }) => {
+		if (page === 'home') return css`width: 110px;`
+		if (page === 'signup') return css`width: 165px;`
+		if (page === 'login') return css`width: 165px;`
+	}}
+	}
 
-		@media ${ screen.desktop } {
-			width: 10.4375rem;
-			height: 2.8125rem;
-		}
-	`}
+	@media ${ screen.tablet.lg } {
+	${({ page }) => {
+		if (page === 'home') return css`width: 135px;`
+		if (page === 'signup') return css`padding: 1.5em 0;`
+		if (page === 'login') return css`padding: 1.5em 0;`
+	}}
+	}
+
+	@media ${ screen.tablet.lg } {
+	${({ page }) => {
+		if (page === 'home') return css`width: 165px;`
+	}}
+	}
 `
 
 export const FilterBox = styled.ul`
@@ -115,9 +136,9 @@ export const Button = styled(Link)`
 	background: ${({ theme }) => theme.colors.primary._400 };
 	color: ${({ theme }) => theme.colors.light };
 	font-size: 0.9rem;
-	padding: 0.4em;
-	align-self: center;
-	z-index: ${ zIndex };
+	padding: 0.2625em 0.5em;
+	/* align-self: top; */
+	align-self: baseline;
 
 	@media ${ screen.tablet.sm } {
 		font-size: 1rem;
@@ -127,6 +148,7 @@ export const Button = styled(Link)`
 
 export const Anchor = styled(Link)`
 	color: #333;
+	font-family: ${ fontFamily.primary };
 	font-size: 0.875rem;
 	font-weight: 700;
 

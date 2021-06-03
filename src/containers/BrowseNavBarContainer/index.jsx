@@ -27,7 +27,7 @@ const BrowseNavBarContainer = () => {
 	}
 
 	return (
-		<NavBar browse>
+		<NavBar page={ 'browse' }>
 			<NavBar.Inner>
 				<NavBar.Box>
 					{isMobile && ((menu)
