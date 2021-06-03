@@ -1,10 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 import { normalize } from 'styled-normalize'
+import { browser } from './browser.styles'
 // import { fontFace } from './fontFace' // ${ fontFace }
 // import { test } from './test.styles' // ${ test }
 
 const GlobalStyle = createGlobalStyle`
 	${ normalize }
+	${ browser }
 
   * {
     margin: 0;

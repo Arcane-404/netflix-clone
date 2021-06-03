@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 import { Icon } from '../'
 import { screen, colors } from '../_globals'
 
+/*
+- 45px
+- 75px
+- 90px
+*/
+
 export const Container = styled.nav`
 	width: 100%;
 	padding: 0 5%;

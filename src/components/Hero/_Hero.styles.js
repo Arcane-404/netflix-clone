@@ -2,20 +2,18 @@ import styled, { css } from 'styled-components'
 import { fontFamily, screen } from '../_globals'
 
 export const Container = styled.div`
-	background-image: ${({ theme }) => theme.gradient.banner.home[100] };
 	height: 70vh;
 	padding: 0 5%;
-	position: relative;
 	display: flex;
 	flex-flow: column;
 	align-items: center;
+	position: relative;
 
 	@media ${ screen.tablet.sm } {
 		height: 80vh;
 	}
 
 	@media ${ screen.desktop } {
-		background-image: ${({ theme }) => theme.gradient.banner.home[200] };
 		height: 100vh;
 	}
 `
@@ -69,12 +67,31 @@ export const SubTitle = styled.h2`
 	}
 `
 
-export const Image = styled.img`
-	height: 100%;
+export const ImageBox = styled.div`
+	--size: 100%;
+	width: var(--size);
+	height: var(--size);
 	position: absolute;
 	top: 0;
 	left: 0;
-	object-fit: cover;
+	z-index: -1;
 	user-select: unset;
+
+	&::before {
+		content: '';
+		background-image: ${({ theme }) => theme.gradient.banner.home[100] };
+		width: var(--size);
+		height: var(--size);
+		position: absolute;
+	}
+
+	@media ${ screen.desktop } {
+		background-image: ${({ theme }) => theme.gradient.banner.home[200] };
+	}
+`
+
+export const Image = styled.img`
+	height: var(--size);
+	object-fit: cover;
 	z-index: -1;
 `
