@@ -12,3 +12,5 @@ export { default as SigninFormContainer 	} from './SigninFormContainer'
 export { default as RegistrationContainer } from './RegistrationContainer'
 export { default as RegFormContainer 			} from './RegFormContainer'
 export { default as FooterContainer 			} from './FooterContainer'
+export { default as LogoutContainer 			} from './LogoutContainer'
+

@@ -1,9 +1,11 @@
 import React from 'react'
+import { HomeNavBarContainer, LogoutContainer } from '../containers/'
 
 const LogoutPage = () => {
 	return (
 		<>
-			<h1>Logout page</h1>
+			<HomeNavBarContainer />
+			<LogoutContainer />
 		</>
 	)
 }
