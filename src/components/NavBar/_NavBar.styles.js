@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { Icon } from '../'
 import { screen, colors } from '../_globals'
 
+const zIndex = 5
+
 export const Container = styled.nav`
 	width: 100%;
 	padding: 0 5%;
@@ -18,7 +20,7 @@ export const Container = styled.nav`
 			background: #141414;
 			background-image: ${ theme.gradient.navbar.browse };
 			position: sticky;
-			z-index: 5;
+			z-index: ${ zIndex };
 		`
 	}}
 
@@ -61,7 +63,7 @@ export const Close = styled(Icon.Close)`
 export const Logo = styled.img`
 	width: auto;
 	height: 1.5rem;
-	z-index: 5;
+	z-index: ${ zIndex };
 
 	${({ grow }) => grow && css`
 		@media ${ screen.tablet.sm } {
@@ -115,7 +117,7 @@ export const Button = styled(Link)`
 	font-size: 0.9rem;
 	padding: 0.4em;
 	align-self: center;
-	z-index: inherit;
+	z-index: ${ zIndex };
 
 	@media ${ screen.tablet.sm } {
 		font-size: 1rem;
