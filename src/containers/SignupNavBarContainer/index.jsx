@@ -7,7 +7,7 @@ const SignupNavBarContainer = () => {
 		<NavBar signup>
 			<NavBar.Inner>
 				<NavBar.Logo grow src={ logo.img } alt={ logo.alt } to="/" />
-				<NavBar.Anchor to="/login"> Sign In </NavBar.Anchor>
+				{/* <NavBar.Anchor to="/login"> Sign In </NavBar.Anchor> */}
 			</NavBar.Inner>
 		</NavBar>
 	)
