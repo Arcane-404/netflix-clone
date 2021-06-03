@@ -7,6 +7,7 @@ import {
 	Label,
 	Input,
 	Error,
+	FirebaseError,
 	Button,
 	Frame,
 	Content,
@@ -58,6 +59,12 @@ Signin.Input = function SigninInput ({ children, ...restProps }) {
 Signin.Error = function SigninError ({ children, ...restProps }) {
 	return (
 		<Error { ...restProps }> { children } </Error>
+	)
+}
+
+Signin.FirebaseError = function SigninFirebaseError ({ children, ...restProps }) {
+	return (
+		<FirebaseError { ...restProps }> { children } </FirebaseError>
 	)
 }
 

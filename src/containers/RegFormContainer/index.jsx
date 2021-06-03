@@ -10,8 +10,9 @@ const RegFormContainer = () => {
 	const { firebase } = useContext( FirebaseContext )
 	const history = useHistory()
 
-	const [ email, setEmail ] = useState(signupEmail)
-	const [ password, setPassword ] = useState('')
+	// const [ email, setEmail ] = useState(signupEmail)
+	const [ email, setEmail ] = useState('testing@gmail.com')
+	const [ password, setPassword ] = useState('testing')
 	const [ emailError, setEmailError ] = useState(false)
 	const [ passwordError, setPasswordError ] = useState(false)
 	const [ error, setError ] = useState('')
@@ -39,7 +40,8 @@ const RegFormContainer = () => {
 			.catch( ( err ) => {
 				setEmail('')
 				setPassword('')
-				console.log(err.message)
+				// console.log(err.message)
+				setError(err.message)
 			})
 		}
 	}
@@ -47,9 +49,11 @@ const RegFormContainer = () => {
 	useEffect( () => {
 		if ( password !== '' ) {
 			setPasswordError(false)
+			setError(false)
 		}
 		if ( email !== '' ) {
 			setEmailError(false)
+			setError(false)
 		}
 	}, [ email, password ])
 
@@ -106,6 +110,7 @@ const RegFormContainer = () => {
 						{ passwordError && <p>Password is required!</p>}
 					</RegForm.Frame>
 
+					{ error && <RegForm.Error> { error } </RegForm.Error> }
 					<RegForm.Button>
 						Continue
 					</RegForm.Button>

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect, useContext } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 import { Signin } from '../../components'
+import { FirebaseContext } from '../../custom/_firebaseContext'
 
 const SigninFormContainer = () => {
 
@@ -9,6 +10,10 @@ const SigninFormContainer = () => {
 	const [ password, setPassword ] = useState('')
 	const [ emailError, setEmailError ] = useState(false)
 	const [ passwordError, setPasswordError ] = useState(false)
+	const [ error, setError ] = useState('')
+
+	const { firebase } = useContext( FirebaseContext )
+	const history = useHistory()
 
 	const toggleLearnMore = () => {
 		setToggle( !toggle )
@@ -22,14 +27,29 @@ const SigninFormContainer = () => {
 		if ( password === '' ) {
 			setPasswordError(true)
 		}
+		else {
+			firebase.auth().signInWithEmailAndPassword(email, password)
+			.then( () => {
+				setEmail('')
+				setPassword('')
+				setEmailError('')
+				history.push('/browse')
+			})
+			.catch( (err) => {
+				console.log(err.message)
+				setError(err.message)
+			})
+		}
 	}
 
 	useEffect( () => {
 		if ( email !== '' ) {
 			setEmailError(false)
+			setError(false)
 		}
 		if ( password !== '' ) {
 			setPasswordError(false)
+			setError(false)
 		}
 	}, [ email, password ])
 
@@ -48,7 +68,7 @@ const SigninFormContainer = () => {
 						onChange={ ({ target }) => setEmail( target.value ) }
 					/>
 					<Signin.Label
-						for="email"
+						htmlFor="email"
 					>
 						Email of phone number
 					</Signin.Label>
@@ -64,13 +84,14 @@ const SigninFormContainer = () => {
 						onChange={ ({ target }) => setPassword( target.value ) }
 					/>
 					<Signin.Label
-						for="password"
+						htmlFor="password"
 					>
 						Password
 					</Signin.Label>
 					{ passwordError && <Signin.Error>Your password must contain between 4 and 60 characters.</Signin.Error> }
 				</Signin.InputFrame>
 
+				{ error && <Signin.FirebaseError> {error} </Signin.FirebaseError>}
 				<Signin.Button> Sign In </Signin.Button>
 
 				<Signin.CheckboxLabel htmlFor="rememberMe">

@@ -1,7 +1,7 @@
 //Create our firebase context here
 import React, { createContext } from 'react'
-import * as firebase from 'firebase'
-
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 const FirebaseContext = createContext(null)
 

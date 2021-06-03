@@ -42,6 +42,7 @@ export const Frame = styled.div`
 	p {
 		color: red;
 		font-size: 0.8rem;
+		margin-top: 0.25rem;
 	}
 `
 
@@ -93,10 +94,16 @@ export const Input = styled.input`
 	${ ({ error }) => {
 		if (error) {
 			return css`
-				border: 1px solid red;
+				border: 1px solid ${ ({ theme }) => theme.colors.primary._400 };
 			`
 		}
 	}}
+`
+
+export const Error = styled.p`
+	color: ${ ({ theme }) => theme.colors.primary._400 };
+	font-family: ${ ({ theme }) =>  theme.fontFamily.primary };
+	position: absolute;
 `
 
 export const Button = styled.button`
@@ -104,7 +111,7 @@ export const Button = styled.button`
 	height: 50px;
 	background: ${ ({ theme }) => theme.colors.primary._400 };
 	color: #fff;
-	margin-top: 1rem;
+	margin-top: 2rem;
 
 	&:hover {
 		background: ${ ({ theme }) => theme.colors.primary._300 };

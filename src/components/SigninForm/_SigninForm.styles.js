@@ -103,6 +103,12 @@ export const Error = styled.p`
 	}
 `
 
+export const FirebaseError = styled.p`
+	color: ${ ({ theme }) => theme.colors.orange };
+	position: relative;
+	font-family: ${ ({ theme }) => theme.fontFamily.primary };
+`
+
 export const Button = styled.button`
 	height: 50px;
 	padding: 1rem;
