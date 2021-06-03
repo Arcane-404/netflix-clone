@@ -69,6 +69,7 @@ export const SubTitle = styled.h2`
 
 export const ImageBox = styled.div`
 	--size: 100%;
+
 	width: var(--size);
 	height: var(--size);
 	position: absolute;
@@ -86,7 +87,9 @@ export const ImageBox = styled.div`
 	}
 
 	@media ${ screen.desktop } {
-		background-image: ${({ theme }) => theme.gradient.banner.home[200] };
+		&::before {
+			background-image: ${({ theme }) => theme.gradient.banner.home[200] };
+		}
 	}
 `
 

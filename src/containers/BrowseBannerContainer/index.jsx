@@ -13,11 +13,13 @@ const BrowseBannerContainer = () => {
 				<Spotlight.Box>
 					<Spotlight.Title>{ temp.title }</Spotlight.Title>
 
-					<Spotlight.InfoBox>
-						<Spotlight.Info>{ temp.release_year }</Spotlight.Info>
-						<Spotlight.Info>{ temp.maturity }</Spotlight.Info>
-						<Spotlight.Info>{ temp.duration }</Spotlight.Info>
-					</Spotlight.InfoBox>
+					{ !isDesktop && (
+						<Spotlight.InfoBox>
+							<Spotlight.Info>{ temp.release_year }</Spotlight.Info>
+							<Spotlight.Info>{ temp.maturity }</Spotlight.Info>
+							<Spotlight.Info>{ temp.duration }</Spotlight.Info>
+						</Spotlight.InfoBox>
+					)}
 
 					{ !isMobile && <Spotlight.Description>{ temp.description }</Spotlight.Description> }
 

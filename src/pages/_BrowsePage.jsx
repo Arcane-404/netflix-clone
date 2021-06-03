@@ -11,7 +11,6 @@ const BrowsePage = () => {
 			- CardTwoContainer
 			- FooterContainer
 			*/}
-			<div style={{ height: '100vh', background: '#333' }}></div>
 		</>
 	)
 }

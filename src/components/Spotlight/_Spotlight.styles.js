@@ -2,12 +2,6 @@ import styled, { css } from 'styled-components'
 import { Icon } from '../'
 import { screen } from '../_globals'
 
-/*
-side padding:
-- 20px
-- 60px
-*/
-
 export const Container = styled.div`
 	/* background: #000; */
 	height: 125px;
@@ -16,6 +10,12 @@ export const Container = styled.div`
 
 	@media ${ screen.tablet.sm } {
 		height: 340px;
+		padding: 0 2.812em;
+	}
+
+	@media ${ screen.desktop } {
+		height: 865px;
+		padding: 0 3.5em;
 	}
 `
 
@@ -33,9 +33,13 @@ export const Title = styled.h1`
 	font-family: ${({ theme }) => theme.fontFamily.tertiary };
 	font-size: 1.1875rem;
 	font-weight: 400;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 	margin: 0;
 	/* margin-bottom: 0.25em; */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+
+	@media ${ screen.desktop } {
+		font-size: 1.688rem;
+	}
 `
 
 export const Description = styled.p`
@@ -45,6 +49,17 @@ export const Description = styled.p`
 	line-height: 1.4;
 	max-width: 35ch;
 	margin-bottom: 1.5em;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+
+	@media ${ screen.desktop } {
+		color: #FFF;
+		font-family: ${({ theme }) => theme.fontFamily.secondary };
+		/* font-size: 1.375rem; */
+		font-size: 1.188rem;
+		max-width: 40.25ch;
+		margin: 0;
+		margin: 1em 0;
+	}
 `
 
 export const InfoBox = styled.ul`
@@ -132,9 +147,11 @@ export const InfoCircle = styled(Icon.InfoCircle)`
 `
 
 export const ImageBox = styled.div`
+	--size: 100%;
+
 	background: #000;
-	/* width: 100%; */
-	height: 100%;
+	width: var(--size);
+	height: var(--size);
 	padding-left: 95px;
 	position: absolute;
 	top: 0;
@@ -144,11 +161,25 @@ export const ImageBox = styled.div`
 	@media ${ screen.tablet.sm } {
 		padding-left: 256px;
 	}
+
+	@media ${ screen.desktop } {
+		padding-left: 0;
+
+		&::before {
+			content: '';
+			background-image: ${({ theme }) => theme.gradient.banner.browse[200] };
+			width: var(--size);
+			height: var(--size);
+			position: absolute;
+		}
+
+		/* background-image: ${({ theme }) => theme.gradient.banner.browse[100] }; */
+	}
 `
 
 export const Image = styled.img`
 	/* mask-image: ${({ theme }) => theme.gradient.banner.browse[100] }; */
-	height: 100%;
+	height: var(--size);
 	object-fit: cover;
 	object-position: top;
 `
