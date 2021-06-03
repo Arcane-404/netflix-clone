@@ -180,6 +180,7 @@ export const ImageBox = styled.div`
 
 		&::before {
 			content: '';
+
 			background-image: ${({ theme }) => theme.gradient.banner.browse[200] };
 			width: var(--size);
 			height: var(--size);
