@@ -40,7 +40,8 @@ const RegFormContainer = () => {
 			.catch( ( err ) => {
 				setEmail('')
 				setPassword('')
-				console.log(err.message)
+				// console.log(err.message)
+				setError(err.message)
 			})
 		}
 	}
@@ -48,9 +49,11 @@ const RegFormContainer = () => {
 	useEffect( () => {
 		if ( password !== '' ) {
 			setPasswordError(false)
+			setError(false)
 		}
 		if ( email !== '' ) {
 			setEmailError(false)
+			setError(false)
 		}
 	}, [ email, password ])
 
@@ -107,6 +110,7 @@ const RegFormContainer = () => {
 						{ passwordError && <p>Password is required!</p>}
 					</RegForm.Frame>
 
+					{ error && <RegForm.Error> { error } </RegForm.Error> }
 					<RegForm.Button>
 						Continue
 					</RegForm.Button>
