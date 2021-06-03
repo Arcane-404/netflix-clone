@@ -61,6 +61,7 @@ export const Close = styled(Icon.Close)`
 export const Logo = styled.img`
 	width: auto;
 	height: 1.5rem;
+	z-index: 5;
 
 	${({ grow }) => grow && css`
 		@media ${ screen.tablet.sm } {
@@ -114,6 +115,7 @@ export const Button = styled(Link)`
 	font-size: 0.9rem;
 	padding: 0.4em;
 	align-self: center;
+	z-index: inherit;
 
 	@media ${ screen.tablet.sm } {
 		font-size: 1rem;
