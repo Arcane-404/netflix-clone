@@ -1,7 +1,15 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { Logout } from '../../components/'
 
 const LogoutContainer = () => {
+
+	const history = useHistory()
+
+	const homePageRedirect = () => {
+		history.push('/')
+	}
+
 	return (
 		<Logout>
 			<Logout.Inner>
@@ -14,7 +22,7 @@ const LogoutContainer = () => {
 				<Logout.Content>
 					You’ll be redirected to the Netflix home page in 30 seconds.
 				</Logout.Content>
-				<Logout.Button>Go Now</Logout.Button>
+				<Logout.Button onClick={ homePageRedirect }>Go Now</Logout.Button>
 			</Logout.Inner>
 		</Logout>
 	)
