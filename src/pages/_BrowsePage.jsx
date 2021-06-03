@@ -7,13 +7,11 @@ const BrowsePage = () => {
 			<BrowseNavBarContainer />
 			<BrowseBannerContainer />
 			{/*
-			- BrowseNavBarContainer
-			- BrowseBannerContainer
 			- CardOneContainer
 			- CardTwoContainer
 			- FooterContainer
 			*/}
-			<div style={{ height: '100vh', background: 'lightgray' }}></div>
+			<div style={{ height: '100vh', background: '#333' }}></div>
 		</>
 	)
 }

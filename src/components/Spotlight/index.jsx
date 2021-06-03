@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Inner, Box, Title, InfoBox, Info, CtaBox, Button, Image } from './_Spotlight.styles'
+import { Container, Inner, Box, Title, Description, InfoBox, Info, CtaBox, Button, ImageBox, Image } from './_Spotlight.styles'
 
 export default function Spotlight ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>
@@ -17,6 +17,10 @@ Spotlight.Title = function SpotlightTitle ({ children, ...restProps }) {
 	return <Title { ...restProps }> { children } </Title>
 }
 
+Spotlight.Description = function SpotlightDescription ({ children, ...restProps }) {
+	return <Description { ...restProps }> { children } </Description>
+}
+
 Spotlight.InfoBox = function SpotlightInfoBox ({ children, ...restProps }) {
 	return <InfoBox { ...restProps }> { children } </InfoBox>
 }
@@ -31,6 +35,10 @@ Spotlight.CtaBox = function SpotlightCtaBox ({ children, ...restProps }) {
 
 Spotlight.Button = function SpotlightButton ({ children, ...restProps }) {
 	return <Button { ...restProps }> { children } </Button>
+}
+
+Spotlight.ImageBox = function SpotlightImageBox ({ children, ...restProps }) {
+	return <ImageBox { ...restProps }> { children } </ImageBox>
 }
 
 Spotlight.Image = function SpotlightImage ({ ...restProps }) {

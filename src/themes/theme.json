@@ -1,6 +1,7 @@
 {
   "colors": {
     "primary": {
+      "200": "#FF0A16",
       "_300": "#F40612",
       "_400": "#E50914",
       "_600": "#B20710",
@@ -39,7 +40,8 @@
 
   "fontFamily": {
     "primary"   : "'Gotham Bold', 'Helvetica Neue', sans-serif",
-    "secondary" : "'Gotham Book', 'Helvetica Neue', sans-serif"
+    "secondary" : "'Gotham Book', 'Helvetica Neue', sans-serif",
+    "tertiary"  : "'Helvetica Neue', sans-serif"
   },
 
   "fontSize": {
@@ -86,7 +88,8 @@
         "200": "linear-gradient(to top,rgba(0,0,0, 0.8) 0,rgba(0,0,0,0) 60%,rgba(0,0,0, 0.8) 100%)"
       },
       "browse": {
-        "100": "background: linear-gradient(94deg, rgba(0,0,1, 0.84) 0%, rgba(0,0,1, 0.83) 12%, rgba(0,0,0, 0.15) 32%, rgba(0,0,0, 0.15) 100%)",
+        "100": "linear-gradient(94deg, rgba(0,0,1, 0.84) 0%, rgba(0,0,1, 0.83) 12%, rgba(0,0,0, 0.15) 32%, rgba(0,0,0, 0.15) 100%)",
+        "_100": "linear-gradient(94deg, rgba(0,0,1, 0.84) 0%, rgba(0,0,1, 0.83) 12%, rgba(0,0,0, 0.15) 32%, rgba(0,0,0, 0.15) 100%)",
         "200": "linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20, 0.15) 15%,rgba(20,20,20, 0.35) 29%,rgba(20,20,20, 0.58) 44%,#141414 68%,#141414 100%)"
       }
     }

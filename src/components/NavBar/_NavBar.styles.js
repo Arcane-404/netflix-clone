@@ -18,6 +18,7 @@ export const Container = styled.nav`
 			background: #141414;
 			background-image: ${ theme.gradient.navbar.browse };
 			position: sticky;
+			z-index: 5;
 		`
 	}}
 
