@@ -10,8 +10,9 @@ const RegFormContainer = () => {
 	const { firebase } = useContext( FirebaseContext )
 	const history = useHistory()
 
-	const [ email, setEmail ] = useState(signupEmail)
-	const [ password, setPassword ] = useState('')
+	// const [ email, setEmail ] = useState(signupEmail)
+	const [ email, setEmail ] = useState('testing@gmail.com')
+	const [ password, setPassword ] = useState('testing')
 	const [ emailError, setEmailError ] = useState(false)
 	const [ passwordError, setPasswordError ] = useState(false)
 	const [ error, setError ] = useState('')
