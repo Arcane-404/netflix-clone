@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Logout } from '../../components/'
 
@@ -9,6 +9,16 @@ const LogoutContainer = () => {
 	const homePageRedirect = () => {
 		history.push('/')
 	}
+
+	const countDown = () => {
+		setTimeout( () => {
+			history.push('/')
+		}, 30000 )
+	}
+
+	useEffect( () => {
+		countDown()
+	}, [ ])
 
 	return (
 		<Logout>
