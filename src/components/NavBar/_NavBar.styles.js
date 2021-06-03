@@ -1,19 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Icon } from '../'
-import { screen, colors, fontFamily } from '../_globals'
-
-const sides = css`
-	padding: 0 5%;
-
-	@media ${ screen.tablet.sm } {
-		padding: 0 2.812em;
-	}
-
-	@media ${ screen.tablet.lg } {
-		padding: 0 3.5em;
-	}
-`
+import { sides, stateChangePrimary, screen, colors, fontFamily } from '../_globals'
 
 export const Container = styled.nav`
 	${ sides }
@@ -27,7 +15,7 @@ export const Container = styled.nav`
 	z-index: 5;
 
 	${({ page }) => (page === 'home') && css`
-		padding-top: 1.625em !important;
+		padding-top: 1.75em !important;
 	`}
 
 	${({ page }) => (page === 'signup') && css`
@@ -37,7 +25,7 @@ export const Container = styled.nav`
 	${({ page, theme }) => (page === 'browse') && css`
 		background: #141414;
 		background-image: ${ theme.gradient.navbar.browse };
-		position: fixed;
+		position: static;
 	`}
 `
 
@@ -54,6 +42,7 @@ export const Inner = styled.div`
 
 export const Box = styled.div`
 	display: flex;
+	align-items: center;
 `
 
 export const Menu = styled(Icon.Menu)`
@@ -74,23 +63,25 @@ export const Logo = styled.img`
 	width: 85px;
 
 	${({ page }) => {
-		if (page === 'home') return css`width: 85px; padding: 0em 0;`
+		if (page === 'home') return css`width: 85px;`
 		if (page === 'signup') return css`width: 75px; padding: 1em 0;`
 		if (page === 'login') return css`width: 75px; padding: 1em 0;`
-		if (page === 'browse') return css`width: 85px; padding: 0em 0;`
+		if (page === 'browse') return css`width: 85px;`
 		return css`background: red;`
 	}}
 
 	@media ${ screen.tablet.sm } {
 	${({ page }) => {
-		if (page === 'home') return css`width: 110px;`
+		if (page === 'home') return css`width: 120px;`
 		if (page === 'signup') return css`width: 165px;`
 		if (page === 'login') return css`width: 165px;`
+		if (page === 'browse') return css`width: 120px; padding: 1.25em 0;`
 	}}
 	}
 
 	@media ${ screen.tablet.lg } {
 	${({ page }) => {
+		console.log(page)
 		if (page === 'home') return css`width: 135px;`
 		if (page === 'signup') return css`padding: 1.5em 0;`
 		if (page === 'login') return css`padding: 1.5em 0;`
@@ -100,18 +91,19 @@ export const Logo = styled.img`
 	@media ${ screen.tablet.lg } {
 	${({ page }) => {
 		if (page === 'home') return css`width: 165px;`
+		if (page === 'browse') return css`width: 90px;`
 	}}
 	}
 `
 
 export const FilterBox = styled.ul`
-	border: 3px solid red;
+	/* border: 3px solid red; */
 	display: flex;
-	margin-left: 1em;
+	margin-left: 3.25em;
 `
 
 export const Text = styled.li`
-	border: 2px solid pink;
+	/* border: 2px solid pink; */
 	color: #E5E5E5;
 	font-size: 0.875rem;
 	cursor: pointer;
@@ -123,17 +115,19 @@ export const Text = styled.li`
 		font-weight: 700;
 	}
 	&:not(.active):hover { color: #B3B3B3; }
-	& + li { margin-left: 1em; }
+	& + li { margin-left: 1.125em; }
 
 	${({ primary }) => primary && css`
-		color: red;
+		color: ${({ theme }) => theme.colors.primary._400 };
 		font-size: 1rem;
+		&:hover { color: red !important; }
 	`}
 `
 
 export const Button = styled(Link)`
+	${ stateChangePrimary }
+
 	border-radius: ${({ theme }) => theme.radius.round.sm };
-	background: ${({ theme }) => theme.colors.primary._400 };
 	color: ${({ theme }) => theme.colors.light };
 	font-size: 0.9rem;
 	padding: 0.2625em 0.5em;

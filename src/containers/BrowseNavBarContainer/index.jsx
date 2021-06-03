@@ -35,7 +35,7 @@ const BrowseNavBarContainer = () => {
 						: <NavBar.Close onClick={ handleToggle } />
 					)}
 
-					<NavBar.Logo src={ logo.img } alt={ logo.alt } to="/browse" />
+					<NavBar.Logo page={ 'browse' } src={ logo.img } alt={ logo.alt } to="/browse" />
 
 					{!isMobile && (
 						<NavBar.FilterBox>

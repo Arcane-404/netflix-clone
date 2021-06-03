@@ -1,5 +1,5 @@
 import styled,{ css } from 'styled-components'
-import { screen } from '../_globals'
+import { screen, stateChangePrimary } from '../_globals'
 
 export const Container = styled.form`
 	width: 100%;
@@ -111,8 +111,9 @@ export const Error = styled.span`
 export const Button = styled.button.attrs({
 	type: 'submit'
 })`
+	${ stateChangePrimary }
+
 	border-radius: ${({ theme }) => theme.radius.round.xsm };
-	background: ${({ theme }) => theme.colors.primary._400 };
 	color: ${({ theme }) => theme.colors.light };
 	margin: 0 auto;
 	margin-top: 1em;
@@ -128,15 +129,8 @@ export const Button = styled.button.attrs({
 		transition-property: transform;
 	}
 
-	&:hover {
-		background: ${({ theme }) => theme.colors.primary._300 };
-		& svg { transform: translateX(5px); }
-	}
-
-	&:active {
-		background: ${({ theme }) => theme.colors.primary._600 };
-		& svg { transform: translateX(0); }
-	}
+	&:hover { & svg { transform: translateX(5px); }}
+	&:active { & svg { transform: translateX(0); }}
 
 	@media ${ screen.tablet.lg } {
 		font-size: 1.625rem;
