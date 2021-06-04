@@ -1,27 +1,32 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { HomePage, LoginPage, LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
+import { useAuth } from './custom/'
+import { RedirectRoute, ProtectedRoute } from './routes/'
 
 const App = () => {
+
+	const { user } = useAuth()
+
 	return (
 		<>
 			<Switch>
 
-				<Route exact path="/">
+				<RedirectRoute exact path="/" user={ user } loggedInPath="/browse">
 					<HomePage />
-				</Route>
+				</RedirectRoute>
 
-				<Route path="/login">
+				<RedirectRoute path="/login" user={ user } loggedInPath="/browse">
 					<LoginPage />
-				</Route>
+				</RedirectRoute>
 
 				<Route path="/logout">
 					<LogoutPage />
 				</Route>
 
-				<Route exact path="/signup">
+				<RedirectRoute exact path="/signup" user={ user } loggedInPath="browse">
 					<SignupPage />
-				</Route>
+				</RedirectRoute>
 
 				<Route exact path="/signup/registration">
 					<SignupRegistrationPage />
@@ -31,9 +36,9 @@ const App = () => {
 					<RegformPage />
 				</Route>
 
-				<Route path="/browse">
+				<ProtectedRoute path="/browse" user={ user } >
 					<BrowsePage />
-				</Route>
+				</ProtectedRoute>
 			</Switch>
 		</>
 	)
