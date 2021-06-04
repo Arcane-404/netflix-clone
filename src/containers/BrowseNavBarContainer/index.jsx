@@ -19,7 +19,6 @@ const BrowseNavBarContainer = () => {
 	const isDesktop = useMediaQuery('desktop')
 	const history = useHistory()
 	const { firebase } = useContext(FirebaseContext)
-	console.log(firebase.auth)
 
 	const logoutUser = () => {
 		firebase.auth().signOut()

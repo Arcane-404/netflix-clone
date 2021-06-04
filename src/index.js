@@ -9,15 +9,15 @@ import './assets/style.scss'
 
 render(
 	<StrictMode>
-		<BrowserRouter>
-			<GlobalThemeProvider>
-				<FirebaseContextProvider>
+		<FirebaseContextProvider>
+			<BrowserRouter>
+				<GlobalThemeProvider>
 					<EmailContextProvider>
 						<App />
 					</EmailContextProvider>
-				</FirebaseContextProvider>
-			</GlobalThemeProvider>
-		</BrowserRouter>
+				</GlobalThemeProvider>
+			</BrowserRouter>
+		</FirebaseContextProvider>
 	</StrictMode>,
 	document.getElementById('root')
 )
