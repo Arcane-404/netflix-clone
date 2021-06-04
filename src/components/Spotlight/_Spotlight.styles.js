@@ -1,21 +1,19 @@
 import styled, { css } from 'styled-components'
 import { Icon } from '../'
-import { screen } from '../_globals'
+import { sideSpacing, screen } from '../_globals'
 
 export const Container = styled.div`
-	/* background: #000; */
+	${ sideSpacing }
+
 	height: 125px;
-	padding: 0 5%;
 	position: relative;
 
 	@media ${ screen.tablet.sm } {
 		height: 340px;
-		padding: 0 2.812em;
 	}
 
 	@media ${ screen.desktop } {
 		height: 865px;
-		padding: 0 3.5em;
 	}
 `
 

@@ -79,7 +79,8 @@
   "gradient": {
     "navbar": {
       "general": "linear-gradient(to bottom,rgba(0,0,0, 0.7) 10%,rgba(0,0,0,0) 100%)",
-      "browse": "linear-gradient(to bottom, rgba(0,0,0, 0.72) 0%, rgba(0,0,0, 0.45) 41%, rgba(0,0,0, 0.14) 81%, rgba(0,0,0, 0.14) 100%)"
+      "browse": "linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0) 100%)",
+      "_browse": "linear-gradient(to bottom, rgba(0,0,0, 0.72) 0%, rgba(0,0,0, 0.45) 41%, rgba(0,0,0, 0.14) 81%, rgba(0,0,0, 0.14) 100%)"
     },
     "card": "0px 3px 10px rgba(0,0,0, 0.75)",
     "banner": {
