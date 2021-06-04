@@ -4,6 +4,7 @@
   "release_year": "2021",
   "maturity": "TV-MA",
   "duration": "87m",
-  "img": "/images/browse-banner.jpg",
+  "img": "/images/bg-banner.jpg",
+  "_img": "/images/browse-banner.jpg",
   "alt": "browse banner spotlight"
 }

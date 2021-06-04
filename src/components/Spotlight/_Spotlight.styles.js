@@ -6,9 +6,11 @@ export const Container = styled.div`
 	${ sideSpacing }
 
 	height: 125px;
+	margin-top: 45px;
 	position: relative;
 
 	@media ${ screen.tablet.sm } {
+		margin-top: initial;
 		height: 340px;
 	}
 
@@ -90,15 +92,28 @@ export const Button = styled.button.attrs({
 	& + button { margin-left: 0.75em; }
 
 	${({ primary }) => primary && css`
+		/* ADD stateChangePrimary */
+		/* border: 1px solid #ff0a16; */
 		background: ${({ theme }) => theme.colors.primary._400 };
 
 		&:hover { background: ${({ theme }) => theme.colors.primary._300 }; }
 		&:active { background: ${({ theme }) => theme.colors.primary._600 }; }
 	`}
 
-	${({ secondary }) => secondary && css``}
+	${({ secondary }) => secondary && css`
+		border: 1px solid  rgba(255, 255, 255, 0.5);
+		background: rgba(42,42,42, 0.4);
+		&:hover { background: rgba(42,42,42, 0.7); }
+		&:active { border-color: rgba(255, 255, 255, 0.7); }
+	`}
+
+	@media ${ screen.tablet.lg } {
+		font-size: 1rem;
+		padding: 0.375em 1em 0.375em 0.75em;
+	}
 
 	@media ${ screen.desktop } {
+		border: unset;
 		border-radius: ${({ theme }) => theme.radius.round.sm };
 		font-family: ${({ theme }) => theme.fontFamily.secondary };
 		font-size: 1.1875rem;
@@ -163,35 +178,39 @@ export const ImageBox = styled.div`
 	background: #000;
 	width: var(--size);
 	height: var(--size);
-	padding-left: 95px;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: -1;
 
-	@media ${ screen.tablet.sm } {
-		padding-left: 256px;
+	&::before {
+		content: '';
+
+		background-image: ${({ theme }) => theme.gradient.banner.browse[100] };
+		width: 70%;
+		height: var(--size);
+		margin-left: auto;
+		display: block;
+		position: absolute;
+		right: 0;
 	}
 
 	@media ${ screen.desktop } {
-		padding-left: 0;
-
 		&::before {
-			content: '';
-
 			background-image: ${({ theme }) => theme.gradient.banner.browse[200] };
 			width: var(--size);
-			height: var(--size);
-			position: absolute;
 		}
-
-		/* background-image: ${({ theme }) => theme.gradient.banner.browse[100] }; */
 	}
 `
 
 export const Image = styled.img`
-	/* mask-image: ${({ theme }) => theme.gradient.banner.browse[100] }; */
+	width: 70%;
 	height: var(--size);
+	margin-left: auto;
 	object-fit: cover;
 	object-position: top;
+
+	@media ${ screen.desktop } {
+		width: var(--size);
+	}
 `

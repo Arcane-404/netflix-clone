@@ -24,21 +24,28 @@ export const Container = styled.nav`
 
 	${({ page }) => (page === 'browse') && css`
 		background: #141414;
-		position: static;
+		position: fixed;
+		transition: 0.4s ease;
+		transition-property: background;
+
+		${({ sticky }) => sticky && css`background: rgba(0,0,0, 0.6);`}
 	`}
+
+	@media ${ screen.tablet.sm } {
+		${({ page, theme }) => (page === 'browse')  && css`
+			background: transparent;
+			background-image: ${ theme.gradient.navbar[100] };
+		`}
+
+		${({ sticky }) => sticky && css`background: rgba(0,0,0, 0.6);`}
+	}
 
 	@media ${ screen.desktop } {
 		${({ page, theme }) => (page === 'browse')  && css`
-			background: transparent;
-			background-image: ${ theme.gradient.navbar.browse };
-			position: fixed;
-			transition: 0.4s ease;
-			transition-property: background;
+			background-image: ${ theme.gradient.navbar[200] };
 		`}
 
-		${({ sticky }) => sticky && css`
-			background: #141414;
-		`}
+		${({ sticky }) => sticky && css`background: #141414;`}
 	}
 `
 
@@ -132,6 +139,7 @@ export const Text = styled.li`
 	${({ primary }) => primary && css`
 		color: ${({ theme }) => theme.colors.primary._400 };
 		font-size: 1rem;
+		font-weight: 700;
 		&:hover { color: red !important; }
 	`}
 `
@@ -158,10 +166,7 @@ export const Anchor = styled(Link)`
 	font-size: 0.875rem;
 	font-weight: 700;
 
-	&:hover {
-		text-decoration: underline;
-		/* text-decoration-color: #333; */
-	}
+	&:hover {	text-decoration: underline; }
 
 	@media ${ screen.tablet.sm } {
 		font-size: 1rem;
