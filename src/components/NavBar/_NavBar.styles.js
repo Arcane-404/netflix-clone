@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Icon } from '../'
-import { sides, stateChangePrimary, screen, colors, fontFamily } from '../_globals'
+import { sideSpacing, stateChangePrimary, screen, colors, fontFamily } from '../_globals'
 
 export const Container = styled.nav`
-	${ sides }
+	${ sideSpacing }
 
 	width: 100%;
 	min-height: 45px;
@@ -22,12 +22,32 @@ export const Container = styled.nav`
 		border-bottom: 1px solid #E6E6E6;
 	`}
 
-	${({ page, theme }) => (page === 'browse') && css`
+	${({ page }) => (page === 'browse') && css`
 		background: #141414;
-		background-image: ${ theme.gradient.navbar.browse };
 		position: static;
 	`}
+
+	@media ${ screen.desktop } {
+		${({ page, theme }) => (page === 'browse')  && css`
+			background: transparent;
+			background-image: ${ theme.gradient.navbar.browse };
+			transition: 0.4s ease;
+			transition-property: background;
+		`}
+
+		${({ sticky }) => sticky && css`
+			background: #141414;
+			position: fixed;
+		`}
+	}
 `
+/*
+(page === 'browse') && sticky && css`
+			background: transparent;
+			background-image: ${ theme.gradient.navbar.browse };
+			position: fixed;
+		`}
+*/
 
 export const Inner = styled.div`
 	/* border: 3px solid red; */
@@ -81,7 +101,6 @@ export const Logo = styled.img`
 
 	@media ${ screen.tablet.lg } {
 	${({ page }) => {
-		console.log(page)
 		if (page === 'home') return css`width: 135px;`
 		if (page === 'signup') return css`padding: 1.5em 0;`
 		if (page === 'login') return css`padding: 1.5em 0;`

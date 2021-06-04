@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components'
-import { fontFamily, screen } from '../_globals'
+import { sideSpacing, screen, fontFamily } from '../_globals'
 
 export const Container = styled.div`
+	${ sideSpacing }
+
 	height: 70vh;
-	padding: 0 5%;
 	display: flex;
 	flex-flow: column;
 	align-items: center;

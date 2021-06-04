@@ -3,31 +3,37 @@ import { useHistory } from 'react-router-dom'
 import { SearchBarContainer } from '../'
 import { NavBar } from '../../components'
 import { logo } from '../../json'
-import { useMediaQuery } from '../../custom'
+import { useEventListener, useMediaQuery } from '../../custom'
 import { FirebaseContext } from '../../custom/_firebaseContext'
-/*
-- nav active ft
-- search bar motion
-*/
 
 const BrowseNavBarContainer = () => {
 
+	const [ isSticky, setSticky ] = useState(false)
 	const [ menu, setMenu ] = useState(true)
-	const handleToggle = () => setMenu(!menu)
 	const isMobile = useMediaQuery('mobile')
 	const isTablet = useMediaQuery('tablet')
 	const isDesktop = useMediaQuery('desktop')
 	const history = useHistory()
 	const { firebase } = useContext(FirebaseContext)
-	console.log(firebase.auth)
+	// console.log(firebase.auth)
+
+	const handleToggle = () => setMenu(!menu)
 
 	const logoutUser = () => {
 		firebase.auth().signOut()
 		history.push('/logout')
 	}
 
+	const handleScroll = (e) => {
+		const offset = window.scrollY
+		if (offset > 0) setSticky(true)
+		else setSticky(false)
+	}
+
+	useEventListener('scroll', handleScroll)
+
 	return (
-		<NavBar page={ 'browse' }>
+		<NavBar page={ 'browse' } sticky={ isSticky }>
 			<NavBar.Inner>
 				<NavBar.Box>
 					{isMobile && ((menu)

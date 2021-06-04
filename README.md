@@ -1,8 +1,10 @@
 # Netflix - Online Streaming (Clone) App
 
-[ ![Status][Badge-Status] ][Site-Page]
+[ ![Status][Badge-Web-Status] ][Web-Page]
 [ ![Contributors][Badge-Contributors] ](#Contributors)
-<!-- [ ![Netlify Status][Badge-Netlify] ][Netlify] -->
+![Feedback][Badge-Feedback]
+![Netflix][Badge-Netflix]
+<!-- [ ![Netlify Status][Badge-Netlify-Status] ][Netlify-Deploy] -->
 
 Note: to Replicate, Refine, & Improve the current UI development
 
@@ -27,13 +29,17 @@ GH-CLI : gh repo clone Arcane-404/netflix-clone
 
 ## Technologies Used
 
+|||
+|-|-|
+| HOSTED | [ ![Netlify][Badge-Netlify] ][Netlify] |
+
 [ ![React][Badge-React] ][React]
 [ ![JavaScript][Badge-JavaScript] ][JavaScript]
 [ ![React-Router][Badge-React-Router] ][React-Router]
+[ ![Firebase][Badge-Firebase] ][Firebase]
 [ ![Sass][Badge-Sass] ][Sass]
 [ ![Styled-Components][Badge-Styled-Components] ][Styled-Components]
 [ ![Storybook][Badge-Storybook] ][Storybook]
-[ ![Firebase][Badge-Firebase] ][Firebase]
 - hooks:
 useState /
 useEffect /
@@ -41,9 +47,11 @@ useContext /
 useCallback
 - other:
 [`normalize.css`][styled-normalize] /
-[`react-icons`][react-icons] /
 [`uuid`][uuid] /
-[`fusejs`][fusejs]
+[`react-icons`][react-icons] /
+[`react-query`][react-query] /
+[`axios`][axios] /
+[`fuse.js`][fusejs]
 
 ## Collaboration Tools
 
@@ -71,39 +79,48 @@ useCallback
 
 <!--  -->
 
-<!-- status: Live_App | Debug | In_Development -->
-<!-- badge color: success | important | informational -->
+<!-- Top Priority Badges -->
+[Web-Page]: https://the-netflix-clone.netlify.app/
+[Badge-Web-Status]: https://img.shields.io/website-up-down-sucess-important/https://the-netflix-clone.netlify.app/.svg?style=for-the-badge
 [Badge-Status]: https://img.shields.io/badge/Status-In_Development-informational?style=for-the-badge
-[Badge-Contributors]: https://img.shields.io/github/contributors/Arcane-404/netflix-clone?color=lightgreen&style=for-the-badge
-[Site-Page]: https://the-netflix-clone.netlify.app/
 
-[Badge-Netlify]: https://api.netlify.com/api/v1/badges/47b0d6c7-6655-4410-9aa7-f85789a646b2/deploy-status
-[Netlify]: https://app.netlify.com/sites/the-netflix-clone/deploys
+[Badge-Contributors]: https://img.shields.io/github/contributors/Arcane-404/netflix-clone?color=lightgreen&style=for-the-badge
+[Badge-Feedback]: https://img.shields.io/badge/Ask_Me-anything-1abc9c.svg?style=for-the-badge
+
+[Badge-Netlify-Status]: https://api.netlify.com/api/v1/badges/___/deploy-status
+[Netlify-Deploy]: https://app.netlify.com/sites/the-netflix-clone/deploys
+
+[Badge-Netflix]: https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white
 
 
 <!-- Technology Link -->
 [React]: https://reactjs.org/
-[JavaScript]: http://vanilla-js.com/
+[JavaScript]: https://standardjs.com/
 [React-Router]: https://reactrouter.com/
+[Firebase]: https://firebase.google.com/
 [Sass]: https://sass-lang.com/
 [Styled-Components]: https://styled-components.com/
 [Storybook]: https://storybook.js.org/
-[Firebase]: https://firebase.google.com/
 
 <!-- Technology Badge -->
-[Badge-React]: https://img.shields.io/badge/-React-20232A.svg?&style=for-the-badge&logo=React&logoColor=61DAFB
-[Badge-JavaScript]: https://img.shields.io/badge/-JavaScript-323330.svg?&style=for-the-badge&logo=JavaScript&logoColor=F0DB4F
+[Badge-React]: https://img.shields.io/badge/React-20232A.svg?&style=for-the-badge&logo=React&logoColor=61DAFB
+[Badge-JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
 [Badge-React-Router]: https://img.shields.io/badge/-React_Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=FFF
-[Badge-Sass]: https://img.shields.io/badge/-Sass-hotpink.svg?&style=for-the-badge&logo=Sass&logoColor=FFF
-[Badge-Styled-Components]: https://img.shields.io/badge/-Styled_Components-DB748E.svg?&style=for-the-badge&logo=Styled-Components&logoColor=FFF
-[Badge-Storybook]: https://img.shields.io/badge/-Storybook-F0608A.svg?&style=for-the-badge&logo=Storybook&logoColor=FFF
-[Badge-Firebase]: https://img.shields.io/badge/-Firebase-FFCB2B.svg?&style=for-the-badge&logo=Firebase&logoColor=333
+[Badge-Firebase]: https://img.shields.io/badge/Firebase-FFCB2B.svg?&style=for-the-badge&logo=Firebase&logoColor=333
+[Badge-Sass]: https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[Badge-Styled-Components]: https://img.shields.io/badge/Styled_Components-DB748E.svg?&style=for-the-badge&logo=Styled-Components&logoColor=FFF
+[Badge-Storybook]: https://img.shields.io/badge/Storybook-F0608A.svg?&style=for-the-badge&logo=Storybook&logoColor=FFF
 
 <!-- Other Technology Link & Badge -->
+[Netlify]: https://www.netlify.com/
 [styled-normalize]: https://necolas.github.io/normalize.css/
-[react-icons]: https://react-icons.github.io/react-icons/
 [uuid]: https://www.npmjs.com/package/uuid
+[react-icons]: https://react-icons.github.io/react-icons/
+[React-Query]: https://react-query.tanstack.com/
+[axios]: https://axios-http.com/
 [fusejs]: https://fusejs.io/
+
+[Badge-Netlify]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
 
 
 <!-- Productivity Tools Link -->
@@ -124,5 +141,5 @@ useCallback
 [Adnan-LinkedIn]: https://www.linkedin.com/in/sanixstudio/
 
 <!-- Contributors Badge -->
-[Badge-GitHub]: https://img.shields.io/badge/-GitHub-black.svg?style=for-the-badge&logo=GitHub&colorB=555
-[Badge-LinkedIn]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[Badge-GitHub]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=FFF
+[Badge-LinkedIn]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=FFF

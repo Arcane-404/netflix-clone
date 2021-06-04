@@ -8,7 +8,7 @@ export const Container = styled.form`
 	flex-flow: column;
 	/* align-items: center; */
 
-	${({ dark }) => dark && css`background: #000;`}
+	${({ dark }) => dark && css`color: #000 !important;`}
 `
 
 export const Inner = styled.div`

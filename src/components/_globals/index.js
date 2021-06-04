@@ -1,10 +1,9 @@
 import { css } from 'styled-components'
 
-export const sides = css`
+export const sideSpacing = css`
 	padding: 0 5%;
 
 	@media ${ ({ theme }) => theme.breakpoints.tablet.sm } {
-		/* padding: 0 2.812em; */
 		padding: 0 1.875em;
 	}
 
@@ -19,9 +18,12 @@ export const stateChangePrimary = css`
 	&:active { background: ${({ theme }) => theme.colors.primary._600 }; }
 `
 
-export const colors = {
-	light: ({ theme }) => theme.colors.light,
-	dark: ({ theme }) => theme.colors.dark
+export const screen = {
+	tablet: {
+		sm: ({ theme }) => theme.breakpoints.tablet.sm,
+		lg: ({ theme }) => theme.breakpoints.tablet.lg
+	},
+	desktop: ({ theme }) => theme.breakpoints.desktop
 }
 
 export const fontFamily = {
@@ -29,29 +31,7 @@ export const fontFamily = {
 	secondary: ({ theme }) => theme.fontFamily.secondary
 }
 
-export const fontSize = {
-	headline: {
-		sm: '',
-		md: '',
-		lg: ''
-	},
-	subhead: {
-		sm: '',
-		lg: ''
-	},
-	copy: {
-		sm: '',
-		lg: ''
-	},
-	link: '',
-	cta: '',
-	body: ''
-}
-
-export const screen = {
-	tablet: {
-		sm: ({ theme }) => theme.breakpoints.tablet.sm,
-		lg: ({ theme }) => theme.breakpoints.tablet.lg
-	},
-	desktop: ({ theme }) => theme.breakpoints.desktop
+export const colors = {
+	light: ({ theme }) => theme.colors.light,
+	dark: ({ theme }) => theme.colors.dark
 }
