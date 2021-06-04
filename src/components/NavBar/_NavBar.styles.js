@@ -31,23 +31,16 @@ export const Container = styled.nav`
 		${({ page, theme }) => (page === 'browse')  && css`
 			background: transparent;
 			background-image: ${ theme.gradient.navbar.browse };
+			position: fixed;
 			transition: 0.4s ease;
 			transition-property: background;
 		`}
 
 		${({ sticky }) => sticky && css`
 			background: #141414;
-			position: fixed;
 		`}
 	}
 `
-/*
-(page === 'browse') && sticky && css`
-			background: transparent;
-			background-image: ${ theme.gradient.navbar.browse };
-			position: fixed;
-		`}
-*/
 
 export const Inner = styled.div`
 	/* border: 3px solid red; */

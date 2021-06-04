@@ -1,26 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SearchBar } from '../../components'
 import { useMediaQuery, useInput } from '../../custom'
 
-/*
-- shrink search bar
-- click/focus
-	- grow & show search bar
-*/
+const targetSibling = e => e.currentTarget.nextElementSibling
 
 const SearchBarContainer = () => {
+
+	const [ inFocus, setInFocus ] = useState(false)
 	const [ search, handleChange ] = useInput('')
 	const isDesktop = useMediaQuery('desktop')
 	const placeholder = (isDesktop) ? 'Title, people, genres' : 'Search'
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		console.log('HELL the SEARCH')
+		if (!search) return
+	}
+
+	const handleClick = (e) => {
+		targetSibling(e).focus()
+		if (!inFocus) setInFocus(!inFocus)
+	}
+
+	const handleBlur = (e) => {
+		console.log('blur', !search, inFocus)
+		return !search && setInFocus(!inFocus)
+	}
+
+	const handleFocus = e => setInFocus(true)
+
+	const searchProps = {
+		onSubmit: handleSubmit,
+		onFocus: handleFocus,
+		inFocus: inFocus,
+		onBlur: handleBlur
 	}
 
 	return (
-		<SearchBar onSubmit={ handleSubmit }>
-			{ isDesktop && <SearchBar.Icon /> }
+		<SearchBar { ...searchProps }>
+			{ isDesktop && <SearchBar.Search onClick={ handleClick } /> }
+
 			<SearchBar.Input
 				placeholder={ placeholder }
 				value={ search }

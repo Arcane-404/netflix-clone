@@ -42,8 +42,6 @@ const BrowseBannerContainer = () => {
 			<Spotlight.ImageBox>
 				<Spotlight.Image src={ temp.img } alt={ temp.alt } />
 			</Spotlight.ImageBox>
-
-			<div style={{ height: '100vh', background: 'slategray' }}></div>
 		</Spotlight>
 	)
 }
