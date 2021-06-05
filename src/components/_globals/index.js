@@ -1,5 +1,11 @@
 import { css } from 'styled-components'
 
+export const pageWrapper = css`
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+`
+
 export const sideSpacing = css`
 	padding: 0 5%;
 

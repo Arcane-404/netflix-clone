@@ -1,10 +1,11 @@
 {
-  "title": "Bo Burnham: Inside",
-  "description": "A new comedy special shot and performed by Bo Burham, alone, over the course of the past year.",
+  "title": "Sweet Tooth",
+  "synopsis1": "When the apocalypse arrived, so did the human-animal hybrids. Meet Gus: part boy, part deer, all heart.",
+  "synopsis2": "On a perilous adventure across a post-apocalyptic world, a lovable boy who's half-human and half-deer searches for a new beginning with a gruff protector.",
   "release_year": "2021",
-  "maturity": "TV-MA",
-  "duration": "87m",
-  "img": "/images/bg-banner.jpg",
-  "_img": "/images/browse-banner.jpg",
-  "alt": "browse banner spotlight"
+  "maturity": "TV-14",
+  "duration": "1 Season",
+  "img1": "/images/bg-banner-1.jpg",
+  "img2": "/images/bg-banner-2.jpg",
+  "alt": "spotlight film banner"
 }

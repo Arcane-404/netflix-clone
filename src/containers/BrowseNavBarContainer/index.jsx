@@ -11,7 +11,7 @@ const BrowseNavBarContainer = () => {
 	const [ isSticky, setSticky ] = useState(false)
 	const [ menu, setMenu ] = useState(true)
 	const isMobile = useMediaQuery('mobile')
-	const isTablet = useMediaQuery('tablet')
+	const isTabletSm = useMediaQuery('tablet-sm')
 	const isDesktop = useMediaQuery('desktop')
 	const history = useHistory()
 	const { firebase } = useContext(FirebaseContext)
@@ -45,7 +45,7 @@ const BrowseNavBarContainer = () => {
 
 					{!isMobile && (
 						<NavBar.FilterBox>
-							{isTablet && !isDesktop && (
+							{isTabletSm && !isDesktop && (
 								<NavBar.Text primary>Browse</NavBar.Text>
 							)}
 							{isDesktop && (

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { Icon } from '../'
-import { sideSpacing, stateChangePrimary, screen, colors, fontFamily } from '../_globals'
+import { pageWrapper, sideSpacing, stateChangePrimary, screen, colors, fontFamily } from '../_globals'
 
 export const Container = styled.nav`
 	${ sideSpacing }
@@ -50,11 +50,10 @@ export const Container = styled.nav`
 `
 
 export const Inner = styled.div`
+	${ pageWrapper }
+
 	/* border: 3px solid red; */
-	width: 100%;
-	max-width: 1920px;
 	height: 100%;
-	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
