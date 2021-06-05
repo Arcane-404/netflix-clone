@@ -6,6 +6,8 @@ import temp from '../../json/temp'
 const BrowseBannerContainer = () => {
 	const isMobile = useMediaQuery('mobile')
 	const isDesktop = useMediaQuery('desktop')
+	const synopsis = isDesktop ? temp.synopsis1 : temp.synopsis2
+	const bgBannerImg = isDesktop ? temp.img1 : temp.img2
 
 	return (
 		<Spotlight>
@@ -21,7 +23,7 @@ const BrowseBannerContainer = () => {
 						</Spotlight.InfoBox>
 					)}
 
-					{ !isMobile && <Spotlight.Description>{ temp.description }</Spotlight.Description> }
+					{ !isMobile && <Spotlight.Description>{ synopsis }</Spotlight.Description> }
 
 					<Spotlight.CtaBox>
 						<Spotlight.Button primary>
@@ -40,7 +42,7 @@ const BrowseBannerContainer = () => {
 			{ isDesktop && <Spotlight.Maturity>{ temp.maturity }</Spotlight.Maturity> }
 
 			<Spotlight.ImageBox>
-				<Spotlight.Image src={ temp.img } alt={ temp.alt } />
+				<Spotlight.Image src={ bgBannerImg } alt={ temp.alt } />
 			</Spotlight.ImageBox>
 		</Spotlight>
 	)

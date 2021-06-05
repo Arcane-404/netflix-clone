@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Icon } from '../'
-import { sideSpacing, screen } from '../_globals'
+import { pageWrapper, sideSpacing, screen } from '../_globals'
 
 export const Container = styled.div`
 	${ sideSpacing }
@@ -14,12 +14,18 @@ export const Container = styled.div`
 		height: 340px;
 	}
 
+	@media ${ screen.tablet.lg } {
+		height: 410px;
+	}
+
 	@media ${ screen.desktop } {
 		height: 865px;
 	}
 `
 
 export const Inner = styled.div`
+	${ pageWrapper }
+
 	height: 100%;
 	display: flex;
 `
@@ -35,30 +41,38 @@ export const Title = styled.h1`
 	font-weight: 400;
 	margin: 0;
 	/* margin-bottom: 0.25em; */
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+
+	@media ${ screen.tablet.lg } {
+		font-size: 1.25rem;
+	}
 
 	@media ${ screen.desktop } {
-		font-size: 1.688rem;
+		font-family: ${({ theme }) => theme.fontFamily.primary };
+		font-size: 1.563rem;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 	}
 `
 
 export const Description = styled.p`
 	color: #999;
-	font-family: ${({ theme }) => theme.fontFamily.tertiary };
+	/* font-family: ${({ theme }) => theme.fontFamily.tertiary }; */
 	font-size: 0.8125rem;
 	line-height: 1.4;
-	max-width: 35ch;
+	max-width: 33%;
 	margin-bottom: 1.5em;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+
+	@media ${ screen.tablet.lg } {
+		font-size: 1rem;
+	}
 
 	@media ${ screen.desktop } {
 		color: #FFF;
 		font-family: ${({ theme }) => theme.fontFamily.secondary };
-		/* font-size: 1.375rem; */
-		font-size: 1.188rem;
-		max-width: 40.25ch;
-		margin: 0;
+		font-size: 1.25rem;
+		max-width: 41ch;
+		/* margin: 0; */
 		margin: 1em 0;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 	}
 `
 
@@ -73,6 +87,10 @@ export const Info = styled.li`
 	color: #999;
 
 	& + li { margin-left: 0.8em; }
+
+	@media ${ screen.tablet.lg } {
+		font-size: 1rem;
+	}
 `
 
 export const CtaBox = styled.div`
@@ -87,13 +105,12 @@ export const Button = styled.button.attrs({
 	color: #FFF;
 	font-size: 0.8125rem;
 	font-weight: 700;
-	padding: 0.57em 1.35em;
+	text-transform: uppercase;
+	padding: 0.5em 1.35em;
 
-	& + button { margin-left: 0.75em; }
+	& + button { margin-left: 1.5em; }
 
 	${({ primary }) => primary && css`
-		/* ADD stateChangePrimary */
-		/* border: 1px solid #ff0a16; */
 		background: ${({ theme }) => theme.colors.primary._400 };
 
 		&:hover { background: ${({ theme }) => theme.colors.primary._300 }; }
@@ -109,18 +126,21 @@ export const Button = styled.button.attrs({
 
 	@media ${ screen.tablet.lg } {
 		font-size: 1rem;
-		padding: 0.375em 1em 0.375em 0.75em;
+		padding: 0.563em 1.375em;
 	}
 
 	@media ${ screen.desktop } {
 		border: unset;
 		border-radius: ${({ theme }) => theme.radius.round.sm };
 		font-family: ${({ theme }) => theme.fontFamily.secondary };
-		font-size: 1.1875rem;
+		/* font-size: 1.1875rem; */
+		font-size: 1.125rem;
+		text-transform: capitalize;
 		padding: 0.5em 1.5em 0.5em 1.25em;
 		display: flex;
 		align-items: center;
 
+		& + button { margin-left: 0.75em; }
 		& > svg  { margin-right: 0.35em; }
 
 		${({ primary }) => primary && css`
