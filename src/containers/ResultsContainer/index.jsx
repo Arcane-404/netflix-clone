@@ -1,35 +1,18 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React from 'react'
 import { useQuery } from 'react-query'
 import { v4 as uuid } from 'uuid'
-import Fuse from 'fuse.js'
 import { Content, Card } from '../../components'
+import { useFuse } from '../../hooks'
 import { Loading, Errors, getData, fuseOptions } from './request'
 // import tempData from '../../json/tempData'
 
 const ResultsContainer = () => {
-	const [ query, setQuery ] = useState('')
-	const [ results, setResults ] = useState([])
 	const { isLoading, error, data } = useQuery('tempData', getData)
+	const { search, handleSearch, results } = useFuse(data, fuseOptions)
 
 	// if (isLoading && !data) console.log('loading', isLoading)
 	// if (error) console.log('error', error)
 	// if (!data) console.log('data', data)
-
-	const handleSearch = useCallback(
-		e => setQuery(e.target.value),
-		[ setQuery ]
-	)
-
-	useEffect(() => {
-		// console.log('data', data)
-		if (data) {
-			const fuse = new Fuse(data, fuseOptions)
-			const fuzzy = query && fuse.search(query).map(result => result.item)
-			console.log(query.length, fuzzy.length, data.length)
-			if (fuzzy.length) setResults(fuzzy)
- 			if (!query) setResults(data)
-		}
-	}, [ query, data ])
 
 	if (isLoading) return <Loading />
 	if (error) return <Errors />
@@ -43,7 +26,7 @@ const ResultsContainer = () => {
 						id="search"
 						list="search-options"
 						autoComplete="off"
-						value={ query }
+						value={ search }
 						onChange={ handleSearch }
 					/>
 				</div>

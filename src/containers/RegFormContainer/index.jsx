@@ -72,7 +72,7 @@ const RegFormContainer = () => {
 						<RegForm.Span>3</RegForm.Span>
 					</RegForm.PreTitle>
 
-					<RegForm.Title>{ auth.regForm }</RegForm.Title>
+					<RegForm.Title>{ auth.regForm.title }</RegForm.Title>
 					<RegForm.SubTitle>{ auth.regForm.subtitle }</RegForm.SubTitle>
 
 					<RegForm.Frame>
@@ -84,11 +84,7 @@ const RegFormContainer = () => {
 							onChange={ ({ target }) => setEmail(target.value) }
 							error={ emailError ? true : false }
 						/>
-						<RegForm.Label
-							htmlFor="email"
-						>
-							Email
-						</RegForm.Label>
+						<RegForm.Label htmlFor="email">Email</RegForm.Label>
 						{ emailError && <p>Email is required!</p> }
 					</RegForm.Frame>
 
@@ -101,15 +97,11 @@ const RegFormContainer = () => {
 							onChange={ ({ target }) => setPassword(target.value)  }
 							error={ passwordError ? true : false }
 						/>
-						<RegForm.Label
-							htmlFor="password"
-						>
-							Add a password
-						</RegForm.Label>
+						<RegForm.Label htmlFor="password">Add a password</RegForm.Label>
 						{ passwordError && <p>Password is required!</p>}
 					</RegForm.Frame>
 
-					{ error && <RegForm.Error> { error } </RegForm.Error> }
+					{ error && <RegForm.Error>{ error }</RegForm.Error> }
 					<RegForm.Button>{ auth.regForm.button }</RegForm.Button>
 				</RegForm.Inner>
 			</RegForm>

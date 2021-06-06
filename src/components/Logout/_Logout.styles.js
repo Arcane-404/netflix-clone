@@ -5,7 +5,7 @@ export const Container = styled.div`
 	margin-top: 100px;
 
 	@media (min-width: 550px) {
-		background: url('/images/Logout.jpeg');
+		background: url('/images/logout-bg.png');
 		background-position: top 10% left 10%;
 		background-repeat: no-repeat;
 		background-size: cover;
