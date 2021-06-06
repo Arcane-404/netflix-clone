@@ -1,10 +1,11 @@
 import React from 'react'
 import { Preload } from '../../components'
+import { logo } from '../../json'
 
 const PreloadContainer = () => {
 	return (
 		<Preload>
-			<Preload.Img src="/images/netflix-logo-animation.gif" />
+			<Preload.Gif src={ logo.gif } alt={ logo.alt } />
 		</Preload>
 	)
 }

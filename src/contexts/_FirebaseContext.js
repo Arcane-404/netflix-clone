@@ -1,9 +1,6 @@
 import React, { useState, createContext, useContext } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
-import dotenv from 'dotenv'
-
-dotenv.config()
 
 const { REACT_APP_API_KEY, REACT_APP_APP_ID } = process.env
 

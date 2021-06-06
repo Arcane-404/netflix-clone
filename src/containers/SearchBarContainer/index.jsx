@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import { SearchBar } from '../../components'
-import { useMediaQuery, useInput } from '../../hooks'
+import { useMediaQuery } from '../../hooks'
 
 const targetSibling = e => e.currentTarget.nextElementSibling
 
-const SearchBarContainer = () => {
+const SearchBarContainer = ({ search, handleSearch }) => {
 
 	const [ inFocus, setInFocus ] = useState(false)
-	const [ search, handleChange ] = useInput('')
 	const isDesktop = useMediaQuery('desktop')
 	const placeholder = (isDesktop) ? 'Title, people, genres' : 'Search'
 
@@ -28,7 +27,7 @@ const SearchBarContainer = () => {
 
 	const handleFocus = e => setInFocus(true)
 
-	const searchProps = {
+	const searchBarProps = {
 		onSubmit: handleSubmit,
 		onFocus: handleFocus,
 		inFocus: inFocus,
@@ -36,13 +35,13 @@ const SearchBarContainer = () => {
 	}
 
 	return (
-		<SearchBar { ...searchProps }>
+		<SearchBar { ...searchBarProps }>
 			{ isDesktop && <SearchBar.Icon onClick={ handleClick } /> }
 
 			<SearchBar.Input
 				placeholder={ placeholder }
 				value={ search }
-				onChange={ handleChange }
+				onChange={ handleSearch }
 			/>
 		</SearchBar>
 	)
