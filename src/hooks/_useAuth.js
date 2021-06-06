@@ -6,7 +6,7 @@ const { FirebaseContexts } = FirebaseContext
 const useAuth = () => {
 
 	const [ user, setUser ] = useState(null)
-	const { firebase, setLoggedIn } = useContext( FirebaseContext ) // ✓
+	const { firebase, setLoggedIn } = useContext( FirebaseContexts ) // ✓
 	const history = useHistory()
 
 	useEffect( () => {
