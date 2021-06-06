@@ -10,9 +10,8 @@ const RegFormContainer = () => {
 	const { firebase } = useContext( FirebaseContext )
 	const history = useHistory()
 
-	// const [ email, setEmail ] = useState(signupEmail)
-	const [ email, setEmail ] = useState('testing@gmail.com')
-	const [ password, setPassword ] = useState('testing')
+	const [ email, setEmail ] = useState(signupEmail)
+	const [ password, setPassword ] = useState('')
 	const [ emailError, setEmailError ] = useState(false)
 	const [ passwordError, setPasswordError ] = useState(false)
 	const [ error, setError ] = useState('')
@@ -21,11 +20,11 @@ const RegFormContainer = () => {
 		e.preventDefault()
 		if (email === '') {
 			setEmailError(true)
-			console.log('Email is required!')
+			// console.log('Email is required!')
 		}
 		if (password === '') {
 			setPasswordError(true)
-			console.log('Password is required!')
+			// console.log('Password is required!')
 		}
 		else {
 			firebase.auth().createUserWithEmailAndPassword( email, password )

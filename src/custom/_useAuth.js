@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 const useAuth = () => {
 
 	const [ user, setUser ] = useState(null)
-	const { firebase } = useContext( FirebaseContext )
+	const { firebase, setLoggedIn } = useContext( FirebaseContext )
 	const history = useHistory()
 
 	useEffect( () => {
@@ -13,14 +13,17 @@ const useAuth = () => {
 			if ( authUser ) {
 				// User is signed in.
 				console.log('User is signed in')
-				history.push('/browse')
+				// history.push('/browse')
+				setLoggedIn(true)
+
 			} else {
 				// No user is signed in.
 				console.log('User is signed out')
+				setLoggedIn(false)
 			}
 		})
 
-	}, [ firebase, history ])
+	}, [ firebase, history, setLoggedIn ])
 	return { user }
 }
 

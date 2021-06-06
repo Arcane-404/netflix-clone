@@ -1,5 +1,5 @@
 //Create our firebase context here
-import React, { createContext } from 'react'
+import React, { useState, createContext } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import dotenv from 'dotenv'
@@ -23,8 +23,11 @@ const config = {
 const fb = firebase.default.initializeApp(config)
 
 const FirebaseContextProvider = ({ children }) => {
+
+	const [ loggedIn, setLoggedIn ] = useState('')
+
 	return (
-		<FirebaseContext.Provider value={{ firebase: fb }}>
+		<FirebaseContext.Provider value={{ firebase: fb, loggedIn, setLoggedIn }}>
 			{ children }
 		</FirebaseContext.Provider>
 	)
