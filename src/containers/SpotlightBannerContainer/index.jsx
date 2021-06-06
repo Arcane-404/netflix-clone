@@ -1,9 +1,9 @@
 import React from 'react'
 import { Spotlight } from '../../components'
-import { useMediaQuery } from '../../custom'
+import { useMediaQuery } from '../../hooks'
 import temp from '../../json/temp'
 
-const BrowseBannerContainer = () => {
+const SpotlightBannerContainer = () => {
 	const isMobile = useMediaQuery('mobile')
 	const isDesktop = useMediaQuery('desktop')
 	const synopsis = isDesktop ? temp.synopsis1 : temp.synopsis2
@@ -27,13 +27,11 @@ const BrowseBannerContainer = () => {
 
 					<Spotlight.CtaBox>
 						<Spotlight.Button primary>
-							{ isDesktop && <Spotlight.Play /> }
-							<Spotlight.Text>Play</Spotlight.Text>
+							{ isDesktop && <Spotlight.Play /> } <Spotlight.Text>Play</Spotlight.Text>
 						</Spotlight.Button>
 
 						<Spotlight.Button secondary>
-							{ isDesktop && <Spotlight.InfoCircle /> }
-							<Spotlight.Text>More Info</Spotlight.Text>
+							{ isDesktop && <Spotlight.InfoCircle /> } <Spotlight.Text>More Info</Spotlight.Text>
 						</Spotlight.Button>
 					</Spotlight.CtaBox>
 				</Spotlight.Box>
@@ -41,11 +39,9 @@ const BrowseBannerContainer = () => {
 
 			{ isDesktop && <Spotlight.Maturity>{ temp.maturity }</Spotlight.Maturity> }
 
-			<Spotlight.ImageBox>
-				<Spotlight.Image src={ bgBannerImg } alt={ temp.alt } />
-			</Spotlight.ImageBox>
+			<Spotlight.ImageBox><Spotlight.Image src={ bgBannerImg } alt={ temp.alt } /></Spotlight.ImageBox>
 		</Spotlight>
 	)
 }
 
-export default BrowseBannerContainer
+export default SpotlightBannerContainer

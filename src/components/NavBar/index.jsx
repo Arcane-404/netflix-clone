@@ -1,6 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Inner, Box, FilterBox, Menu, Close, Logo, Text,	Button, Anchor, Logout } from './_NavBar.styles'
+import {
+	Container,
+	Inner,
+	Box,
+	FilterBox,
+	Menu,
+	Close,
+	Logo,
+	Text,	Button,
+	Anchor,
+	Logout
+} from './_NavBar.styles'
 
 export default function NavBar ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>

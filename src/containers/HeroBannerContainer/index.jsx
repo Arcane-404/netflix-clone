@@ -3,7 +3,7 @@ import { SignupFormContainer } from '../'
 import { Hero } from '../../components'
 import { home } from '../../json'
 
-const HomeBannerContainer = () => {
+const HeroBannerContainer = () => {
 	return (
 		<Hero>
 			<Hero.Inner>
@@ -20,4 +20,4 @@ const HomeBannerContainer = () => {
 	)
 }
 
-export default HomeBannerContainer
+export default HeroBannerContainer

@@ -1,13 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import { RegForm } from '../../components'
-import { EmailContext } from '../../custom/EmailContext'
-import { FirebaseContext } from '../../custom/_firebaseContext'
+import { FirebaseContext, EmailContext } from '../../contexts'
+import { auth } from '../../json'
+const { FirebaseContexts } = FirebaseContext
+const { EmailContexts } = EmailContext
+// import { EmailContext } from '../../custom/EmailContext'
+// import { FirebaseContext } from '../../custom/_firebaseContext'
 
 const RegFormContainer = () => {
 
-	const { signupEmail } = useContext( EmailContext )
-	const { firebase } = useContext( FirebaseContext )
+	const { signupEmail } = useContext( EmailContexts )
+	const { firebase } = useContext( FirebaseContexts )
 	const history = useHistory()
 
 	// const [ email, setEmail ] = useState(signupEmail)
@@ -68,13 +72,8 @@ const RegFormContainer = () => {
 						<RegForm.Span>3</RegForm.Span>
 					</RegForm.PreTitle>
 
-					<RegForm.Title>
-						Create a password to start your membership.
-					</RegForm.Title>
-
-					<RegForm.SubTitle>
-						Just a few more steps and you`re done! We hate paperwork, too.
-					</RegForm.SubTitle>
+					<RegForm.Title>{ auth.regForm }</RegForm.Title>
+					<RegForm.SubTitle>{ auth.regForm.subtitle }</RegForm.SubTitle>
 
 					<RegForm.Frame>
 						<RegForm.Input
@@ -111,9 +110,7 @@ const RegFormContainer = () => {
 					</RegForm.Frame>
 
 					{ error && <RegForm.Error> { error } </RegForm.Error> }
-					<RegForm.Button>
-						Continue
-					</RegForm.Button>
+					<RegForm.Button>{ auth.regForm.button }</RegForm.Button>
 				</RegForm.Inner>
 			</RegForm>
 		</>

@@ -3,8 +3,9 @@ import { useHistory } from 'react-router-dom'
 import { SearchBarContainer } from '../'
 import { NavBar } from '../../components'
 import { logo } from '../../json'
-import { useEventListener, useMediaQuery } from '../../custom'
-import { FirebaseContext } from '../../custom/_firebaseContext'
+import { useEventListener, useMediaQuery } from '../../hooks'
+import { FirebaseContext } from '../../contexts'
+const { FirebaseContexts } = FirebaseContext
 
 const BrowseNavBarContainer = () => {
 
@@ -14,7 +15,7 @@ const BrowseNavBarContainer = () => {
 	const isTabletSm = useMediaQuery('tablet-sm')
 	const isDesktop = useMediaQuery('desktop')
 	const history = useHistory()
-	const { firebase } = useContext(FirebaseContext)
+	const { firebase } = useContext(FirebaseContexts)
 	// console.log(firebase.auth)
 
 	const handleToggle = () => setMenu(!menu)

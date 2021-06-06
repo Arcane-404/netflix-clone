@@ -1,5 +1,11 @@
 import React from 'react'
-import { Container, Inner, Title, Content, Button } from './Logout.styles'
+import {
+	Container,
+	Inner,
+	Title,
+	Content,
+	Button
+} from './_Logout.styles'
 
 export default function Logout ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>

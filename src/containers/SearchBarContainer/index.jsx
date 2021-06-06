@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SearchBar } from '../../components'
-import { useMediaQuery, useInput } from '../../custom'
+import { useMediaQuery, useInput } from '../../hooks'
 
 const targetSibling = e => e.currentTarget.nextElementSibling
 

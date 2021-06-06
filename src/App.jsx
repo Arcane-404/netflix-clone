@@ -1,8 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { HomePage, LoginPage, LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
-import { useAuth } from './custom/'
-import { RedirectRoute, ProtectedRoute } from './routes/'
+import { RedirectRoute, ProtectedRoute } from './routes'
+import { useAuth } from './hooks'
 
 const App = () => {
 

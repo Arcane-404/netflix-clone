@@ -1,5 +1,12 @@
 import React from 'react'
-import { Container, Inner, Title, SubTitle, ImageBox, Image } from './_Hero.styles'
+import {
+	Container,
+	Inner,
+	Title,
+	SubTitle,
+	ImageBox,
+	Image
+} from './_Hero.styles'
 
 export default function Hero ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>

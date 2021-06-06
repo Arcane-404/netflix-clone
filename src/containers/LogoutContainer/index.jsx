@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
-import { Logout } from '../../components/'
+import { Logout } from '../../components'
+import { auth } from '../../json'
+
+const TIME = 15000
 
 const LogoutContainer = () => {
 
@@ -13,7 +16,7 @@ const LogoutContainer = () => {
 	const countDown = () => {
 		setTimeout( () => {
 			history.push('/')
-		}, 30000 )
+		}, TIME )
 	}
 
 	useEffect( () => {
@@ -23,16 +26,10 @@ const LogoutContainer = () => {
 	return (
 		<Logout>
 			<Logout.Inner>
-				<Logout.Title>
-					Leaving So Soon?
-				</Logout.Title>
-				<Logout.Content>
-					Just so you know, you don’t always need to sign out of Netflix. It’s only necessary if you’re on a shared or public computer.
-				</Logout.Content>
-				<Logout.Content>
-					You’ll be redirected to the Netflix home page in 30 seconds.
-				</Logout.Content>
-				<Logout.Button onClick={ homePageRedirect }>Go Now</Logout.Button>
+				<Logout.Title>{ auth.logout.title }</Logout.Title>
+				<Logout.Content>{ auth.logout.content1 }</Logout.Content>
+				<Logout.Content>{ auth.logout.content2 }</Logout.Content>
+				<Logout.Button onClick={ homePageRedirect }>{ auth.logout.button }</Logout.Button>
 			</Logout.Inner>
 		</Logout>
 	)

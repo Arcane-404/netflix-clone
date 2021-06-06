@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { Registration } from '../../components'
+import { auth } from '../../json'
 
 const RegistrationContainer = () => {
 
@@ -23,15 +24,9 @@ const RegistrationContainer = () => {
 					<Registration.Span>3</Registration.Span>
 				</Registration.PreTitle>
 
-				<Registration.Title>Finish Setting up your account. </Registration.Title>
-				<Registration.SubTitle>
-					Netflix is personalized for you. Create a password to watch Netflix on any device at any time.
-				</Registration.SubTitle>
-				<Registration.Button
-					onClick={ onContinue }
-				>
-					Continue
-				</Registration.Button>
+				<Registration.Title>{ auth.registration.title }</Registration.Title>
+				<Registration.SubTitle>{ auth.registration.subtitle }</Registration.SubTitle>
+				<Registration.Button onClick={ onContinue }>{ auth.registration.button }</Registration.Button>
 			</Registration.Inner>
 
 		</Registration>
