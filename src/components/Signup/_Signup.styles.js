@@ -20,7 +20,7 @@ export const Inner = styled.div`
 export const Image = styled.img`
 	/* border: 1px solid black; */
 	width: 95px;
-	height: 90px;
+	/* height: 90px; */
 `
 
 export const PreTitle = styled.p`

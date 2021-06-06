@@ -5,6 +5,11 @@ import { FirebaseContext } from '../../contexts'
 import { auth } from '../../json'
 const { FirebaseContexts } = FirebaseContext
 
+const errorMsg = {
+	email: 'Please enter a valid email or phone number.',
+	password: 'Your password must contain between 4 and 60 characters.'
+}
+
 const SigninFormContainer = () => {
 
 	const [ toggle, setToggle ] = useState(false)
@@ -69,12 +74,8 @@ const SigninFormContainer = () => {
 						value={ email }
 						onChange={ ({ target }) => setEmail( target.value ) }
 					/>
-					<Signin.Label
-						htmlFor="email"
-					>
-						{ auth.login.label.email }
-					</Signin.Label>
-					{ emailError && <Signin.Error>Please enter a valid email or phone number.</Signin.Error> }
+					<Signin.Label htmlFor="email">{ auth.login.label.email }</Signin.Label>
+					{ emailError && <Signin.Error>{ errorMsg.email }</Signin.Error> }
 				</Signin.InputFrame>
 
 				<Signin.InputFrame>
@@ -85,12 +86,8 @@ const SigninFormContainer = () => {
 						value={ password }
 						onChange={ ({ target }) => setPassword( target.value ) }
 					/>
-					<Signin.Label
-						htmlFor="password"
-					>
-						{ auth.login.label.password }
-					</Signin.Label>
-					{ passwordError && <Signin.Error>Your password must contain between 4 and 60 characters.</Signin.Error> }
+					<Signin.Label htmlFor="password">{ auth.login.label.password }</Signin.Label>
+					{ passwordError && <Signin.Error>{ errorMsg.password }</Signin.Error> }
 				</Signin.InputFrame>
 
 				{ error && <Signin.FirebaseError>{ error }</Signin.FirebaseError>}
@@ -117,14 +114,14 @@ const SigninFormContainer = () => {
 					<Signin.ReCaptchaBody>
 						{ auth.login.reCaptchaBody.text1 }
 						<Signin.ReCaptchaLink
-							href="https://policies.google.com/privacy"
+							href={ auth.login.reCaptchaBody.link1 }
 							target="_blank"
 						>
 							{ auth.login.reCaptchaBody.linkText1 }
 						</Signin.ReCaptchaLink>
 						and
 						<Signin.ReCaptchaLink
-							href="https://policies.google.com/terms"
+							href={ auth.login.reCaptchaBody.link2 }
 							target="_blank"
 						>
 							{ auth.login.reCaptchaBody.linkText2 }

@@ -4,7 +4,7 @@ export const Loading = () => (
 	<h1>loading — <span role="img" aria-label="load">🔃</span></h1>
 )
 
-export const Errors = (error = { message: 'none' }) => (
+export const Errors = (error = { message: 'unknown' }) => (
 	<>
 		<h1>error — <span role="img" aria-label="error">📛</span></h1>
 		<p>{ error.message }</p>
