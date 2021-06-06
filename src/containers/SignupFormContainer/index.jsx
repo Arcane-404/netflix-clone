@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { useHistory } from 'react-router-dom'
 import { SignupForm } from '../../components'
 import { EmailContext } from '../../contexts'
@@ -10,7 +10,8 @@ const SignupFormContainer = () => {
 	const [ email, setEmail ] = useState('')
 	const [ error, setError ] = useState('')
 
-	const { setSignupEmail } = useContext( EmailContexts )
+	const { signupEmail, setSignupEmail } = useContext( EmailContext ) // ✓
+
 
 	const handleChange = (e) => {
 		setEmail(e.target.value)
@@ -24,6 +25,12 @@ const SignupFormContainer = () => {
 		console.log(email)
 		history.push('/signup/registration')
 	}
+
+	useEffect( () => {
+		if ( signupEmail ) {
+			setEmail( signupEmail )
+		}
+	}, [ signupEmail ]) // ✓
 
 	return (
 		<SignupForm onSubmit={ formSubmit }>
