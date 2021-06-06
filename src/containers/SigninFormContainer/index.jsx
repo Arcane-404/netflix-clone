@@ -72,7 +72,7 @@ const SigninFormContainer = () => {
 					<Signin.Label
 						htmlFor="email"
 					>
-						{ auth.login.emailLabel }
+						{ auth.login.label.email }
 					</Signin.Label>
 					{ emailError && <Signin.Error>Please enter a valid email or phone number.</Signin.Error> }
 				</Signin.InputFrame>
@@ -88,7 +88,7 @@ const SigninFormContainer = () => {
 					<Signin.Label
 						htmlFor="password"
 					>
-						{ auth.login.passwordLabel }
+						{ auth.login.label.password }
 					</Signin.Label>
 					{ passwordError && <Signin.Error>Your password must contain between 4 and 60 characters.</Signin.Error> }
 				</Signin.InputFrame>
@@ -98,12 +98,12 @@ const SigninFormContainer = () => {
 
 				<Signin.CheckboxLabel htmlFor="rememberMe">
 					<Signin.Checkbox type="checkbox" id="rememberMe" />
-					{ auth.login.checkbox }
+					{ auth.login.label.checkbox }
 				</Signin.CheckboxLabel>
 
 				<Signin.Frame>
-					<Signin.Content>{ auth.login.content }</Signin.Content>
-					<Link to="/"><Signin.Link>{ auth.login.linkText }</Signin.Link></Link>
+					<Signin.Content>{ auth.login.content.text }</Signin.Content>
+					<Link to="/"><Signin.Link>{ auth.login.content.linkText }</Signin.Link></Link>
 				</Signin.Frame>
 
 				<Signin.ReCaptchaHeader>

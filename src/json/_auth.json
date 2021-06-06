@@ -27,11 +27,15 @@
 
   "login": {
     "title": "Sign In",
-    "emailLabel": "Email of phone number",
-    "passwordLabel": "Password",
-    "checkbox": "Remember me",
-    "content": "New to Netflix?",
-    "linkText": "Sign up now.",
+    "label": {
+      "email": "Email of phone number",
+      "password": "Password",
+      "checkbox": "Remember me"
+    },
+    "content": {
+      "text": "New to Netflix?",
+      "linkText": "Sign up now."
+    },
     "reCaptchaHeader": {
       "title": "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
       "linkText": "Learn More."
