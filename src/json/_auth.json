@@ -7,31 +7,37 @@
 
   "regForm": {
     "title": "Create a password to start your membership.",
-    "subtitle": "Just a few more steps and you`re done! We hate paperwork, too.",
+    "subtitle": "Just a few more steps and you're done! We hate paperwork, too.",
     "button": "Continue"
   },
 
   "registration": {
     "title": "Finish Setting up your account.",
     "subtitle": "Netflix is personalized for you. Create a password to watch Netflix on any device at any time.",
-    "button": "Continue"
+    "button": "Continue",
+    "img": "/images/signup-devices.png",
+    "alt": "signup devices"
   },
 
   "signup": {
     "title": "Congratulations on signing up!",
     "subtitle": "Now you can access all of Netflix's Features",
     "button": "Continue to Browse",
-    "img": "/images/Checkmark.png",
-    "alt": "checkmark picture"
+    "img": "/images/signup-checkmark.png",
+    "alt": "signup checkmark"
   },
 
   "login": {
     "title": "Sign In",
-    "emailLabel": "Email of phone number",
-    "passwordLabel": "Password",
-    "checkbox": "Remember me",
-    "content": "New to Netflix?",
-    "linkText": "Sign up now.",
+    "label": {
+      "email": "Email of phone number",
+      "password": "Password",
+      "checkbox": "Remember me"
+    },
+    "content": {
+      "text": "New to Netflix?",
+      "linkText": "Sign up now."
+    },
     "reCaptchaHeader": {
       "title": "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
       "linkText": "Learn More."
@@ -39,6 +45,8 @@
     "reCaptchaBody": {
       "text1": "The ination collected by Google reCAPTCHA is subject to the Google",
       "text2": "and is used for providing, maintaining, and improving there CAPTCHA service and for general security purposes (it is not used for personalized advertising by Google).",
+      "link1": "https://policies.google.com/privacy",
+      "link2": "https://policies.google.com/terms",
       "linkText1": "Privacy Policy",
       "linkText2": "Terms of Service"
     }
