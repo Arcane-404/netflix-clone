@@ -12,14 +12,15 @@ const useFuse = (data, fuseOptions) => {
 		if (data) {
 			const fuse = new Fuse(data, fuseOptions)
 			const fuzzy = query && fuse.search(query).map(result => result.item)
-			console.log(query.length, fuzzy.length, data.length)
-			if (fuzzy.length) setResults(fuzzy)
- 			if (!query) setResults(data)
+			// console.log(query.length, fuzzy.length, data.length)
+			if (fuzzy.length && query.length > 3) setResults(fuzzy)
+ 			if (!query && !fuzzy.length) setResults(data)
 		}
 	}, [ query, data, fuseOptions ])
 
 	return {
 		search: query,
+		setSearch: setQuery,
 		handleSearch,
 		results
 	}

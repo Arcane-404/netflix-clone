@@ -7,7 +7,7 @@ import { useEventListener, useMediaQuery } from '../../hooks'
 import { FirebaseContext } from '../../contexts'
 const { FirebaseContexts } = FirebaseContext
 
-const BrowseNavBarContainer = () => {
+const BrowseNavBarContainer = (props) => {
 
 	const [ isSticky, setSticky ] = useState(false)
 	const [ menu, setMenu ] = useState(true)
@@ -61,7 +61,7 @@ const BrowseNavBarContainer = () => {
 				</NavBar.Box>
 
 				<NavBar.Box>
-					<SearchBarContainer />
+					<SearchBarContainer { ...props } />
 					{/* ProfileOption */}
 					<NavBar.Logout onClick={ logoutUser }>Log out</NavBar.Logout>
 				</NavBar.Box>

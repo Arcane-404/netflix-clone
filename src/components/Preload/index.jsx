@@ -1,10 +1,10 @@
 import React from 'react'
-import { Container, Img } from './_Preload.styles'
+import { Container, Gif } from './_Preload.styles'
 
 export default function Preload ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children }</Container>
 }
 
-Preload.Img = function PreloadImg ({ children, ...restProps }) {
-	return <Img { ...restProps } />
+Preload.Gif = function PreloadGif ({ ...restProps }) {
+	return <Gif { ...restProps } />
 }
