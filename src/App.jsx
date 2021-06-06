@@ -4,6 +4,7 @@ import { LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage
 import { FirebaseContext } from './contexts' // ✓
 import { GifContainer } from './containers' // ✓
 const { FirebaseContexts } = FirebaseContext
+import { useAuth } from './hooks/'
 
 // const HomePage = lazy( () => import('./pages/_HomePage'))
 const LoginPage = lazy( () => import('./pages/_LoginPage')) // ✓
@@ -17,17 +18,19 @@ const HomePage = React.lazy(() => {
 const App = () => {
 
 	const { loggedIn } = useContext(FirebaseContexts) // ✓
+	// const { user } = useAuth()
 
-	// console.log(loggedIn)
-	//Finish up lazy loading with the fallback
+	console.log(loggedIn)
+	// Rename Gif to  PreLoad
+	//
 	return (
 		<>
 			<Suspense fallback= { <GifContainer /> } >
 				<Switch>
 
 					<Route exact path="/">
-						{/* { loggedIn ? <Redirect to="/browse" /> :  <HomePage /> } */}
-						<HomePage />
+						{ loggedIn ? <Redirect to="/browse" /> :  <HomePage /> }
+						{/* <HomePage /> */}
 					</Route>
 
 					<Route path="/login">

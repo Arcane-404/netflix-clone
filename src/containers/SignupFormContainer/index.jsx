@@ -10,7 +10,7 @@ const SignupFormContainer = () => {
 	const [ email, setEmail ] = useState('')
 	const [ error, setError ] = useState('')
 
-	const { signupEmail, setSignupEmail } = useContext( EmailContext ) // ✓
+	const { signupEmail, setSignupEmail } = useContext( EmailContexts ) // ✓
 
 
 	const handleChange = (e) => {
