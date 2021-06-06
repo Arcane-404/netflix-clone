@@ -2,7 +2,7 @@ import React, { lazy, Suspense, useContext } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
 import { FirebaseContext } from './contexts' // ✓
-import { GifContainer } from './containers' // ✓
+import { PreloadContainer } from './containers' // ✓
 const { FirebaseContexts } = FirebaseContext
 import { useAuth } from './hooks/'
 
@@ -18,19 +18,17 @@ const HomePage = React.lazy(() => {
 const App = () => {
 
 	const { loggedIn } = useContext(FirebaseContexts) // ✓
-	// const { user } = useAuth()
+	useAuth() //Everytime our App renders, it will run this useAuth hook
 
 	console.log(loggedIn)
-	// Rename Gif to  PreLoad
-	//
+
 	return (
 		<>
-			<Suspense fallback= { <GifContainer /> } >
+			<Suspense fallback= { <PreloadContainer /> } >
 				<Switch>
 
 					<Route exact path="/">
 						{ loggedIn ? <Redirect to="/browse" /> :  <HomePage /> }
-						{/* <HomePage /> */}
 					</Route>
 
 					<Route path="/login">

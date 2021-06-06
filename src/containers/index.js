@@ -13,5 +13,5 @@ export { default as RegistrationContainer 		} from './RegistrationContainer'
 export { default as RegFormContainer 					} from './RegFormContainer'
 export { default as FooterContainer 					} from './FooterContainer'
 export { default as LogoutContainer 					} from './LogoutContainer'
-export { default as GifContainer					} from './GifContainer' // ✓
+export { default as PreloadContainer					} from './PreloadContainer' // ✓
 
