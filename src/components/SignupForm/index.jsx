@@ -1,5 +1,14 @@
 import React from 'react'
-import { Container, Inner, Frame, Title, Input, Label, Error, Button } from './_SignupForm.styles'
+import {
+	Container,
+	Inner,
+	Frame,
+	Title,
+	Input,
+	Label,
+	Error,
+	Button
+} from './_SignupForm.styles'
 import { Icon } from '../'
 
 export default function SignupForm ({ children, ...restProps }) {

@@ -1,2 +1,2 @@
-export { default as RedirectRoute } from './_redirectRoute'
-export { default as ProtectedRoute } from './_redirectRoute'
+export { default as RedirectRoute } from './_RedirectRoute'
+export { default as ProtectedRoute } from './_RedirectRoute'

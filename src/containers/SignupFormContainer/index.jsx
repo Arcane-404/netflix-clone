@@ -1,19 +1,16 @@
 import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { SignupForm, Icon } from '../../components'
-import { EmailContext } from '../../custom/EmailContext'
-
-const signup = {
-	title: 'Ready to watch? Enter your email to create or restart your membership.',
-	label: 'Email Address'
-}
+import { SignupForm } from '../../components'
+import { EmailContext } from '../../contexts'
+import { auth } from '../../json'
+const { EmailContexts } = EmailContext
 
 const SignupFormContainer = () => {
 
 	const [ email, setEmail ] = useState('')
 	const [ error, setError ] = useState('')
 
-	const { setSignupEmail } = useContext( EmailContext )
+	const { setSignupEmail } = useContext( EmailContexts )
 
 	const handleChange = (e) => {
 		setEmail(e.target.value)
@@ -30,9 +27,7 @@ const SignupFormContainer = () => {
 
 	return (
 		<SignupForm onSubmit={ formSubmit }>
-			<SignupForm.Title>
-				{ signup.title }
-			</SignupForm.Title>
+			<SignupForm.Title>{ auth.signupForm.title }</SignupForm.Title>
 
 			<SignupForm.Inner>
 				<SignupForm.Frame>
@@ -45,20 +40,11 @@ const SignupFormContainer = () => {
 						error={ error }
 					/>
 
-					<SignupForm.Label htmlFor="email">
-						{ signup.label }
-					</SignupForm.Label>
-
-					{error && (
-						<SignupForm.Error>
-							{ error || 'Email is required!' }
-						</SignupForm.Error>
-					)}
+					<SignupForm.Label htmlFor="email">{ auth.signupForm.label }</SignupForm.Label>
+					{error && <SignupForm.Error>{ error || 'Email is required!' }</SignupForm.Error>}
 				</SignupForm.Frame>
 
-				<SignupForm.Button>
-					Get Started <SignupForm.Icon />
-				</SignupForm.Button>
+				<SignupForm.Button>{ auth.signupForm.button } <SignupForm.Icon /></SignupForm.Button>
 			</SignupForm.Inner>
 		</SignupForm>
 	)

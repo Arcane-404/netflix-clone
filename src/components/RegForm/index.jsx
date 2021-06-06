@@ -1,5 +1,17 @@
 import React from 'react'
-import { Container, Inner, PreTitle, Span, Title, SubTitle, Frame, Label, Input, Error, Button } from './_RegForm.styles'
+import {
+	Container,
+	Inner,
+	PreTitle,
+	Span,
+	Title,
+	SubTitle,
+	Frame,
+	Label,
+	Input,
+	Error,
+	Button
+} from './_RegForm.styles'
 
 export default function RegForm ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>

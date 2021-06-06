@@ -1,11 +1,15 @@
 import React from 'react'
-import { Container, Search, Input } from './_SearchBar.styles'
+import {
+	Container,
+	Search,
+	Input
+} from './_SearchBar.styles'
 
 export default function SearchBar ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>
 }
 
-SearchBar.Search = function SearchBarSearch ({ ...restProps }) {
+SearchBar.Icon = function SearchBarIcon ({ ...restProps }) {
 	return <Search { ...restProps } />
 }
 
