@@ -28,9 +28,9 @@ const FirebaseContextProvider = ({ children }) => {
 	const [ loggedIn, setLoggedIn ] = useState('') // ✓
 
 	return (
-		<FirebaseContext.Provider value={{ firebase: fb, loggedIn, setLoggedIn }}>
+		<FirebaseContexts.Provider value={{ firebase: fb, loggedIn, setLoggedIn }}>
 			{ children }
-		</FirebaseContext.Provider>
+		</FirebaseContexts.Provider>
 	)
 }
 

@@ -37,7 +37,7 @@ const SearchBarContainer = () => {
 
 	return (
 		<SearchBar { ...searchProps }>
-			{ isDesktop && <SearchBar.Search onClick={ handleClick } /> }
+			{ isDesktop && <SearchBar.Icon onClick={ handleClick } /> }
 
 			<SearchBar.Input
 				placeholder={ placeholder }

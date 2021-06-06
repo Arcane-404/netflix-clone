@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useContext } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
 import { FirebaseContext } from './contexts' // ✓
+import { useAuth } from './hooks/'
 import { GifContainer } from './containers' // ✓
 const { FirebaseContexts } = FirebaseContext
 
@@ -17,17 +18,19 @@ const HomePage = React.lazy(() => {
 const App = () => {
 
 	const { loggedIn } = useContext(FirebaseContexts) // ✓
+	// const { user } = useAuth()
 
-	// console.log(loggedIn)
-	//Finish up lazy loading with the fallback
+	console.log(loggedIn)
+	// Rename Gif to  PreLoad
+	//
 	return (
 		<>
 			<Suspense fallback= { <GifContainer /> } >
 				<Switch>
 
 					<Route exact path="/">
-						{/* { loggedIn ? <Redirect to="/browse" /> :  <HomePage /> } */}
-						<HomePage />
+						{ loggedIn ? <Redirect to="/browse" /> :  <HomePage /> }
+						{/* <HomePage /> */}
 					</Route>
 
 					<Route path="/login">
