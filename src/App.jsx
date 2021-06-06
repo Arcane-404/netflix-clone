@@ -2,9 +2,9 @@ import React, { lazy, Suspense, useContext } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
 import { FirebaseContext } from './contexts' // ✓
-import { useAuth } from './hooks/'
 import { GifContainer } from './containers' // ✓
 const { FirebaseContexts } = FirebaseContext
+import { useAuth } from './hooks/'
 
 // const HomePage = lazy( () => import('./pages/_HomePage'))
 const LoginPage = lazy( () => import('./pages/_LoginPage')) // ✓
