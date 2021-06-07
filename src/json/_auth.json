@@ -34,6 +34,7 @@
       "password": "Password",
       "checkbox": "Remember me"
     },
+    "button": "Sign In",
     "content": {
       "text": "New to Netflix?",
       "linkText": "Sign up now."

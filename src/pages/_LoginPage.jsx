@@ -1,12 +1,12 @@
 import React from 'react'
 import { Background } from '../components'
-import { SigninFormContainer, LoginNavBarContainer } from '../containers'
+import { LoginNavBarContainer, LoginFormContainer } from '../containers'
 
 const LoginPage = () => {
 	return (
 		<Background>
 			<LoginNavBarContainer />
-			<SigninFormContainer />
+			<LoginFormContainer />
 		</Background>
 	)
 }
