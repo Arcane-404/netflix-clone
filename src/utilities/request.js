@@ -11,6 +11,9 @@ export const Errors = (error = { message: 'unknown' }) => (
 	</>
 )
 
+
+// const url = BASE_URL + PATHS + QUERIES
+
 export const getData = () => (
 	axios.get('/tempData.json').then(response => response.data)
 )

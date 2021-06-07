@@ -16,7 +16,6 @@ const BrowseNavBarContainer = (props) => {
 	const isDesktop = useMediaQuery('desktop')
 	const history = useHistory()
 	const { firebase } = useContext(FirebaseContexts)
-	// console.log(firebase.auth)
 
 	const handleToggle = () => setMenu(!menu)
 
@@ -52,8 +51,8 @@ const BrowseNavBarContainer = (props) => {
 							{isDesktop && (
 								<>
 									<NavBar.Text className={ 'active' }>Home</NavBar.Text>
-									<NavBar.Text>TV Shows</NavBar.Text>
-									<NavBar.Text>Movies</NavBar.Text>
+									{/* <NavBar.Text>TV Shows</NavBar.Text> */}
+									{/* <NavBar.Text>Movies</NavBar.Text> */}
 								</>
 							)}
 						</NavBar.FilterBox>

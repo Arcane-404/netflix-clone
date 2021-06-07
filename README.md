@@ -90,7 +90,7 @@ useCallback
 [Badge-Netlify-Status]: https://api.netlify.com/api/v1/badges/___/deploy-status
 [Netlify-Deploy]: https://app.netlify.com/sites/the-netflix-clone/deploys
 
-[Badge-Netflix]: https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white
+[Badge-Netflix]: https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=FFF
 
 
 <!-- Technology Link -->
