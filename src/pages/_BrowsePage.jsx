@@ -17,7 +17,7 @@ const BrowsePage = () => {
 		<>
 			<BrowseNavBarContainer { ...navBarProps } />
 			{ (data.length === results.length) && <SpotlightBannerContainer /> }
-			{ data && results.length && <ResultsContainer { ...resultsProps } /> }
+			{ data && results && <ResultsContainer { ...resultsProps } /> }
 			<FooterContainer />
 		</>
 	)

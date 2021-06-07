@@ -4,19 +4,15 @@ import { withKnobs } from '@storybook/addon-knobs'
 // import { withA11y } from '@storybook/addon-a11y'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import StoryRouter from 'storybook-react-router'
-import { ThemeProvider } from 'styled-components'
-import { EmailContextProvider } from '../src/custom/EmailContext'
-import GlobalStyle from '../src/themes/GlobalStyle'
-import theme from '../src/themes/theme'
+import { GlobalThemeProvider, EmailContextProvider } from '../src/contexts/providers'
 import '../src/assets/style.scss'
 
 addDecorator((Story) => (
-  <ThemeProvider theme={ theme }>
+	<GlobalThemeProvider>
 		<EmailContextProvider>
-			<GlobalStyle />
 			<Story />
 		</EmailContextProvider>
-  </ThemeProvider>
+	</GlobalThemeProvider>
 ))
 addDecorator((story, context) => withConsole()(story)(context))
 addDecorator(withKnobs)
