@@ -1,25 +1,37 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { pageWrapper, sideSpacing } from '../_globals'
+import { fullScreen, isDark, isBoxModel } from '../_globals'
 
 const Container = styled.div`
 	${ sideSpacing }
-	border: 5px solid darkslategray;
+	${ isDark }
+	width: 100%;
+	height: 100vh;
+	${({ test }) => test && css`border: 5px solid darkslategray;`}
 `
 
 const Wrapper = styled.div`
 	${ pageWrapper }
-	border: 3px solid dimgray;
+	${ fullScreen }
+	${({ test }) => test && css`border: 3px solid dimgray;`}
 `
 
 const Box = styled.div`
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-around;
+	${ fullScreen }
+	${({ test }) => test && css`
+		display: flex;
+		flex-flow: wrap;
+		align-items: center;
+		/* justify-content: space-around; */
+		justify-content: center;
+	`}
 `
 
 const Test = styled.div`
-	& * { border: 2px solid silver; }
+	${ fullScreen }
+	${ isBoxModel }
+	/* & * { border: 2px solid silver; } */
 	& * { transition: all 0.35s linear; }
 `
 

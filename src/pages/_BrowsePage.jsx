@@ -1,17 +1,20 @@
 import React from 'react'
 import { useQuery } from 'react-query'
 import { BrowseNavBarContainer, SpotlightBannerContainer, ResultsContainer, FooterContainer } from '../containers'
-import { Loading, Errors, getData, fuseOptions } from '../utilities/request'
+import { Status } from '../components'
 import { useFuse } from '../hooks'
+import { getTestData, fuseOptions } from '../utilities/request'
 
 const BrowsePage = () => {
-	const { isLoading, error, data } = useQuery('tempData', getData)
+	const { isLoading, error, data } = useQuery('testData', getTestData)
 	const { search, handleSearch, results } = useFuse(data, fuseOptions)
 	const navBarProps = { search, handleSearch }
 	const resultsProps = { results }
 
-	if (isLoading) return <Loading />
-	if (error) return <Errors />
+	console.log(data)
+
+	if (isLoading) return <Status.Loading />
+	if (error) return <Status.Errors error={ error } />
 
 	return (
 		<>
