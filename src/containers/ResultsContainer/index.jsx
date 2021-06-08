@@ -1,26 +1,22 @@
 import React from 'react'
 import { v4 as uuid } from 'uuid'
 import { Content, Card } from '../../components'
+import { imageLink } from '../../utilities/request'
 
 const ResultsContainer = ({ results }) => {
 	return (
-		<Content>
-			<Content.Wrapper>
+		<Content test>
+			<Content.Wrapper test>
 				<Content.Test>
-					<Content.Box>
+					<Content.Box test>
 						{ (!results.length)
 							? 'no matches found'
 							: results.map(item => (
 								<Card key={ uuid() }>
-									<Card.ImageBox>
-										<Card.Image src={ item.image } alt={ item.author } />
+									<Card.ImageBox title={ item.title }>
+										<Card.ImageTitle>{ item.title }</Card.ImageTitle>
+										<Card.Image src={ imageLink(item.backdrop_path) } alt={ item.original_title } />
 									</Card.ImageBox>
-
-									<Card.TextBox>
-										<a href={ item.url } target="_blank" rel="noopener noreferrer">
-											<Card.Title>{ item.title }</Card.Title>
-										</a>
-									</Card.TextBox>
 								</Card>
 							))}
 					</Content.Box>

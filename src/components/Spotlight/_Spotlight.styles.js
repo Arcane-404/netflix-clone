@@ -49,7 +49,7 @@ export const Title = styled.h1`
 	@media ${ screen.desktop } {
 		font-family: ${({ theme }) => theme.fontFamily.primary };
 		font-size: 1.563rem;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+		text-shadow: ${({ theme }) => theme.shadow.text };
 	}
 `
 
@@ -72,7 +72,7 @@ export const Description = styled.p`
 		max-width: 41ch;
 		/* margin: 0; */
 		margin: 1em 0;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+		text-shadow: ${({ theme }) => theme.shadow.text };
 	}
 `
 

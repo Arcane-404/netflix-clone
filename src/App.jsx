@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useContext } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import { LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage } from './pages'
+import { LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage, ErrorPage } from './pages'
 import { FirebaseContext } from './contexts' // ✓
 import { PreloadContainer } from './containers' // ✓
 const { FirebaseContexts } = FirebaseContext
@@ -54,6 +54,10 @@ const App = () => {
 					<Route path="/browse">
 						{/* { loggedIn ? <BrowsePage /> : <Redirect to="/" /> } */}
 						<BrowsePage />
+					</Route>
+
+					<Route path="/*">
+						<ErrorPage />
 					</Route>
 				</Switch>
 			</Suspense>
