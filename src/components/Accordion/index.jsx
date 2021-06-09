@@ -1,8 +1,12 @@
 import React from 'react'
-import { Container, Inner, Frame, Header, Title, Toggle, Body, Content } from './_Accordion.styles'
+import { Container, Heading, Inner, Frame, Header, Title, Toggle, Body, Content } from './_Accordion.styles'
 
 export default function Accordion ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>
+}
+
+Accordion.Heading = function AccordionHeading ({ children, ...restProps }) {
+	return <Heading { ...restProps }> { children } </Heading>
 }
 
 Accordion.Inner = function AccordionInner ({ children, ...restProps }) {

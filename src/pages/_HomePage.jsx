@@ -1,5 +1,5 @@
 import React from 'react'
-import { HomeNavBarContainer, HeroBannerContainer, JumbotronContainer, FooterContainer } from '../containers'
+import { HomeNavBarContainer, HeroBannerContainer, JumbotronContainer, FaqContainer, FooterContainer } from '../containers'
 
 const HomePage = () => {
 	return (
@@ -7,6 +7,7 @@ const HomePage = () => {
 			<HomeNavBarContainer />
 			<HeroBannerContainer />
 			<JumbotronContainer />
+			<FaqContainer />
 			<FooterContainer />
 			{/*
 			- AboutUsContainer
