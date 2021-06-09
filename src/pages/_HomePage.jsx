@@ -1,11 +1,12 @@
 import React from 'react'
-import { HomeNavBarContainer, HeroBannerContainer, FooterContainer } from '../containers'
+import { HomeNavBarContainer, HeroBannerContainer, JumbotronContainer, FooterContainer } from '../containers'
 
 const HomePage = () => {
 	return (
 		<>
 			<HomeNavBarContainer />
 			<HeroBannerContainer />
+			<JumbotronContainer />
 			<FooterContainer />
 			{/*
 			- AboutUsContainer

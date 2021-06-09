@@ -1,8 +1,12 @@
 import React from 'react'
-import { Container, Inner, ContentFrame, Title, Subtitle, ImageFrame, Image } from './_Jumbotron.styles'
+import { Container, Frame, Inner, ContentFrame, Title, Subtitle, ImageFrame, Image, Video } from './_Jumbotron.styles'
 
 export default function Jumbotron ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>
+}
+
+Jumbotron.Frame = function JumbotronFrame ({ children, ...restProps }) {
+	return <Frame { ...restProps }> { children } </Frame>
 }
 
 Jumbotron.Inner = function JumbotronInner ({ children, ...restProps }) {
@@ -31,4 +35,8 @@ Jumbotron.ImageFrame = function JumbotronImageFrame ({ children, ...restProps })
 
 Jumbotron.Image = function JumbotronImage ({ children, ...restProps }) {
 	return <Image { ...restProps } />
+}
+
+Jumbotron.Video = function JumbotronVideo ({ children, ...restProps }) {
+	return <Video { ...restProps } />
 }
