@@ -15,9 +15,6 @@ const FaqContainer = () => {
 								<Accordion.Title>
 									{ acc.header }
 								</Accordion.Title>
-								<Accordion.Toggle>
-									<Plus />
-								</Accordion.Toggle>
 							</Accordion.Header>
 							<Accordion.Body>
 								<Accordion.Content>
