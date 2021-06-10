@@ -20,8 +20,6 @@ const App = () => {
 	const { loggedIn } = useContext(FirebaseContexts) // ✓
 	useAuth() //Everytime our App renders, it will run this useAuth hook
 
-	console.log(loggedIn)
-
 	return (
 		<>
 			<Suspense fallback= { <PreloadContainer /> } >
