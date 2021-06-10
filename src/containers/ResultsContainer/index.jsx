@@ -1,7 +1,7 @@
 import React from 'react'
 import { v4 as uuid } from 'uuid'
 import { Content, Card } from '../../components'
-import { imageLink } from '../../utilities/request'
+import { imageLink } from '../../utilities/response'
 
 const ResultsContainer = ({ results }) => {
 	return (
@@ -14,7 +14,7 @@ const ResultsContainer = ({ results }) => {
 							: results.map(item => (
 								<Card key={ uuid() }>
 									<Card.ImageBox title={ item.title }>
-										<Card.ImageTitle>{ item.title }</Card.ImageTitle>
+										<Card.Title>{ item.title }</Card.Title>
 										<Card.Image src={ imageLink(item.backdrop_path) } alt={ item.original_title } />
 									</Card.ImageBox>
 								</Card>
