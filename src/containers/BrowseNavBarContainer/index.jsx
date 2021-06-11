@@ -61,7 +61,7 @@ const BrowseNavBarContainer = (props) => {
 				</NavBar.Box>
 
 				<NavBar.Box>
-					<SearchBarContainer { ...props } />
+					{/* <SearchBarContainer { ...props } /> */}
 					{/* ProfileOption */}
 					<NavBar.Logout onClick={ logoutUser }>Log out</NavBar.Logout>
 				</NavBar.Box>
