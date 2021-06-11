@@ -1,7 +1,8 @@
 import React, { useState, createContext, useContext } from 'react'
 import { Container, Heading, Inner, Frame, Header, Title, Toggle, Body, Content } from './_Accordion.styles'
 import { Plus, Close } from '../Icon/'
-import data from '../../json/_faq.json'
+import { faq } from '../../json/'
+import { v4 as uuidv4 } from 'uuid'
 
 const ToggleContext = createContext()
 
@@ -21,19 +22,18 @@ Accordion.Frame = function AccordionFrame ({ children, ...restProps }) {
 
 	const [ currentIndex, setCurrentIndex ] = useState()
 	const [ isOpen, setIsOpen ] = useState(false)
+	const faqData = faq
 
 	return (
-		<>
-			{
-				data.map( (info, index) => (
-					<ToggleContext.Provider
-						key={ index }
-						value={{ currentIndex, setCurrentIndex, isOpen, setIsOpen, info, index }}>
-						<Frame { ...restProps }> { children } </Frame>
-					</ToggleContext.Provider>
-				))
-			}
-		</>
+		<>{
+			faqData.map( (info, index) => (
+				<ToggleContext.Provider
+					key={ uuidv4() }
+					value={{ currentIndex, setCurrentIndex, isOpen, setIsOpen, info, index }}>
+					<Frame { ...restProps }> { children } </Frame>
+				</ToggleContext.Provider>
+			))
+		}</>
 	)
 }
 
