@@ -24,11 +24,9 @@ const RegFormContainer = () => {
 		e.preventDefault()
 		if (email === '') {
 			setEmailError(true)
-			console.log('Email is required!')
 		}
 		if (password === '') {
 			setPasswordError(true)
-			console.log('Password is required!')
 		}
 		else {
 			firebase.auth().createUserWithEmailAndPassword( email, password )
@@ -43,7 +41,6 @@ const RegFormContainer = () => {
 			.catch( ( err ) => {
 				setEmail('')
 				setPassword('')
-				// console.log(err.message)
 				setError(err.message)
 			})
 		}

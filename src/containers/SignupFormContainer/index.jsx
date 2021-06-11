@@ -22,7 +22,7 @@ const SignupFormContainer = () => {
 	const formSubmit = (e) => {
 		e.preventDefault()
 		setSignupEmail(email)
-		console.log(email)
+		// console.log(email)
 		history.push('/signup/registration')
 	}
 

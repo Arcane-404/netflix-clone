@@ -21,7 +21,6 @@ Accordion.Inner = function AccordionInner ({ children, ...restProps }) {
 Accordion.Frame = function AccordionFrame ({ children, ...restProps }) {
 
 	const [ currentIndex, setCurrentIndex ] = useState()
-	const [ isOpen, setIsOpen ] = useState(false)
 	const faqData = faq
 
 	return (
@@ -29,7 +28,7 @@ Accordion.Frame = function AccordionFrame ({ children, ...restProps }) {
 			faqData.map( (info, index) => (
 				<ToggleContext.Provider
 					key={ uuidv4() }
-					value={{ currentIndex, setCurrentIndex, isOpen, setIsOpen, info, index }}>
+					value={{ currentIndex, setCurrentIndex, info, index }}>
 					<Frame { ...restProps }> { children } </Frame>
 				</ToggleContext.Provider>
 			))
@@ -39,7 +38,7 @@ Accordion.Frame = function AccordionFrame ({ children, ...restProps }) {
 
 Accordion.Header = function AccordionHeader ({ children, ...restProps }) {
 
-	const { index, currentIndex, setCurrentIndex, isOpen, setIsOpen } = useContext(ToggleContext)
+	const { index, currentIndex, setCurrentIndex } = useContext(ToggleContext)
 
 	return (
 		<Header { ...restProps }
