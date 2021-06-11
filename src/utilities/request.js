@@ -1,3 +1,4 @@
+import { stringify } from 'querystringify'
 import axios from 'axios'
 const { REACT_APP_TMDB_API_KEY } = process.env
 
@@ -14,15 +15,14 @@ export const fuseOptions = {
 // }
 
 const BASE_URL = 'https://api.themoviedb.org/3'
-const API_QUERY = `?api_key=${ REACT_APP_TMDB_API_KEY }`
-const BASE_QUERY = API_QUERY + '&append_to_response=videos,image'
+const BASE_QUERY = {
+	api_key: REACT_APP_TMDB_API_KEY,
+	append_to_response: 'images,videos,release_dates,credits'
+}
 
-const YT_VIDEO_URL = 'https://www.youtube.com/embed/'
-const IMAGE_URL = 'https://image.tmdb.org/t/p/w500/'
-
-export const requestLink = (path = '', query = '') => BASE_URL + path + BASE_QUERY + query
-export const imageLink = img => IMAGE_URL + img
-export const videoLink = key => YT_VIDEO_URL + key
+export const requestLink = (path = '', query = '') => (
+	BASE_URL + path + stringify({ ...BASE_QUERY, ...query }, true)
+)
 
 const testData = { path: '/data/movies.json' }
 // const urlPopularMovies = requestLink('/movie/popular')
@@ -30,6 +30,13 @@ const testData = { path: '/data/movies.json' }
 // const urlTopRatedMovies = requestLink('/movie/top_rated')
 // const urlSearchMovies = requestLink('/movie/popular', '&query=furious')
 
-export const getTestData = () => (
-	axios.get(testData.path).then(response => response.data.results)
-)
+export const getTestData = (path = '', query = {}) => {
+	const url = testData.path
+	// const url = requestLink(path, query)
+	return axios.get(url).then(response => response.data.results)
+}
+
+export const getData = (path = '', query = {}) => {
+	const url = requestLink(path, query)
+	return axios.get(url).then(response => response.data)
+}

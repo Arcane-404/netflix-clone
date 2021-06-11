@@ -1,27 +1,22 @@
 import React from 'react'
+import { v4 as uuid } from 'uuid'
 import { Jumbotron } from '../../components'
-import data from '../../json/_jumbotron.json'
+import { jumbotron } from '../../json'
 
 const JumbotronContainer = () => {
 	return (
 		<Jumbotron>
-			{data.map( (d, i) => (
-				<Jumbotron.Frame key={ i }>
-					<Jumbotron.Inner direction={ d.direction }>
-
+			{ jumbotron.map(content => (
+				<Jumbotron.Frame key={ uuid() }>
+					<Jumbotron.Inner direction={ content.direction }>
 						<Jumbotron.ContentFrame>
-							<Jumbotron.Title>
-								{ d.title }
-							</Jumbotron.Title>
-							<Jumbotron.Subtitle>
-								{ d.subtitle }
-							</Jumbotron.Subtitle>
+							<Jumbotron.Title>{ content.title }</Jumbotron.Title>
+							<Jumbotron.Subtitle>{ content.subtitle }</Jumbotron.Subtitle>
 						</Jumbotron.ContentFrame>
 
 						<Jumbotron.ImageFrame>
-							<Jumbotron.Image src={ d.img } alt="image" />
+							<Jumbotron.Image src={ content.img } alt={ content.alt } />
 						</Jumbotron.ImageFrame>
-
 					</Jumbotron.Inner>
 				</Jumbotron.Frame>
 			))}

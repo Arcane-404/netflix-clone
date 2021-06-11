@@ -4,17 +4,22 @@ import { Icon } from '../'
 export const Container = styled.div`
 	border-radius: ${({ theme }) => theme.radius.round.sm };
 	background: #181818;
-	/* width: 100%; */
-	min-width: 235px;
-	min-height: 130px;
+	min-width: 230px;
+	/* min-height: 130px; */
 	display: flex;
 	flex-flow: column;
 	overflow: hidden;
 
-	& > div:nth-child(1) { flex: 1 1 195px; }
-	& > div:nth-child(2) { flex: 1 1 155px; }
+	/* & > div:nth-child(1) { flex: 1 1 195px; } */
+	& > div:nth-child(1) { flex: 1 1 130px; }
+	/* & > div:nth-child(2) { flex: 1 1 155px; } */
+	& > div:nth-child(2) { flex: 0 0 0; }
 
 	${({ hover }) => hover && css`
+		& > div:nth-child(1) { flex: 1 1 195px; }
+		& > div:nth-child(2) {
+			flex: 1 1 155px;
+		}
 		min-width: 345px;
 		min-height: 350px;
 	`}
@@ -100,7 +105,6 @@ export const MetaInfo = styled.div`
 
 export const Info = styled.span`
 	color: #FFF;
-	/* display: inline-block; */
 
 	& + span { margin-left: 0.5em; }
 
@@ -110,7 +114,7 @@ export const Info = styled.span`
 		font-weight: 700;
 	`}
 
-	${({ year }) => year && css``}
+	/* ${({ year }) => year && css``} */
 
 	${({ maturity }) => maturity && css`
 		border: 1px solid rgba(255,255,255, 0.4);
@@ -118,7 +122,7 @@ export const Info = styled.span`
 		padding: 0 0.4em;
 	`}
 
-	${({ duration }) => duration && css``}
+	/* ${({ duration }) => duration && css``} */
 
 	${({ hdBadge }) => hdBadge && css`
 		border: 1px solid rgba(255,255,255, 0.4);

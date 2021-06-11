@@ -26,6 +26,7 @@ const BrowseNavBarContainer = (props) => {
 
 	const handleScroll = (e) => {
 		const offset = window.scrollY
+		if (isSticky && offset > 100) return
 		if (offset > 0) setSticky(true)
 		else setSticky(false)
 	}
