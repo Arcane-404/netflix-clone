@@ -13,13 +13,11 @@ const useAuth = () => {
 		firebase.auth().onAuthStateChanged( function ( authUser ) {
 			if ( authUser ) {
 				// User is signed in.
-				console.log('User is signed in')
 				// history.push('/browse')
 				setLoggedIn(true) // ✓
 
 			} else {
 				// No user is signed in.
-				console.log('User is signed out')
 				setLoggedIn(false) // ✓
 			}
 		})
