@@ -5,21 +5,20 @@ export const Container = styled.div`
   border: 3px solid gold;
   border-radius: 0.25em;
 	background: #181818;
-  width: 300px;
-  position: fixed;
-	top: 0;
-  /* top: 82px; */
-  /* top: 85px; */
-  /* left: 32px; */
-  /* left: 234px; */
-  /* left: 430px; */
-	top: 190px;
-	left: 235px;
-	transform: translate(-50%, -50%);
-  transition: 0.2s ease;
-	transition-property: opacity, transform;
+  width: 325px;
+  position: absolute;
+	/* opacity: 0.25; */
+	/* transform: translate(-5%, -20%); */
+  /* transition: 0.2s ease; */
+	/* transition-property: opacity, transform; */
 	z-index: 2;
-	opacity: 0.25;
+
+	${({ posY }) => posY && css`top: ${ posY + 'px' };` }
+	${({ posX, isFarLeft, isFarRight }) => {
+		if (isFarRight) return css`right: 4vw;`
+		if (isFarLeft) return css`left: 4vw;`
+		else return css`left: ${ posX + 'px' };`
+	}}
 `
 
 export const ImageBox = styled.div`

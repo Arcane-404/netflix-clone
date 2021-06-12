@@ -1,8 +1,13 @@
 import React from 'react'
 // import { useQuery } from 'react-query'
-import { BrowseNavBarContainer, SpotlightBannerContainer, RowResultsContainer, FooterContainer } from '../containers'
-// import { Status } from '../components'
 // import { useFuse } from '../hooks'
+// import { Status } from '../components'
+import {
+	BrowseNavBarContainer,
+	SpotlightBannerContainer,
+	RowResultsContainer,
+	FooterContainer
+} from '../containers'
 // import { getTestData, fuseOptions } from '../utilities/request'
 
 const BrowsePage = () => {
@@ -22,7 +27,7 @@ const BrowsePage = () => {
 			{/* { data && results && <ResultsContainer { ...resultsProps } /> } */}
 			{ (true) && (
 				<>
-					<RowResultsContainer title="Netflix Originals" isLgRow={ true } />
+					<RowResultsContainer title="Netflix Originals" isLargeRow={ true } />
 					<RowResultsContainer title="TBD Specials" />
 				</>
 			)}

@@ -44,22 +44,27 @@ GH-CLI : gh repo clone Arcane-404/netflix-clone
 useState /
 useEffect /
 useContext /
-useCallback
+useCallback /
+useMemo /
+Suspense + lazy
 - other:
 [`normalize.css`][styled-normalize] /
 [`uuid`][uuid] /
 [`react-icons`][react-icons] /
 [`react-query`][react-query] /
 [`axios`][axios] /
-[`fuse.js`][fusejs]
+[`fuse.js`][fusejs] /
+[`swiper`][swiper]
+- API Resources:
+[`TMDB`][TMDB]
 
 ## Collaboration Tools
 
 ### Code Productivity
 
-- CodeStream
-- editorConfig
-- eslint
+- [CodeStream][CodeStream]
+- [EditorConfig][EditorConfig]
+- [ESLint][ESLint]
 
 ### Shared Documents
 
@@ -119,11 +124,16 @@ useCallback
 [React-Query]: https://react-query.tanstack.com/
 [axios]: https://axios-http.com/
 [fusejs]: https://fusejs.io/
+[swiper]: https://swiperjs.com/
 
 [Badge-Netlify]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
+[TMDB]: https://www.themoviedb.org/documentation/api
 
 
 <!-- Productivity Tools Link -->
+[CodeStream]: https://www.codestream.com/
+[EditorConfig]: https://editorconfig.org/
+[ESLint]: https://eslint.org/
 [Trello]: https://trello.com/b/ua1epL8D/netflix-clone
 [Google-Docs]: https://docs.google.com/document/d/1cVYFRZrMNB_DM8Zqk7nY0m7LTcVHEGx03nTi7N7ifdo/edit?usp=sharing
 [Figma-Jam]: https://www.figma.com/file/uV72mjoGtFQXgk2wWZ6ImV/brainstorm-netflix-clone-app?node-id=0%3A1

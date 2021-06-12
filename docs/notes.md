@@ -1,5 +1,9 @@
 # Notes
 
+## Card Hover Steps
+- hover on card, 3s, then turn on
+- hover out of card, 3s, then turn off
+
 ## Browse Page
 - NavBar > SearchBar
 - Banner

@@ -7,8 +7,6 @@ export const Container = styled.div`
 	width: 100%;
   position: relative;
   overflow: hidden;
-
-	/* ${({ isLgRow }) => isLgRow && css`height: 250px;`} */
 `
 
 export const Image = styled.img``
