@@ -1,15 +1,15 @@
-const IMAGE_URL = 'https://image.tmdb.org/t/p'
-const YT_VIDEO_URL = 'https://www.youtube.com/embed/'
-const IMDB_URL = 'https://www.imdb.com/title'
+import { IMAGE_URL, YT_VIDEO_URL, IMDB_URL } from './_options'
 
-export const imageLink = (img, path = '/w500/') => IMAGE_URL + path + img
+export const imageLink = (img, path = '/w500') => IMAGE_URL + path + img
 export const videoLink = key => YT_VIDEO_URL + key
 export const imdbLink = id => IMDB_URL + id
 
-export const getScore = val => +(`${val}`).replace('.','')
-export const getYear = val => new Date(val).getFullYear()
-export const getDuration = val => `${ Math.floor(val / 60) }h ${ val % 60 }m`
-export const getMaturity = val => (
+/*  */
+
+const getScore = val => +(`${val}`).replace('.','')
+const getYear = val => new Date(val).getFullYear()
+const getDuration = val => `${ Math.floor(val / 60) }h ${ val % 60 }m`
+const getMaturity = val => (
 	val.find(item => item.iso_3166_1 === 'US')
 	.release_dates.find(item => item.certification).certification
 )

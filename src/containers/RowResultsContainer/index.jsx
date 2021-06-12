@@ -4,20 +4,30 @@ import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import { Content, Card, SwiperRow } from '../../components'
-import { imageLink } from '../../utilities/response'
-// import { ModalContainer } from './containers'
+import { CardContainer, InfoModalContainer } from '../'
+// import { getId, imageLink } from '../../utilities'
 import { swiperProps } from './swiperProps'
+
 import axios from 'axios'
 const movies = { path: '/data/moviesShort.json' }
 
 SwiperCore.use([ Navigation ])
 
-const RowResultsContainer = ({ title, isLgRow }) => {
+const RowResultsContainer = ({ title, isLargeRow = false }) => {
 	const [ results, setResults ] = useState(null)
+	// const [ info, setInfo ] = useState(null)
+	// const [ isHover, setHover ] = useState(false)
 
-	const cardProps = {
-		isLgRow
-	}
+	// const handleInfoModal = (e) => {
+	// 	const id = getId(e)
+	// 	const movie = results.find(item => item.id === +id)
+	// 	console.log(id, movie)
+	// }
+
+	// const cardProps = {
+	// 	isLargeRow,
+	// 	onMouseEnter: handleInfoModal
+	// }
 
 	useEffect(() => {
 		(() => (
@@ -34,20 +44,15 @@ const RowResultsContainer = ({ title, isLgRow }) => {
 			<h1>{ title }</h1>
 
 			<Swiper { ...swiperProps }>
-				{ results && results.map((item, id) => (
-					<SwiperSlide tag="div" key={ `slide-${ id }` }>
-						<Card { ...cardProps } data-id={ item.id }>
-							{ !isLgRow && <Card.Title>{ item.title }</Card.Title> }
-							<Card.Image
-								src={ imageLink(item.images[(isLgRow ? 'poster' : 'backdrop' )]) }
-								alt={ item.title }
-							/>
-						</Card>
+				{ results && results.map(item => (
+					<SwiperSlide tag="div" key={ uuid() }>
+						{/* <CardContainer { ...cardProps } item={ item } /> */}
+						<CardContainer isLargeRow={ isLargeRow } item={ item } />
 					</SwiperSlide>
 				))}
 			</Swiper>
 
-			{/* { isHover && info && <ModalContainer { ...modalProps } /> } */}
+			{/* { isHover && info && <InfoModalContainer { ...modalProps } /> } */}
 		</SwiperRow>
 		// </Content>
 	)

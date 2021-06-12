@@ -1,5 +1,11 @@
 import React from 'react'
-import { HomeNavBarContainer, HeroBannerContainer, JumbotronContainer, FaqContainer, FooterContainer } from '../containers'
+import {
+	HomeNavBarContainer,
+	HeroBannerContainer,
+	JumbotronContainer,
+	FaqContainer,
+	FooterContainer
+} from '../containers'
 
 const HomePage = () => {
 	return (
@@ -9,11 +15,6 @@ const HomePage = () => {
 			<JumbotronContainer />
 			<FaqContainer />
 			<FooterContainer />
-			{/*
-			- AboutUsContainer
-			- FaqContainer
-			- SignupFormConatainer
-			*/}
 		</>
 	)
 }
