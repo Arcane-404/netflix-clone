@@ -1,6 +1,7 @@
 import React from 'react'
 // import { useQuery } from 'react-query'
 // import { useFuse } from '../hooks'
+import { request } from '../utilities'
 // import { Status } from '../components'
 import {
 	BrowseNavBarContainer,
@@ -25,10 +26,11 @@ const BrowsePage = () => {
 			{/* <BrowseNavBarContainer { ...navBarProps } /> */}
 			{/* { (data.length === results.length) && <SpotlightBannerContainer /> } */}
 			{/* { data && results && <ResultsContainer { ...resultsProps } /> } */}
-			{ (true) && (
+			{ (false) && (
 				<>
-					<RowResultsContainer title="Netflix Originals" isLargeRow={ true } />
-					<RowResultsContainer title="TBD Specials" />
+					<RowResultsContainer title="Netflix Originals" request={ request.original } mediaType="tv" isLargeRow={ true } />
+					<RowResultsContainer title="Top Rated" request={ request.topRated } isTopRatedRow={ true } />
+					{/* <RowResultsContainer title="Trending" /> */}
 				</>
 			)}
 			<FooterContainer />

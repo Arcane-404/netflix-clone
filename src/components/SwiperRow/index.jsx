@@ -54,6 +54,12 @@ export const Container = styled.div`
   }
 `
 
+const Title = styled.h2``
+
 export default function SwiperRow ({ children, ...restProps }) {
 	return <Container { ...restProps }>{ children }</Container>
+}
+
+SwiperRow.Title = function SwiperRowTitle ({ children, ...restProps }) {
+	return <Title { ...restProps }>{ children }</Title>
 }

@@ -1,7 +1,8 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import { queryClientOptions } from '../utilities'
 
-const client = new QueryClient()
+const client = new QueryClient(queryClientOptions)
 
 const QueryDevtools = () => (
 	<ReactQueryDevtools initialIsOpen={ false } />
@@ -17,10 +18,3 @@ const QueryContextProvider = ({ children }) => {
 }
 
 export { QueryDevtools, QueryContextProvider }
-
-// const queryOptions = {
-// 	defaultOptions: {
-// 		queries: { refetchOnWindowFocus: false },
-// 		mutations: {}
-// 	}
-// }

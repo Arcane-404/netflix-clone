@@ -175,7 +175,3 @@ export const Anchor = styled(Link)`
 		font-size: 1.1875rem;
 	}
 `
-
-export const Logout = styled.button`
-
-`

@@ -1,60 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { v4 as uuid } from 'uuid'
 import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
-import { Content, Card, SwiperRow } from '../../components'
-import { CardContainer, InfoModalContainer } from '../'
-// import { getId, imageLink } from '../../utilities'
+import { useQuery } from 'react-query'
+import { SwiperRow } from '../../components'
+import { CardContainer } from '../../containers'
 import { swiperProps } from './swiperProps'
-
-import axios from 'axios'
-const movies = { path: '/data/moviesShort.json' }
-
 SwiperCore.use([ Navigation ])
 
-const RowResultsContainer = ({ title, isLargeRow = false }) => {
-	const [ results, setResults ] = useState(null)
-	// const [ info, setInfo ] = useState(null)
-	// const [ isHover, setHover ] = useState(false)
+const RowResultsContainer = (
+	{ title, request, mediaType = 'movie' , isLargeRow, isTopRated }
+) => {
+	const { data } = useQuery(title, request)
 
-	// const handleInfoModal = (e) => {
-	// 	const id = getId(e)
-	// 	const movie = results.find(item => item.id === +id)
-	// 	console.log(id, movie)
-	// }
-
-	// const cardProps = {
-	// 	isLargeRow,
-	// 	onMouseEnter: handleInfoModal
-	// }
-
-	useEffect(() => {
-		(() => (
-			axios
-			.get(movies.path)
-			.then(response => setResults(response.data))
-			.catch(error => console.error(error))
-		))()
-	}, [ ])
+	const cardProps = {
+		mediaType,
+		isLargeRow,
+		isTopRated
+	}
 
 	return (
-		// <Content test>
 		<SwiperRow>
-			<h1>{ title }</h1>
+			<SwiperRow.Title>{ title }</SwiperRow.Title>
 
 			<Swiper { ...swiperProps }>
-				{ results && results.map(item => (
+				{ data && data.map(item => (
 					<SwiperSlide tag="div" key={ uuid() }>
-						{/* <CardContainer { ...cardProps } item={ item } /> */}
-						<CardContainer isLargeRow={ isLargeRow } item={ item } />
+						<CardContainer { ...cardProps } item={ item } />
 					</SwiperSlide>
 				))}
 			</Swiper>
-
-			{/* { isHover && info && <InfoModalContainer { ...modalProps } /> } */}
 		</SwiperRow>
-		// </Content>
 	)
 }
 
