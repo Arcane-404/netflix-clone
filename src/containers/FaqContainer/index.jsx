@@ -1,6 +1,5 @@
 import React from 'react'
 import { Accordion } from '../../components'
-import data from '../../json/_faq.json'
 
 const FaqContainer = () => {
 	return (

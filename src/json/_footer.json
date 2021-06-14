@@ -1,5 +1,7 @@
 {
-  "column1": [
+  "title": "Questions? Call 1-844-505-2993",
+
+  "col1": [
     { "text": "FAQ",                    "link": "https://help.netflix.com/en/node/412" },
     { "text": "Investor Relations",     "link": "https://ir.netflix.net/ir-overview/profile/default.aspx" },
     { "text": "Ways to Watch",          "link": "https://devices.netflix.com/en/" },
@@ -7,21 +9,21 @@
     { "text": "Netflix Originals",      "link": "https://www.netflix.com/browse/genre/839338"}
   ],
 
-  "column2": [
+  "col2": [
     { "text": "Help Center",  "link": "https://help.netflix.com/en/" },
     { "text": "Jobs",         "link": "https://jobs.netflix.com/" },
     { "text": "Terms of Use", "link": "https://help.netflix.com/legal/termsofuse" },
     { "text": "Contact Us",   "link": "https://help.netflix.com/en/contactus" }
   ],
 
-  "column3": [
+  "col3": [
     { "text": "Account",            "link": "https://help.netflix.com/en/node/412" },
     { "text": "Redeem Gift Cards",  "link": "https://www.netflix.com/redeem" },
     { "text": "Privacy",            "link": "https://help.netflix.com/legal/privacy" },
     { "text": "Speed Test",         "link": "https://fast.com/" }
   ],
 
-  "column4": [
+  "col4": [
     { "text": "Media Center",       "link": "https://help.netflix.com/en/node/412" },
     { "text": "Buy Gift Cards",      "link": "https://www.netflix.com/gift-cards" },
     { "text": "Cookie Preferences", "link": "https://www.netflix.com/Cookies" },

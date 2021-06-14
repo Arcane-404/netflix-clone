@@ -29,7 +29,10 @@ export const Row = styled.div`
     }
 `
 
-export const Link = styled.a`
+export const Link = styled.a.attrs({
+	target: '_blank',
+	rel: 'noopener noreferrer'
+})`
     color: #757575;
     margin-bottom: 20px;
     font-size: 13px;

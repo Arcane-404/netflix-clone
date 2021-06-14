@@ -8,9 +8,9 @@ import {
 	Menu,
 	Close,
 	Logo,
-	Text,	Button,
-	Anchor,
-	Logout
+	Text,
+	Button,
+	Anchor
 } from './_NavBar.styles'
 
 export default function NavBar ({ children, ...restProps }) {
@@ -52,8 +52,4 @@ NavBar.Button = function NavBarButton ({ children, ...restProps }) {
 
 NavBar.Anchor = function NavBarAnchor ({ children, ...restProps }) {
 	return <Anchor { ...restProps }> { children } </Anchor>
-}
-
-NavBar.Logout = function NavBarLogout ({ children, ...restProps }) {
-	return <Logout { ...restProps }> { children } </Logout>
 }

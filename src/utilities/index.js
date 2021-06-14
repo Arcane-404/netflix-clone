@@ -6,12 +6,14 @@ export {
 
 export {
 	fuseOptions,
-	queryOptions
+	queryOptions,
+	queryClientOptions
 } from './_options'
 
 export {
 	request,
 	getData,
+	getCardData,
 	getSearchData
 } from './_request'
 

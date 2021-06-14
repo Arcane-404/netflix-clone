@@ -1,15 +1,14 @@
 import React, { lazy, Suspense, useContext } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import { LogoutPage, SignupPage, BrowsePage, SignupRegistrationPage, RegformPage, ErrorPage } from './pages'
+import { LogoutPage, SignupPage, RegistrationPage, RegFormPage, ErrorPage } from './pages'
 import { FirebaseContext } from './contexts'
 import { PreloadContainer } from './containers'
 const { FirebaseContexts } = FirebaseContext
 import { useAuth } from './hooks'
 
 const HomePage = lazy(() => new Promise(resolve => setTimeout(() => resolve( import('./pages/_HomePage') ), 3000)))
-const LoginPage = lazy( () => import('./pages/_LoginPage'))
-// const lazyload = (path,time) => new Promise(resolve => setTimeout(() => resolve( import(path) ), time))
-// const HomePage = lazy(() => lazyload('./pages/_HomePage', 3000))
+const LoginPage = lazy(() => import('./pages/_LoginPage'))
+const BrowsePage = lazy(() => import('./pages/_BrowsePage'))
 
 const App = () => {
 
@@ -37,11 +36,11 @@ const App = () => {
 					</Route>
 
 					<Route exact path="/signup/registration">
-						<SignupRegistrationPage />
+						<RegistrationPage />
 					</Route>
 
 					<Route exact path="/signup/regform">
-						<RegformPage />
+						<RegFormPage />
 					</Route>
 
 					<Route path="/browse">

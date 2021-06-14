@@ -5,10 +5,12 @@ export const Container = styled.div`
   border: 3px solid gold;
   border-radius: 0.25em;
 	background: #181818;
-  width: 325px;
+  width: 355px;
   position: absolute;
+	/* cursor: pointer; */
 	/* opacity: 0.25; */
 	/* transform: translate(-5%, -20%); */
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.75);
   /* transition: 0.2s ease; */
 	/* transition-property: opacity, transform; */
 	z-index: 2;
@@ -61,6 +63,26 @@ export const Button = styled.button`
 
 	& + button { margin-left: 0.75em; }
 
+	${({ isIMDB }) => isIMDB && css`
+		border-radius: 1.5em;
+		background: #DBA506;
+		color: #000;
+		width: max-content;
+		padding: 0 0.5em;
+		&:hover { background: #F2DB83; }
+		&:active { background: #DBA506; }
+	`}
+
+	${({ isTMDB }) => isTMDB && css`
+		border-radius: 1.5em;
+		background: #90CEA1;
+		color: #000;
+		width: max-content;
+		padding: 0 0.5em;
+		&:hover { background: #01B4E4; }
+		&:active { background: #90CEA1; }
+	`}
+
 	${({ primary }) => primary && css`
 		background: #FFF;
 		color: #000;
@@ -108,7 +130,7 @@ export const Info = styled.span`
 
 	/* ${({ year }) => year && css``} */
 
-	${({ maturity }) => maturity && css`
+	${({ certification }) => certification && css`
 		border: 1px solid rgba(255,255,255, 0.4);
 		text-transform: uppercase;
 		padding: 0 0.4em;

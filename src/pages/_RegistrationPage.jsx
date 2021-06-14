@@ -1,7 +1,7 @@
 import React from 'react'
 import { RegistrationContainer, SignupNavBarContainer } from '../containers'
 
-const SignupRegistrationPage = () => {
+const RegistrationPage = () => {
 	return (
 		<>
 			<SignupNavBarContainer />
@@ -10,4 +10,4 @@ const SignupRegistrationPage = () => {
 	)
 }
 
-export default SignupRegistrationPage
+export default RegistrationPage

@@ -1,35 +1,37 @@
 import React, { useState } from 'react'
-// import axios from 'axios'
 import { Card } from '../../components'
-import { InfoModalContainer } from '../'
-import { getElementSize, imageLink } from '../../utilities'
-// import { getId } from '../../utilities'
+import { InfoModalContainer } from '../../containers'
+import { getElementSize, imageLink, getCardData, infoResults } from '../../utilities'
 
-// const CardContainer = ({ isLargeRow, item, ...cardProps }) => {
-const CardContainer = ({ isLargeRow, item }) => {
+const CardContainer = ({ item, mediaType, isLargeRow }) => {
 
 	const [ info, setInfo ] = useState(null)
 	const [ isHover, setHover ] = useState(false)
 	const [ position, setPosition ] = useState(null)
 
-	const itemImage = item.images[(isLargeRow ? 'poster' : 'backdrop' )]
+	const itemTitle = (mediaType === 'movie') ? item.title : item.name
+	const itemImage = item[`${ isLargeRow ? 'poster' : 'backdrop' }_path`]
+
+	const getInfoData = async (id) => {
+		if (info && info.id === id) return setHover(true)
+		const path = `/${ mediaType }/${ id }`
+
+		try {
+			const infoData = await getCardData(path, null, mediaType)
+			const results = await infoResults(infoData, mediaType)
+			// console.log(results)
+			setInfo(results)
+			setHover(true)
+		} catch (error) {
+			console.error(error)
+		}
+	}
 
 	const showInfoModal = (e) => {
 		console.log('HOVER IN')
 		const axis = getElementSize(e)
-
-		// console.log('axis', axis)
-		// console.log('test', axis.left + axis.right)
-		// console.log('window', window.innerWidth)
-
-		const [ posX, posY ] = [
-			axis.x + window.scrollX,
-			axis.y + window.scrollY
-		]
-		// console.log(position)
-		setInfo(item)
-		setHover(true)
 		setPosition(axis)
+		getInfoData(item.id)
 	}
 
 	const cardProps = {	'data-id': item.id, onMouseEnter: showInfoModal }
@@ -38,8 +40,8 @@ const CardContainer = ({ isLargeRow, item }) => {
 	return (
 		<>
 			<Card { ...cardProps }>
-				{ !isLargeRow && <Card.Title>{ item.title }</Card.Title> }
-				<Card.Image	src={ imageLink(itemImage) } alt={ item.title } />
+				{ !isLargeRow && <Card.Title>{ itemTitle }</Card.Title> }
+				<Card.Image	src={ imageLink(itemImage) } alt={ itemTitle } />
 			</Card>
 
 			{ isHover && info && <InfoModalContainer { ...modalProps } /> }

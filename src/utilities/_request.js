@@ -1,16 +1,20 @@
-import { stringify } from 'querystringify'
+// import { stringify } from 'querystringify'
 import axios from 'axios'
-import { BASE_URL, api_key, append_to_response, NETFLIX } from './_options'
+import { baseURL, api_key,movieExt, tvShowExt , NETFLIX } from './_options'
 
-const requestLink = (path = '', query = '') => (
-	BASE_URL + path + stringify({ api_key, ...query }, true)
-)
+const api = axios.create({ baseURL })
 
+const getRowData = (path = '', query = {}) => {
+	const axiosOptions = { params: { api_key, ...query } }
+	return api.get(path, axiosOptions).then(response => response.data.results)
+}
+
+// spotlight: () => requestLink('/movie/latest', { append_to_response: movieExt })
+// spotlight: requestLink('/movie/latest', { append_to_response }),
 export const request = {
-	spotlight: requestLink('/movie/latest', { append_to_response }),
-	original: requestLink('/discover/tv', { with_networks: NETFLIX }),
-	trending: requestLink('/all/week'),
-	topRated: requestLink('/movie/top_rated')
+	original: () => getRowData('/discover/tv', { with_networks: NETFLIX }),
+	// trending: requestLink('/all/week'),
+	topRated: () => getRowData('/movie/top_rated')
 }
 
 /*  */
@@ -19,7 +23,14 @@ export const getData = url => (
 	axios.get(url).then(response => response.data)
 )
 
-export const getSearchData = (path = '', query = {}) => {
+export const getCardData = (path = '', query = {}, mediaType = 'movie') => {
+	const append_to_response = (mediaType === 'movie') ? movieExt : tvShowExt
+	const axiosOptions = { params: { api_key, append_to_response, ...query } }
+	return api.get(path, axiosOptions).then(response => response.data)
+}
+
+export const getSearchData = (path = '', query = {}, mediaType = 'movie') => {
+	const append_to_response = (mediaType === 'movie') ? movieExt : tvShowExt
 	const url = requestLink(path, { append_to_response, ...query })
 	return axios.get(url).then(response => response.data)
 }
@@ -27,13 +38,6 @@ export const getSearchData = (path = '', query = {}) => {
 /*  */
 
 // const testData = { path: '/data/movies.json' }
-// const urlPopularMovies = requestLink('/movie/popular')
-// const urlUpcomingMovies = requestLink('/movie/upcoming')
-// const urlTopRatedMovies = requestLink('/movie/top_rated')
-// const urlSearchMovies = requestLink('/movie/popular', '&query=furious')
-
-// export const getTestData = (path = '', query = {}) => {
-// 	const url = testData.path
-// 	const url = requestLink(path, query)
-// 	return axios.get(url).then(response => response.data.results)
-// }
+// const requestLink = (path = '', query = '') => (
+// BASE_URL + path + stringify({ api_key, ...query }, true)
+// )

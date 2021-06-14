@@ -1,48 +1,46 @@
 import React from 'react'
-
 import { Footer } from '../../components'
+import { footer } from '../../json'
 
 const FooterContainer = () => {
 	return (
 		<Footer>
-			<Footer.Title>Questions? Call 1-844-505-2993</Footer.Title>
+			<Footer.Title>{ footer.title }</Footer.Title>
+
 			<Footer.Break />
+
 			<Footer.Row>
-
 				<Footer.Column>
-					<Footer.Link href="#">FAQ</Footer.Link>
-					<Footer.Link href="#">Investor Relations</Footer.Link>
-					<Footer.Link href="#">Ways to Watch</Footer.Link>
-					<Footer.Link href="#">Coporate Information</Footer.Link>
-					<Footer.Link href="#">Netflix Originals</Footer.Link>
+					<Footer.Link href={ footer.col1[0].link }>{ footer.col1[0].text }</Footer.Link>
+					<Footer.Link href={ footer.col1[1].link }>{ footer.col1[1].text }</Footer.Link>
+					<Footer.Link href={ footer.col1[2].link }>{ footer.col1[2].text }</Footer.Link>
+					<Footer.Link href={ footer.col1[3].link }>{ footer.col1[3].text }</Footer.Link>
+					<Footer.Link href={ footer.col1[4].link }>{ footer.col1[4].text }</Footer.Link>
 				</Footer.Column>
 
 				<Footer.Column>
-					<Footer.Link href="#">Help Center</Footer.Link>
-					<Footer.Link href="#">Jobs</Footer.Link>
-					<Footer.Link href="#">Terms of Use</Footer.Link>
-					<Footer.Link href="#">Contact Us</Footer.Link>
+					<Footer.Link href={ footer.col2[0].link }>{ footer.col2[0].text }</Footer.Link>
+					<Footer.Link href={ footer.col2[1].link }>{ footer.col2[1].text }</Footer.Link>
+					<Footer.Link href={ footer.col2[2].link }>{ footer.col2[2].text }</Footer.Link>
+					<Footer.Link href={ footer.col2[3].link }>{ footer.col2[3].text }</Footer.Link>
 				</Footer.Column>
 
 				<Footer.Column>
-					<Footer.Link href="#">Account</Footer.Link>
-					<Footer.Link href="#">Redeem Gift Cards</Footer.Link>
-					<Footer.Link href="#">Privacy</Footer.Link>
-					<Footer.Link href="#">Speed Test</Footer.Link>
+					<Footer.Link href={ footer.col3[0].link }>{ footer.col3[0].text }</Footer.Link>
+					<Footer.Link href={ footer.col3[1].link }>{ footer.col3[1].text }</Footer.Link>
+					<Footer.Link href={ footer.col3[2].link }>{ footer.col3[2].text }</Footer.Link>
+					<Footer.Link href={ footer.col3[3].link }>{ footer.col3[3].text }</Footer.Link>
 				</Footer.Column>
 
 				<Footer.Column>
-					<Footer.Link href="#">Media Center</Footer.Link>
-					<Footer.Link href="#">Buy Gifts Cards</Footer.Link>
-					<Footer.Link href="#">Cookie Preferences</Footer.Link>
-					<Footer.Link href="#">Legal Notices</Footer.Link>
+					<Footer.Link href={ footer.col4[0].link }>{ footer.col4[0].text }</Footer.Link>
+					<Footer.Link href={ footer.col4[1].link }>{ footer.col4[1].text }</Footer.Link>
+					<Footer.Link href={ footer.col4[2].link }>{ footer.col4[2].text }</Footer.Link>
+					<Footer.Link href={ footer.col4[3].link }>{ footer.col4[3].text }</Footer.Link>
+
 					<Footer.Break />
 				</Footer.Column>
-
-				<Footer.Title>English</Footer.Title>
-
 			</Footer.Row>
-
 		</Footer>
 	)
 }
