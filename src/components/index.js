@@ -1,6 +1,7 @@
 export * as Icon from './Icon'
 export { default as Content 		 } from './Content'
 export { default as NavBar 			 } from './NavBar'
+export { default as Filter 			 } from './Filter'
 export { default as SearchBar 	 } from './SearchBar'
 export { default as User 				 } from './User'
 export { default as Hero 			 	 } from './Hero'

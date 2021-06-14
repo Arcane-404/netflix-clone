@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
-import { SearchBarContainer, UserContainer } from '../../containers'
+import { FilterContainer, SearchBarContainer, UserContainer } from '../../containers'
 import { NavBar } from '../../components'
 import { logo } from '../../json'
-import { useEventListener, useMediaQuery } from '../../hooks'
+import { useEventListener } from '../../hooks'
+// import { useEventListener, useMediaQuery } from '../../hooks'
 
 const BrowseNavBarContainer = (props) => {
 
 	const [ isSticky, setSticky ] = useState(false)
 	const [ menu, setMenu ] = useState(true)
-	const isMobile = useMediaQuery('mobile')
+	// const isMobile = useMediaQuery('mobile')
 	// const isTabletSm = useMediaQuery('tablet-sm')
-	const isDesktop = useMediaQuery('desktop')
+	// const isDesktop = useMediaQuery('desktop')
 
 	const handleToggle = () => setMenu(!menu)
 
@@ -28,18 +29,7 @@ const BrowseNavBarContainer = (props) => {
 			<NavBar.Inner>
 				<NavBar.Box>
 					<NavBar.Logo page={ 'browse' } src={ logo.img } alt={ logo.alt } to="/browse" />
-
-					{!isMobile && (
-						<NavBar.FilterBox>
-							{isDesktop && (
-								<>
-									<NavBar.Text className={ 'active' }>Home</NavBar.Text>
-									{/* <NavBar.Text>TV Shows</NavBar.Text> */}
-									{/* <NavBar.Text>Movies</NavBar.Text> */}
-								</>
-							)}
-						</NavBar.FilterBox>
-					)}
+					<FilterContainer />
 				</NavBar.Box>
 
 				<NavBar.Box>
