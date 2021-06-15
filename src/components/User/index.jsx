@@ -1,28 +1,28 @@
 import React from 'react'
 import {
 	Container,
-	Menu,
-	CaretDown,
-	Dropdown,
-	Logout
+	Box,
+	Avatar,
+	Name,
+	CaretDown
 } from './_User.styles'
 
 export default function User ({ children, ...restProps }) {
 	return <Container { ...restProps }> { children } </Container>
 }
 
-User.Menu = function UserMenu ({ children, ...restProps }) {
-	return <Menu { ...restProps }> { children } </Menu>
+User.Box = function UserBox ({ children, ...restProps }) {
+	return <Box { ...restProps }> { children } </Box>
+}
+
+User.Avatar = function UserAvatar ({ ...restProps }) {
+	return <Avatar { ...restProps } />
+}
+
+User.Name = function UserName ({ children, ...restProps }) {
+	return <Name { ...restProps }> { children } </Name>
 }
 
 User.CaretDown = function UserCaretDown ({ ...restProps }) {
 	return <CaretDown { ...restProps } />
-}
-
-User.Dropdown = function UserDropdown ({ children, ...restProps }) {
-	return <Dropdown { ...restProps }> { children } </Dropdown>
-}
-
-User.Logout = function UserLogout ({ children, ...restProps }) {
-	return <Logout { ...restProps }> { children } </Logout>
 }

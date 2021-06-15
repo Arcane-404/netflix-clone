@@ -10,12 +10,12 @@ const FilterContainer = () => {
 
 	return (
 		<Filter>
-			{isTabletSm && !isDesktop && <Filter.Text primary>Browse</Filter.Text> }
+			{isTabletSm && !isDesktop && <Filter.Option primary>Browse</Filter.Option> }
 			{isDesktop && (
 				<>
-					<Filter.Text className={ 'active' }>Home</Filter.Text>
-					{/* <Filter.Text>TV Shows</Filter.Text> */}
-					{/* <Filter.Text>Movies</Filter.Text> */}
+					<Filter.Option className={ 'active' }>Home</Filter.Option>
+					{/* <Filter.Option>TV Shows</Filter.Option> */}
+					{/* <Filter.Option>Movies</Filter.Option> */}
 				</>
 			)}
 		</Filter>

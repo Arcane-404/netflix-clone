@@ -1,5 +1,6 @@
 {
-  "title": "Questions? Call 1-844-505-2993",
+  "title": "Questions? Call",
+  "link": "1-844-505-2993",
 
   "col1": [
     { "text": "FAQ",                    "link": "https://help.netflix.com/en/node/412" },

@@ -9,7 +9,8 @@ export const screen = {
 
 export const fontFamily = {
 	primary: ({ theme }) => theme.fontFamily.primary,
-	secondary: ({ theme }) => theme.fontFamily.secondary
+	secondary: ({ theme }) => theme.fontFamily.secondary,
+	tertiary: ({ theme }) => theme.fontFamily.tertiary
 }
 
 export const colors = {

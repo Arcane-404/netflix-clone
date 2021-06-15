@@ -1,5 +1,7 @@
 {
   "img": "/images/logo.svg",
   "gif": "/images/netflix-logo-animation.gif",
-	"alt": "netflix logo"
+	"alt": "netflix logo",
+
+  "avatar": "/images/netflix-avatar.png"
 }

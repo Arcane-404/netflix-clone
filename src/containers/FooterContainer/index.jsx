@@ -5,7 +5,9 @@ import { footer } from '../../json'
 const FooterContainer = () => {
 	return (
 		<Footer>
-			<Footer.Title>{ footer.title }</Footer.Title>
+			<Footer.Title>
+				{ footer.title } <Footer.Call href={ `tel:${ footer.link }` }>{ footer.link }</Footer.Call>
+			</Footer.Title>
 
 			<Footer.Break />
 
@@ -37,8 +39,6 @@ const FooterContainer = () => {
 					<Footer.Link href={ footer.col4[1].link }>{ footer.col4[1].text }</Footer.Link>
 					<Footer.Link href={ footer.col4[2].link }>{ footer.col4[2].text }</Footer.Link>
 					<Footer.Link href={ footer.col4[3].link }>{ footer.col4[3].text }</Footer.Link>
-
-					<Footer.Break />
 				</Footer.Column>
 			</Footer.Row>
 		</Footer>
