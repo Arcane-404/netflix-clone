@@ -4,13 +4,13 @@ import { Icon } from '../'
 export const Container = styled.div`
 	/* border: 3px solid red; */
 	position: relative;
-	cursor: pointer;
 `
 
 
 export const Box = styled.div`
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 
 	& > * + * { margin-left: 0.75em; }
 `

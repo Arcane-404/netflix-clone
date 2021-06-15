@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Container = styled.ul`
 	border: 3px solid red;
 	display: flex;
 	margin-left: 3.25em;
+	position: relative;
 `
 
 export const Option = styled.li`

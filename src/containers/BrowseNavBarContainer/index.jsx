@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FilterContainer, SearchBarContainer, UserMenuContainer } from '../../containers'
+import { FilterMenuContainer, SearchBarContainer, UserMenuContainer } from '../../containers'
 import { NavBar } from '../../components'
 import { logo } from '../../json'
 import { useEventListener } from '../../hooks'
@@ -25,7 +25,7 @@ const BrowseNavBarContainer = (props) => {
 			<NavBar.Inner>
 				<NavBar.Box>
 					<NavBar.Logo page={ 'browse' } src={ logo.img } alt={ logo.alt } to="/browse" />
-					{/* <FilterContainer /> */}
+					<FilterMenuContainer />
 				</NavBar.Box>
 
 				<NavBar.Box>

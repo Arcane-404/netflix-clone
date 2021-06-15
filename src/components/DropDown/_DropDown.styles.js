@@ -5,10 +5,9 @@ export const Container = styled.div`
 	border: 3px solid red;
 	border-top: 3px solid #FFF;
 	background: #000;
-	padding: 1em;
+	padding: 0.625em;
 	display: flex;
 	position: absolute;
-	top: 175%;
 
 	/* tooltip top */
 	&::before {
@@ -23,13 +22,26 @@ export const Container = styled.div`
 	}
 
 	${({ user }) => user && css`
+		/* display: none; */
+
 		width: 165px;
 		flex-flow: column;
+		top: 175%;
 		right: 0;
 
 		&::before {
-			top: -10%;
+			top: -12%;
 			left: 50%;
+		}
+	`}
+
+	${({ filtered }) => filtered && css`
+		top: 250%;
+		left: 0;
+
+		&::before {
+			top: -23%;
+			left: 10%;
 		}
 	`}
 `
@@ -50,9 +62,18 @@ export const ListTwo = styled.div`
 
 export const Line = styled.span`
 	background: #FFF;
-	width: 100%;
-	height: 0.05em;
-	margin: 0.5em 0;
+
+	${({ horizontal }) => horizontal && css`
+		width: 100%;
+		height: 0.05em;
+		margin: 0.5em 0;
+	`}
+
+	${({ vertical }) => vertical && css`
+		width: 0.05em;
+		height: auto;
+		margin: 0 0.5em;
+	`}
 `
 
 export const Option = styled.a.attrs(({ href }) => href && ({
@@ -62,5 +83,9 @@ export const Option = styled.a.attrs(({ href }) => href && ({
 	color: #FFF;
 	font-family: ${ fontFamily.tertiary };
 	font-size: 0.9rem;
+	width: max-content;
 	cursor: pointer;
+
+	${({ bold }) => bold && css`font-weight: 600;`}
+	${({ disabled }) => disabled && css`cursor: not-allowed;`}
 `

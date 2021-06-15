@@ -1,8 +1,9 @@
 import React from 'react'
 import { Filter } from '../../components'
+import { FilterDropDownContainer } from '../../containers'
 import { useMediaQuery } from '../../hooks'
 
-const FilterContainer = () => {
+const FilterMenuContainer = () => {
 
 	// const isMobile = useMediaQuery('mobile')
 	const isTabletSm = useMediaQuery('tablet-sm')
@@ -10,16 +11,20 @@ const FilterContainer = () => {
 
 	return (
 		<Filter>
-			{isTabletSm && !isDesktop && <Filter.Option primary>Browse</Filter.Option> }
+			{isTabletSm && !isDesktop && (
+				<Filter.Option primary>Browse</Filter.Option>
+			)}
 			{isDesktop && (
 				<>
 					<Filter.Option className={ 'active' }>Home</Filter.Option>
-					{/* <Filter.Option>TV Shows</Filter.Option> */}
-					{/* <Filter.Option>Movies</Filter.Option> */}
+					<Filter.Option>TV Shows</Filter.Option>
+					<Filter.Option>Movies</Filter.Option>
 				</>
 			)}
+
+			<FilterDropDownContainer />
 		</Filter>
 	)
 }
 
-export default FilterContainer
+export default FilterMenuContainer
