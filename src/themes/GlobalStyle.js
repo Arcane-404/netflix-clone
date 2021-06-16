@@ -23,7 +23,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-		/* background-color: #000; */
     font:400 1rem/1.25
 			'Gotham Book', 'Helvetica Neue',
 			Helvetica, Arial, sans-serif;

@@ -6,7 +6,8 @@ import {
 	Link,
 	Row,
 	Text,
-	Title
+	Title,
+	Call
 } from './_Footer.styles'
 
 export default function Footer ({ children, ...props }) {
@@ -27,6 +28,10 @@ Footer.Link = function FooterLink ({ children, ...props }) {
 
 Footer.Title = function FooterTitle ({ children, ...props }) {
 	return <Title { ...props }> {children} </Title>
+}
+
+Footer.Call = function FooterCall ({ children, ...props }) {
+	return <Call { ...props }> {children} </Call>
 }
 
 Footer.Text = function FooterText ({ children, ...props }) {

@@ -45,6 +45,8 @@ export const Title = styled.p`
     margin-bottom: 40px;
 `
 
+export const Call = styled.a``
+
 export const Text = styled.p`
     color: #757575;
     font-size: 13px;

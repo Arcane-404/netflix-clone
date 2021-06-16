@@ -1,3 +1,5 @@
-export { default as theme } from './theme'
-export { default as GlobalStyle } from './GlobalStyle'
+export { default as theme 							} from './theme'
+export { default as LightStyle 					} from './LightStyle'
+export { default as DarkStyle 					} from './DarkStyle'
+export { default as GlobalStyle 				} from './GlobalStyle'
 export { default as GlobalThemeProvider } from './GlobalThemeProvider'

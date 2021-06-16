@@ -50,7 +50,7 @@
     "eslint": "^7.28.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "netlify-cli": "^3.37.16",
+    "netlify-cli": "^3.37.23",
     "rimraf": "^3.0.2",
     "storybook-react-router": "^1.0.8"
   },
