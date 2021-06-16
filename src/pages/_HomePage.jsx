@@ -1,4 +1,5 @@
 import React from 'react'
+import { DarkStyle } from '../themes'
 import {
 	HomeNavBarContainer,
 	HeroBannerContainer,
@@ -10,6 +11,7 @@ import {
 const HomePage = () => {
 	return (
 		<>
+			<DarkStyle />
 			<HomeNavBarContainer />
 			<HeroBannerContainer />
 			<JumbotronContainer />

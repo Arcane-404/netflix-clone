@@ -2,14 +2,15 @@ import React from 'react'
 // import { useQuery } from 'react-query'
 // import { useFuse } from '../hooks'
 import { request } from '../utilities'
+// import { getTestData, fuseOptions } from '../utilities/request'
 // import { Status } from '../components'
+import { DarkStyle } from '../themes'
 import {
 	BrowseNavBarContainer,
 	SpotlightBannerContainer,
 	RowResultsContainer,
 	FooterContainer
 } from '../containers'
-// import { getTestData, fuseOptions } from '../utilities/request'
 
 const BrowsePage = () => {
 	// const { isLoading, error, data } = useQuery('testData', getTestData)
@@ -22,8 +23,9 @@ const BrowsePage = () => {
 
 	return (
 		<>
+			<DarkStyle />
 			<BrowseNavBarContainer />
-			{/* <BrowseNavBarContainer { ...navBarProps } /> */}
+			<SpotlightBannerContainer />
 			{/* { (data.length === results.length) && <SpotlightBannerContainer /> } */}
 			{/* { data && results && <ResultsContainer { ...resultsProps } /> } */}
 			{ (false) && (

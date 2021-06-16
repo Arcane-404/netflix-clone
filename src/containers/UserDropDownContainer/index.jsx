@@ -2,8 +2,9 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { DropDown } from '../../components'
 import { FirebaseConsumer } from '../../contexts/consumers'
+import { useEventListener } from '../../hooks'
 
-const UserDropDownContainer = () => {
+const UserDropDownContainer = ({ isOpen, setOpen }) => {
 	const history = useHistory()
 	const { firebase } = FirebaseConsumer()
 
@@ -12,8 +13,14 @@ const UserDropDownContainer = () => {
 		history.push('/logout')
 	}
 
+	const closeDropDown = (e) => {
+		if (isOpen && !e.target.closest('[data-dropdown]')) return setOpen(false)
+	}
+
+	useEventListener('click', closeDropDown)
+
 	return (
-		<DropDown user>
+		<DropDown user data-dropdown>
 			<DropDown.ListOne>
 				<DropDown.Option disabled>Switch Profiles</DropDown.Option>
 			</DropDown.ListOne>
