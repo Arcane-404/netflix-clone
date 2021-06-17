@@ -30,40 +30,43 @@ Accordion.Inner = function AccordionInner ({ children, ...restProps }) {
 
 Accordion.Frame = function AccordionFrame ({ children, ...restProps }) {
 
-	const [ currentIndex, setCurrentIndex ] = useState()
+	// const [ currentIndex, setCurrentIndex ] = useState()
 
-	return faq.map( (info, index) => (
-		<ToggleContext.Provider
-			key={ uuidv4() }
-			value={{ currentIndex, setCurrentIndex, info, index }}
-		>
-			<Frame { ...restProps }> { children } </Frame>
-		</ToggleContext.Provider>
-	))
+	// return faq.map( (info, index) => (
+	// 	<ToggleContext.Provider
+	// 		key={ uuidv4() }
+	// 		value={{ currentIndex, setCurrentIndex, info, index }}
+	// 	>
+	// 		<Frame { ...restProps }> { children } </Frame>
+	// 	</ToggleContext.Provider>
+	// ))
+	return <Frame { ...restProps }> { children } </Frame>
 }
 
 Accordion.Header = function AccordionHeader ({ children, ...restProps }) {
 
-	const { index, currentIndex, setCurrentIndex } = useContext(ToggleContext)
-	const handleHeader = () => {
-		setCurrentIndex(index)
-		if (currentIndex === index) setCurrentIndex(null)
-	}
+	// const { index, currentIndex, setCurrentIndex } = useContext(ToggleContext)
+	// const handleHeader = () => {
+	// 	setCurrentIndex(index)
+	// 	if (currentIndex === index) setCurrentIndex(null)
+	// }
 
 	return (
-		<Header { ...restProps } onClick={ handleHeader }>
+		<Header { ...restProps } >
 			{ children }
-			{ currentIndex == index && <Accordion.Toggle> <Close /> </Accordion.Toggle> }
-			{ currentIndex !== index && <Accordion.Toggle> <Plus />  </Accordion.Toggle> }
+			{/* { currentIndex == index && <Accordion.Toggle> <Close /> </Accordion.Toggle> } */}
+			{/* { currentIndex !== index && <Accordion.Toggle> <Plus />  </Accordion.Toggle> } */}
 		</Header>
 	)
 }
 
 Accordion.Title = function AccordionTitle ({ children, ...restProps }) {
 
-	const { info } = useContext(ToggleContext)
+	// const { info } = useContext(ToggleContext)
 
-	return <Title { ...restProps }> { info.header } </Title>
+	// return <Title { ...restProps }> { info.header } </Title>
+	return <Title { ...restProps }> { children } </Title>
+
 }
 
 Accordion.Toggle = function AccordionToggle ({ children, ...restProps }) {
@@ -72,15 +75,18 @@ Accordion.Toggle = function AccordionToggle ({ children, ...restProps }) {
 
 Accordion.Body = function AccordionBody ({ children, ...restProps }) {
 
-	const { currentIndex, index } = useContext(ToggleContext)
-	let isActive = currentIndex === index
+	// const { currentIndex, index } = useContext(ToggleContext)
+	// let isActive = currentIndex === index
 
-	return isActive ?  <Body { ...restProps }> { children } </Body> : null
+	// return isActive ?  <Body { ...restProps }> { children } </Body> : null
+	return <Body { ...restProps }> { children } </Body>
 }
 
 Accordion.Content = function AccordionContent ({ children, ...restProps }) {
 
-	const { info } = useContext(ToggleContext)
+	// const { info } = useContext(ToggleContext)
 
-	return <Content { ...restProps }> { info.top_content } { info.bottom_content } </Content>
+	// return <Content { ...restProps }> { info.top_content } { info.bottom_content } </Content>
+	return <Content { ...restProps }> { children } </Content>
+
 }
