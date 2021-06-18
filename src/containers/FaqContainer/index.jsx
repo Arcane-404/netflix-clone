@@ -1,8 +1,8 @@
-import React, { useState, useContext, createContext }  from 'react'
+import React, { useState }  from 'react'
+import { v4 as uuid } from 'uuid'
 import { Accordion } from '../../components'
-import { faq } from '../../json'
 import { Plus, Close } from '../../components/Icon'
-// import { v4 as uuidv4 } from 'uuid'
+import { faq } from '../../json'
 
 const FaqContainer = () => {
 
@@ -10,39 +10,29 @@ const FaqContainer = () => {
 
 	return (
 		<Accordion>
-			<Accordion.Heading>Frequently Asked Questions</Accordion.Heading>
+			<Accordion.Heading>{ faq.heading }</Accordion.Heading>
 			<Accordion.Inner>
-
-				{ faq.map( (info, i) => (
-					<Accordion.Frame key={ i }>
-
+				{ faq.accordion.map( (info, i) => (
+					<Accordion.Frame key={ uuid() }>
 						<Accordion.Header
 							onClick= { () => {
-								// console.log(i)
-								setCurrentIndex(i)
-								if ( currentIndex == i ) {
-									setCurrentIndex(null)
-								}
+								if (currentIndex === i) setCurrentIndex(null)
+								else setCurrentIndex(i)
 							} }
 						>
-							<Accordion.Title> { info.header }</Accordion.Title>
-							{ currentIndex == i && <Accordion.Toggle> <Close /> </Accordion.Toggle> }
-							{ currentIndex !== i && <Accordion.Toggle> <Plus />  </Accordion.Toggle> }
+							<Accordion.Title> { info.title }</Accordion.Title>
+							{ currentIndex === i && <Accordion.Toggle> <Close /> </Accordion.Toggle> }
+							{ currentIndex !== i && <Accordion.Toggle> <Plus /> </Accordion.Toggle> }
 						</Accordion.Header>
 
-						{ currentIndex == i &&
+						{ currentIndex === i && (
 							<Accordion.Body>
 								<Accordion.Content> { info.top_content } </Accordion.Content>
 								<Accordion.Content> { info.bottom_content } </Accordion.Content>
 							</Accordion.Body>
-						}
-
+						)}
 					</Accordion.Frame>
 				))}
-
-
-
-
 			</Accordion.Inner>
 		</Accordion>
 	)

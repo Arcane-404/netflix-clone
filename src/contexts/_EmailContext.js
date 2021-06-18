@@ -7,9 +7,10 @@ const EmailConsumer = () => useContext(EmailContexts)
 const EmailContextProvider = ({ children }) => {
 
 	const [ signupEmail, setSignupEmail ] = useState()
+	const value = { signupEmail, setSignupEmail }
 
 	return (
-		<EmailContexts.Provider value={{ signupEmail, setSignupEmail }}>
+		<EmailContexts.Provider value={ value }>
 			{ children }
 		</EmailContexts.Provider>
 	)

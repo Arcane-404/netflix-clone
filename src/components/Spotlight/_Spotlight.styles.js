@@ -58,7 +58,7 @@ export const Description = styled.p`
 	/* font-family: ${({ theme }) => theme.fontFamily.tertiary }; */
 	font-size: 0.8125rem;
 	line-height: 1.4;
-	max-width: 33%;
+	/* max-width: 33%; */
 	margin-bottom: 1.5em;
 
 	@media ${ screen.tablet.lg } {
@@ -179,7 +179,7 @@ export const InfoCircle = styled(Icon.InfoCircle)`
 	vertical-align: middle;
 `
 
-export const Maturity = styled.span`
+export const Certification = styled.span`
 	border-left: 3px solid #DCDCDC;
 	background: rgba(51,51,51, 0.6);
 	color: #FFF;

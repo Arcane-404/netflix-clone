@@ -1,5 +1,6 @@
 export { default as useEventListener 	} from './_useEventListener'
 export { default as useMediaQuery 		} from './_useMediaQuery'
 export { default as useInput 					} from './_useInput'
+export { default as useStorage 				} from './_useStorage'
 export { default as useAuth 					} from './_useAuth'
 export { default as useFuse 					} from './_useFuse'

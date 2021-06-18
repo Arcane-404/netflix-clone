@@ -1,43 +1,31 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { createPortal } from 'react-dom'
 import { v4 as uuid } from 'uuid'
 import { Modal } from '../../components'
 import { imageLink } from '../../utilities'
+import { InfoModalConsumer } from '../../contexts/consumers'
 
-const InfoModalContainer = ({ info, setHover, position }) => {
-	const [ isFarLeft, setFarLeft ] = useState(false)
-	const [ isFarRight, setFarRight ] = useState(false)
-	const [ posX, setPosX ] = useState(0)
-	const [ posY, setPosY ] = useState(0)
+const InfoModalContainer = () => {
 
-	const infoImage = imageLink(info.images.backdrop)
+	const {
+		target,
+		isFarLeft,
+		isFarRight,
+		posX,
+		posY,
+		closeInfoModal
+	} = InfoModalConsumer()
 
-	const hideInfoModal = () => {
-		console.log('HOVER OUT')
-		setHover(false)
-	}
+	if (!target) return null
 
-	const videoOption = info.videos.direct || info.videos.search
-	const goToVideo = () => window.open(videoOption, '_blank')
-	const goToSource = () => window.open(info.links.homepage, '_blank')
-	const goToIMDB = () => window.open(info.links.imdb, '_blank')
-	const goToTMDB = () => window.open(info.links.tmdb, '_blank')
-
-	useEffect(() => {
-		const doesPassLeftViewPort = position.width - position.left > window.screenLeft
-		const doesPassRightViewPort = position.right  + position.width > window.innerWidth
-		const isWithinViewPort = !doesPassLeftViewPort && !doesPassRightViewPort
-
-		if (posY !== position.y + window.scrollY) setPosY(position.y + window.scrollY)
-		if (isWithinViewPort) setPosX(position.left - (350 / 5)) // !
-		if (doesPassRightViewPort) setFarRight(true)
-		else setFarRight(false)
-		if (doesPassLeftViewPort)	setFarLeft(true)
-		else setFarLeft(false)
-	}, [ posX, posY, position ])
+	const infoImage = imageLink(target.images.backdrop)
+	const goToVideo = () => window.open(target.videos.direct || target.videos.search, '_blank')
+	const goToSource = () => window.open(target.links.homepage, '_blank')
+	const goToIMDB = () => window.open(target.links.imdb, '_blank')
+	const goToTMDB = () => window.open(target.links.tmdb, '_blank')
 
 	const modalProps = {
-		onMouseLeave: hideInfoModal,
+		onMouseLeave: closeInfoModal,
 		isFarLeft,
 		isFarRight,
 		posX,
@@ -47,8 +35,8 @@ const InfoModalContainer = ({ info, setHover, position }) => {
 	return createPortal(
 		<Modal { ...modalProps }>
 			<Modal.ImageBox>
-				<Modal.Title>{ info.title }</Modal.Title>
-				<Modal.Image src={ infoImage } alt={ info.title } />
+				<Modal.Title>{ target.title }</Modal.Title>
+				<Modal.Image src={ infoImage } alt={ target.title } />
 			</Modal.ImageBox>
 
 			<Modal.Body>
@@ -60,15 +48,17 @@ const InfoModalContainer = ({ info, setHover, position }) => {
 				</Modal.ControlBox>
 
 				<Modal.MetaInfo>
-					<Modal.Info score>{ info.score }% Rated</Modal.Info>
-					<Modal.Info year>{ info.year }</Modal.Info>
-					<Modal.Info certification>{ info.certification }</Modal.Info>
-					<Modal.Info duration>{ info.duration }</Modal.Info>
+					<Modal.Info score>{ target.score }% Rated</Modal.Info>
+					<Modal.Info year>{ target.year }</Modal.Info>
+					{ target.certification && (
+						<Modal.Info certification>{ target.certification }</Modal.Info>
+					)}
+					<Modal.Info duration>{ target.duration }</Modal.Info>
 					{/* <Modal.Info hdBadge>HD</Modal.Info> */}
 				</Modal.MetaInfo>
 
 				<Modal.MetaTags>
-					{ info.genres.map(genre => (
+					{ target.genres.map(genre => (
 						<Modal.Tag key={ uuid() }>{ genre }</Modal.Tag>
 					))}
 				</Modal.MetaTags>
@@ -78,27 +68,3 @@ const InfoModalContainer = ({ info, setHover, position }) => {
 }
 
 export default InfoModalContainer
-
-/*
-				<Card.Body>
-					<Card.ControlBox>
-						<Card.Button primary onClick={ goToVideo }> <Card.Play /> </Card.Button>
-						<Card.Button secondary> <Card.Save /> </Card.Button>
-						<Card.Button secondary last onClick={ goToSource }> <Card.MoreInfo /> </Card.Button>
-					</Card.ControlBox>
-
-					<Card.MetaInfo>
-						<Card.Info score>{ info.score }%</Card.Info>
-						<Card.Info year>{ info.year }</Card.Info>
-						<Card.Info maturity>{ info.maturity }</Card.Info>
-						<Card.Info duration>{ info.duration }</Card.Info>
-						<Card.Info hdBadge>HD</Card.Info>
-					</Card.MetaInfo>
-
-					<Card.MetaTags>
-						{ info.genres.map(genre => (
-							<Card.Tag key={ uuid() }>{ genre }</Card.Tag>
-						))}
-					</Card.MetaTags>
-				</Card.Body>
-*/

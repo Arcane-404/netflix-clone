@@ -3,7 +3,8 @@
 [ ![Status][Badge-Web-Status] ][Web-Page]
 [ ![Contributors][Badge-Contributors] ](#Contributors)
 ![Feedback][Badge-Feedback]
-![Netflix][Badge-Netflix]
+[ ![Netflix][Badge-Netflix] ][Netflix]
+[ ![TMDB][Badge-TMDB] ][TMDB]
 <!-- [ ![Netlify Status][Badge-Netlify-Status] ][Netlify-Deploy] -->
 
 Note: to Replicate, Refine, & Improve the current UI development
@@ -32,6 +33,7 @@ GH-CLI : gh repo clone Arcane-404/netflix-clone
 |||
 |-|-|
 | HOSTED | [ ![Netlify][Badge-Netlify] ][Netlify] |
+| API		 | [ ![TMDB][Badge-TMDB] ][TMDB] |
 
 [ ![React][Badge-React] ][React]
 [ ![JavaScript][Badge-JavaScript] ][JavaScript]
@@ -50,13 +52,12 @@ Suspense + lazy
 - other:
 [`normalize.css`][styled-normalize] /
 [`uuid`][uuid] /
+[`localforage`][localforage] /
 [`react-icons`][react-icons] /
 [`react-query`][react-query] /
 [`axios`][axios] /
 [`fuse.js`][fusejs] /
 [`swiper`][swiper]
-- API Resources:
-[`TMDB`][TMDB]
 
 ## Collaboration Tools
 
@@ -96,6 +97,7 @@ Suspense + lazy
 [Netlify-Deploy]: https://app.netlify.com/sites/the-netflix-clone/deploys
 
 [Badge-Netflix]: https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=FFF
+[Netflix]: https://www.netflix.com/
 
 
 <!-- Technology Link -->
@@ -120,13 +122,15 @@ Suspense + lazy
 [Netlify]: https://www.netlify.com/
 [styled-normalize]: https://necolas.github.io/normalize.css/
 [uuid]: https://www.npmjs.com/package/uuid
+[localforage]: https://localforage.github.io/localForage/
 [react-icons]: https://react-icons.github.io/react-icons/
-[React-Query]: https://react-query.tanstack.com/
+[react-query]: https://react-query.tanstack.com/
 [axios]: https://axios-http.com/
 [fusejs]: https://fusejs.io/
 [swiper]: https://swiperjs.com/
 
-[Badge-Netlify]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
+[Badge-Netlify]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=FFF
+[Badge-TMDB]: https://img.shields.io/badge/TMDB-90CEA1?style=for-the-badge&logo=TMDB&logoColor=FFF
 [TMDB]: https://www.themoviedb.org/documentation/api
 
 

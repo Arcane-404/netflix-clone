@@ -44,8 +44,8 @@ const App = () => {
 					</Route>
 
 					<Route path="/browse">
-						{/* { loggedIn ? <BrowsePage /> : <Redirect to="/" /> } */}
-						<BrowsePage />
+						{ loggedIn ? <BrowsePage /> : <Redirect to="/" /> }
+						{/* <BrowsePage /> */}
 					</Route>
 
 					<Route path="/*">

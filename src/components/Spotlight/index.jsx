@@ -12,7 +12,7 @@ import {
 	Text,
 	Play,
 	InfoCircle,
-	Maturity,
+	Certification,
 	ImageBox,
 	Image
 } from './_Spotlight.styles'
@@ -65,8 +65,8 @@ Spotlight.InfoCircle = function SpotlightInfoCircle ({ ...restProps }) {
 	return <InfoCircle { ...restProps } />
 }
 
-Spotlight.Maturity = function SpotlightMaturity ({ children, ...restProps }) {
-	return <Maturity { ...restProps }> { children } </Maturity>
+Spotlight.Certification = function SpotlightCertification ({ children, ...restProps }) {
+	return <Certification { ...restProps }> { children } </Certification>
 }
 
 Spotlight.ImageBox = function SpotlightImageBox ({ children, ...restProps }) {

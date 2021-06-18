@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { screen } from '../_globals/'
 
 export const Container = styled.div`
