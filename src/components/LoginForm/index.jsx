@@ -40,7 +40,7 @@ Login.Label = function LoginLabel ({ children, ...restProps }) {
 	return <Label { ...restProps }> { children } </Label>
 }
 
-Login.Input = function LoginInput ({ children, ...restProps }) {
+Login.Input = function LoginInput ({ ...restProps }) {
 	return <Input { ...restProps } />
 }
 
@@ -68,7 +68,7 @@ Login.Link = function LoginLink ({ children, ...restProps }) {
 	return <Links { ...restProps }> { children } </Links>
 }
 
-Login.Checkbox = function LoginCheckbox ({ children, ...restProps }) {
+Login.Checkbox = function LoginCheckbox ({ ...restProps }) {
 	return <Checkbox { ...restProps } />
 }
 

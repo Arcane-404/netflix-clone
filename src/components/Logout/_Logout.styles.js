@@ -22,7 +22,6 @@ export const Inner = styled.div`
 	padding: 2.7rem;
 	border-radius: 0.375em;
 	background: #fff;
-
 `
 
 export const Title = styled.h1``

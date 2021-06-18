@@ -58,7 +58,7 @@ export const Description = styled.p`
 	/* font-family: ${({ theme }) => theme.fontFamily.tertiary }; */
 	font-size: 0.8125rem;
 	line-height: 1.4;
-	max-width: 33%;
+	/* max-width: 33%; */
 	margin-bottom: 1.5em;
 
 	@media ${ screen.tablet.lg } {

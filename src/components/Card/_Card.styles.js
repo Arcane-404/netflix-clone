@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const Container = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
 	border-radius: ${({ theme }) => theme.radius.round.sm };
 	background: #181818;
 	width: 100%;

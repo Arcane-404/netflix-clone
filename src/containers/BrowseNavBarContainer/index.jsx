@@ -7,9 +7,6 @@ import { useEventListener } from '../../hooks'
 const BrowseNavBarContainer = (props) => {
 
 	const [ isSticky, setSticky ] = useState(false)
-	const [ menu, setMenu ] = useState(true)
-
-	const handleToggle = () => setMenu(!menu)
 
 	const handleScroll = (e) => {
 		const offset = window.scrollY
@@ -25,7 +22,7 @@ const BrowseNavBarContainer = (props) => {
 			<NavBar.Inner>
 				<NavBar.Box>
 					<NavBar.Logo page={ 'browse' } src={ logo.img } alt={ logo.alt } to="/browse" />
-					<FilterMenuContainer />
+					{/* <FilterMenuContainer /> */}
 				</NavBar.Box>
 
 				<NavBar.Box>

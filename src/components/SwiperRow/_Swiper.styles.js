@@ -1,13 +1,15 @@
 import styled from 'styled-components'
+import { screen } from '../_globals'
 
 export const Container = styled.div`
-  border: 5px solid red;
-	margin-top: -16em;
+  /* border: 5px solid red; */
+	@media ${ screen.desktop } {
+		margin-top: -16em;
+	}
 `
 
 export const Result = styled.div`
-  border: 3px solid blue;
-	/* margin-top: -10em; */
+  /* border: 3px solid blue; */
   position: relative;
 
   & .swiper-container {
@@ -24,8 +26,8 @@ export const Result = styled.div`
   & .swiper-button-prev,
   & .swiper-button-next
   {
-    /* background: rgba(20,20,20, 0.5); */
-    background: #000;
+    background: rgba(20,20,20, 0.5);
+    /* background: #000; */
     color: #FFF;
     width: 4%;
     height: 100%;

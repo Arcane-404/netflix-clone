@@ -2,13 +2,14 @@ import styled, { css } from 'styled-components'
 import { Icon } from '../'
 
 export const Container = styled.div`
-  border: 3px solid gold;
+  /* border: 3px solid gold; */
   border-radius: 0.25em;
 	background: #181818;
   width: 355px;
   position: absolute;
 	/* cursor: pointer; */
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.75);
+	overflow: hidden;
 	z-index: 2;
 
 	${({ posY }) => posY && css`top: ${ posY + 'px' };` }
@@ -20,7 +21,7 @@ export const Container = styled.div`
 `
 
 export const ImageBox = styled.div`
-  border: 1px solid silver;
+  /* border: 1px solid silver; */
 `
 
 export const Image = styled.img`
@@ -37,7 +38,7 @@ export const Title = styled.h3`
 `
 
 export const Body = styled.div`
-	border: 1px solid green;
+	/* border: 1px solid green; */
 	padding: 1em;
   /* display: none; */
   /* position: absolute; */
