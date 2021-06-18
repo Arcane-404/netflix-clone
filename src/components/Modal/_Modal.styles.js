@@ -8,11 +8,7 @@ export const Container = styled.div`
   width: 355px;
   position: absolute;
 	/* cursor: pointer; */
-	/* opacity: 0.25; */
-	/* transform: translate(-5%, -20%); */
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.75);
-  /* transition: 0.2s ease; */
-	/* transition-property: opacity, transform; */
 	z-index: 2;
 
 	${({ posY }) => posY && css`top: ${ posY + 'px' };` }

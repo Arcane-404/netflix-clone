@@ -5,7 +5,7 @@ import { fullScreen, isDark, isBoxModel } from '../_globals'
 
 const Container = styled.div`
 	${ sideSpacing }
-	${ isDark }
+	/* ${ isDark } */
 	width: 100%;
 	height: 100vh;
 	${({ test }) => test && css`border: 5px solid darkslategray;`}

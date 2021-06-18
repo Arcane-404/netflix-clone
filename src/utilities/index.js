@@ -1,7 +1,9 @@
 export {
 	print,
+	getMediaType,
 	getId,
-	getElementSize
+	getBound,
+	randomArrChoice
 } from './_helpers'
 
 export {
@@ -13,13 +15,14 @@ export {
 export {
 	request,
 	getData,
-	getCardData,
-	getSearchData
+	getCardData
+	// getSearchData
 } from './_request'
 
 export {
 	imageLink,
 	videoLink,
 	imdbLink,
+	generalResults,
 	infoResults
 } from './_response'

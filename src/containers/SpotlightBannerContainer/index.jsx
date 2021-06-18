@@ -1,45 +1,57 @@
 import React from 'react'
+import { useQuery } from 'react-query'
 import { Spotlight } from '../../components'
 import { useMediaQuery } from '../../hooks'
 import temp from '../../json/temp'
 
-const SpotlightBannerContainer = () => {
+const SpotlightBannerContainer = ({ request }) => {
+
+	const { data } = useQuery('spotlight', request)
 	const isMobile = useMediaQuery('mobile')
 	const isDesktop = useMediaQuery('desktop')
-	const synopsis = isDesktop ? temp.synopsis1 : temp.synopsis2
-	const bgBannerImg = isDesktop ? temp.img1 : temp.img2
+
+	const goToVideo = () => window.open(data.videos.direct || data.videos.search, '_blank')
+	const goToSource = () => window.open(data.links.homepage, '_blank')
+	const overview = data && data.copy[!isDesktop ? 'tagline' : 'description']
+	const bgBannerImg = data && data.images.backdrop[isDesktop ? 'lg' : 'sm']
+
+	if (!data) return null
 
 	return (
 		<Spotlight>
 			<Spotlight.Inner>
 				<Spotlight.Box>
-					<Spotlight.Title>{ temp.title }</Spotlight.Title>
+					<Spotlight.Title>{ data.title }</Spotlight.Title>
 
 					{ !isDesktop && (
 						<Spotlight.InfoBox>
-							<Spotlight.Info>{ temp.release_year }</Spotlight.Info>
-							<Spotlight.Info>{ temp.maturity }</Spotlight.Info>
-							<Spotlight.Info>{ temp.duration }</Spotlight.Info>
+							<Spotlight.Info>{ data.year }</Spotlight.Info>
+							{ data.certification && (
+								<Spotlight.Info>{ data.certification }</Spotlight.Info>
+							)}
+							<Spotlight.Info>{ data.duration }</Spotlight.Info>
 						</Spotlight.InfoBox>
 					)}
 
-					{ !isMobile && <Spotlight.Description>{ synopsis }</Spotlight.Description> }
+					{ !isMobile && <Spotlight.Description>{ overview }</Spotlight.Description> }
 
 					<Spotlight.CtaBox>
-						<Spotlight.Button primary>
+						<Spotlight.Button primary onClick={ goToVideo }>
 							{ isDesktop && <Spotlight.Play /> } <Spotlight.Text>Play</Spotlight.Text>
 						</Spotlight.Button>
 
-						<Spotlight.Button secondary>
+						<Spotlight.Button secondary onClick={ goToSource }>
 							{ isDesktop && <Spotlight.InfoCircle /> } <Spotlight.Text>More Info</Spotlight.Text>
 						</Spotlight.Button>
 					</Spotlight.CtaBox>
 				</Spotlight.Box>
 			</Spotlight.Inner>
 
-			{ isDesktop && <Spotlight.Maturity>{ temp.maturity }</Spotlight.Maturity> }
+			{ isDesktop && data.certification && (
+				<Spotlight.Certification>{ data.certification }</Spotlight.Certification>
+			)}
 
-			<Spotlight.ImageBox><Spotlight.Image src={ bgBannerImg } alt={ temp.alt } /></Spotlight.ImageBox>
+			<Spotlight.ImageBox><Spotlight.Image src={ bgBannerImg } alt={ data.title } /></Spotlight.ImageBox>
 		</Spotlight>
 	)
 }

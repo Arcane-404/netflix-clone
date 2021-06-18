@@ -1,9 +1,10 @@
 import React from 'react'
 // import { useQuery } from 'react-query'
 // import { useFuse } from '../hooks'
-import { request } from '../utilities'
 // import { getTestData, fuseOptions } from '../utilities/request'
-// import { Status } from '../components'
+import { request } from '../utilities'
+import { SwiperRow } from '../components'
+import { InfoModalContextProvider } from '../contexts/providers'
 import { DarkStyle } from '../themes'
 import {
 	BrowseNavBarContainer,
@@ -25,16 +26,16 @@ const BrowsePage = () => {
 		<>
 			<DarkStyle />
 			<BrowseNavBarContainer />
-			<SpotlightBannerContainer />
+			<SpotlightBannerContainer request={ request.spotlight } />
 			{/* { (data.length === results.length) && <SpotlightBannerContainer /> } */}
 			{/* { data && results && <ResultsContainer { ...resultsProps } /> } */}
-			{ (false) && (
-				<>
+			<InfoModalContextProvider>
+				<SwiperRow>
 					<RowResultsContainer title="Netflix Originals" request={ request.original } mediaType="tv" isLargeRow={ true } />
 					<RowResultsContainer title="Top Rated" request={ request.topRated } isTopRatedRow={ true } />
 					{/* <RowResultsContainer title="Trending" /> */}
-				</>
-			)}
+				</SwiperRow>
+			</InfoModalContextProvider>
 			<FooterContainer />
 		</>
 	)

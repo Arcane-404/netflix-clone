@@ -179,7 +179,7 @@ export const InfoCircle = styled(Icon.InfoCircle)`
 	vertical-align: middle;
 `
 
-export const Maturity = styled.span`
+export const Certification = styled.span`
 	border-left: 3px solid #DCDCDC;
 	background: rgba(51,51,51, 0.6);
 	color: #FFF;

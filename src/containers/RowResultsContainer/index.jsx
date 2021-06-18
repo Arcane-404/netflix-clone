@@ -2,17 +2,22 @@ import React from 'react'
 import { v4 as uuid } from 'uuid'
 import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/swiper-bundle.css'
 import { useQuery } from 'react-query'
 import { SwiperRow } from '../../components'
-import { CardContainer } from '../../containers'
+import { CardContainer, InfoModalContainer } from '../../containers'
+import { InfoModalConsumer } from '../../contexts/consumers'
 import { swiperProps } from './swiperProps'
+import 'swiper/swiper-bundle.css'
 SwiperCore.use([ Navigation ])
 
 const RowResultsContainer = (
-	{ title, request, mediaType = 'movie' , isLargeRow, isTopRated }
+	{ title, request, mediaType = 'movie', isLargeRow, isTopRated }
 ) => {
+
+	const { isOpen, target } = InfoModalConsumer()
 	const { data } = useQuery(title, request)
+
+	// console.log(data)
 
 	const cardProps = {
 		mediaType,
@@ -21,7 +26,7 @@ const RowResultsContainer = (
 	}
 
 	return (
-		<SwiperRow>
+		<SwiperRow.Result>
 			<SwiperRow.Title>{ title }</SwiperRow.Title>
 
 			<Swiper { ...swiperProps }>
@@ -31,7 +36,9 @@ const RowResultsContainer = (
 					</SwiperSlide>
 				))}
 			</Swiper>
-		</SwiperRow>
+
+			{ isOpen && target && <InfoModalContainer /> }
+		</SwiperRow.Result>
 	)
 }
 

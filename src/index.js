@@ -14,13 +14,13 @@ render(
 	<StrictMode>
 		<FirebaseContextProvider>
 			<QueryContextProvider>
-				<GlobalThemeProvider>
-					<EmailContextProvider>
+				<EmailContextProvider>
+					<GlobalThemeProvider>
 						<BrowserRouter>
 							<App />
 						</BrowserRouter>
-					</EmailContextProvider>
-				</GlobalThemeProvider>
+					</GlobalThemeProvider>
+				</EmailContextProvider>
 			</QueryContextProvider>
 		</FirebaseContextProvider>
 	</StrictMode>,
