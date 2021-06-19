@@ -22,7 +22,23 @@ GH-CLI : gh repo clone Arcane-404/netflix-clone
 2. `cd ./netflix-clone`
 3. `npm install --legacy-peer-deps`
 4. create `.env`
-   - copy & paste `SKIP_PREFLIGHT_CHECK = true`
+   - copy & paste keys
+   - apply your values
+     - [Get TMDB API key][setup-tmdb-api]
+     - [Get Firebase API key (step 1-7)][setup-firebase-api]
+```env
+SKIP_PREFLIGHT_CHECK = true
+
+REACT_APP_FIREBASE_API_KEY = _
+REACT_APP_FIREBASE_AUTH_DOMAIN = _
+REACT_APP_FIREBASE_PROJECT_ID = _
+REACT_APP_FIREBASE_STORAGE_BUCKET = _
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID = _
+REACT_APP_FIREBASE_APP_ID = _
+
+REACT_APP_TMDB_API_KEY = _
+REACT_APP_TMDB_AUTH_TOKEN = _
+```
 5. `npm start`
 
 ## Project Goals
@@ -99,6 +115,9 @@ Suspense + lazy
 
 [Badge-Netflix]: https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=FFF
 [Netflix]: https://www.netflix.com/
+
+[setup-tmdb-api]: https://docs.themeluxury.com/movieasap/getting-started/how-to-get-a-tmdb-api-key/
+[setup-firebase-api]: https://www.c-sharpcorner.com/article/how-to-create-firebase-web-app-get/
 
 
 <!-- Technology Link -->
