@@ -5,8 +5,6 @@ import { FirebaseContext, EmailContext } from '../../contexts'
 import { auth } from '../../json'
 const { FirebaseContexts } = FirebaseContext
 const { EmailContexts } = EmailContext
-// import { EmailContext } from '../../custom/EmailContext'
-// import { FirebaseContext } from '../../custom/_firebaseContext'
 
 const RegFormContainer = () => {
 
@@ -88,13 +86,13 @@ const RegFormContainer = () => {
 						<RegForm.Input
 							type="password"
 							id="password"
-							placeholder= " "
+							placeholder=" "
 							value={ password }
 							onChange={ ({ target }) => setPassword(target.value)  }
 							error={ passwordError ? true : false }
 						/>
 						<RegForm.Label htmlFor="password">Add a password</RegForm.Label>
-						{ passwordError && <p>Password is required!</p>}
+						{ passwordError && <p>Password is required!</p> }
 					</RegForm.Frame>
 
 					{ error && <RegForm.Error>{ error }</RegForm.Error> }
