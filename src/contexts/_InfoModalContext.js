@@ -17,7 +17,7 @@ const InfoModalContextProvider = ({ children }) => {
 
 	const updateInfoData = (infoData, id) => {
 		const newInfo = { ...info, [ id ]: infoData  }
-		console.log(infoData.id, newInfo, newInfo[id])
+		// console.log(infoData.id, newInfo, newInfo[id])
 		setInfo(newInfo)
 	}
 
