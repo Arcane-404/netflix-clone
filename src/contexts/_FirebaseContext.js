@@ -2,18 +2,26 @@ import React, { useState, createContext, useContext } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
-const { REACT_APP_FIREBASE_API_KEY, REACT_APP_FIREBASE_APP_ID } = process.env
+const {
+	REACT_APP_FIREBASE_API_KEY: apiKey,
+	REACT_APP_FIREBASE_AUTH_DOMAIN: authDomain,
+	REACT_APP_FIREBASE_PROJECT_ID: projectId,
+	REACT_APP_FIREBASE_MESSAGING_SENDER_ID: messagingSenderId,
+	REACT_APP_FIREBASE_APP_ID: appId
+} = process.env
+const databaseURL = `https://${ projectId }.firebaseio.com`
+const storageBucket = `${ projectId }.appspot.com`
 
 const FirebaseContexts = createContext(null)
 
 const config = {
-	apiKey: REACT_APP_FIREBASE_API_KEY,
-	authDomain: 'project-1-ea220.firebaseapp.com',
-	databaseURL: 'https://project-1-ea220.firebaseio.com',
-	projectId: 'project-1-ea220',
-	storageBucket: 'project-1-ea220.appspot.com',
-	messagingSenderId: '22912965609',
-	appId: REACT_APP_FIREBASE_APP_ID
+	apiKey,
+	authDomain,
+	databaseURL,
+	projectId,
+	storageBucket,
+	messagingSenderId,
+	appId
 }
 
 const fb = firebase.default.initializeApp(config)
