@@ -5,7 +5,7 @@
 ![Feedback][Badge-Feedback]
 [ ![Netflix][Badge-Netflix] ][Netflix]
 [ ![TMDB][Badge-TMDB] ][TMDB]
-<!-- [ ![Netlify Status][Badge-Netlify-Status] ][Netlify-Deploy] -->
+[ ![Netlify Status][Badge-Netlify-Status] ][Netlify-Deploy]
 
 Note: to Replicate, Refine, & Improve the current UI development
 
@@ -86,15 +86,16 @@ Suspense + lazy
 <!--  -->
 
 <!-- Top Priority Badges -->
-[Web-Page]: https://the-netflix-clone.netlify.app/
-[Badge-Web-Status]: https://img.shields.io/website-up-down-sucess-important/https://the-netflix-clone.netlify.app/.svg?style=for-the-badge
+[Web-Page]: https://the-netflix-clone-app.netlify.app/
+[Badge-Web-Status]: https://img.shields.io/website-up-down-sucess-important/https/the-netflix-clone-app.netlify.app/.svg?style=for-the-badge
 [Badge-Status]: https://img.shields.io/badge/Status-In_Development-informational?style=for-the-badge
 
 [Badge-Contributors]: https://img.shields.io/github/contributors/Arcane-404/netflix-clone?color=lightgreen&style=for-the-badge
 [Badge-Feedback]: https://img.shields.io/badge/Ask_Me-anything-1abc9c.svg?style=for-the-badge
 
-[Badge-Netlify-Status]: https://api.netlify.com/api/v1/badges/___/deploy-status
-[Netlify-Deploy]: https://app.netlify.com/sites/the-netflix-clone/deploys
+
+[Badge-Netlify-Status]: https://api.netlify.com/api/v1/badges/4f77c5ef-3f26-45e4-8cf3-db2632e91599/deploy-status
+[Netlify-Deploy]: https://app.netlify.com/sites/the-netflix-clone-app/deploys
 
 [Badge-Netflix]: https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=FFF
 [Netflix]: https://www.netflix.com/
