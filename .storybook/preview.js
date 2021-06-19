@@ -4,15 +4,28 @@ import { withKnobs } from '@storybook/addon-knobs'
 // import { withA11y } from '@storybook/addon-a11y'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import StoryRouter from 'storybook-react-router'
-import { GlobalThemeProvider, EmailContextProvider } from '../src/contexts/providers'
+// import { GlobalThemeProvider, EmailContextProvider } from '../src/contexts/providers'
 import '../src/assets/style.scss'
+import {
+	GlobalThemeProvider,
+	FirebaseContextProvider,
+	QueryContextProvider,
+	EmailContextProvider
+} from '../src/contexts/providers'
+
 
 addDecorator((Story) => (
-	<GlobalThemeProvider>
-		<EmailContextProvider>
-			<Story />
-		</EmailContextProvider>
-	</GlobalThemeProvider>
+	<FirebaseContextProvider>
+		<QueryContextProvider>
+			<EmailContextProvider>
+				<GlobalThemeProvider>
+					{/* <BrowserRouter> */}
+						<Story />
+					{/* </BrowserRouter> */}
+				</GlobalThemeProvider>
+			</EmailContextProvider>
+		</QueryContextProvider>
+	</FirebaseContextProvider>
 ))
 addDecorator((story, context) => withConsole()(story)(context))
 addDecorator(withKnobs)
