@@ -1,14 +1,16 @@
 import { storiesOf } from '@storybook/react'
-import { home } from '../../json'
-import Banner from './'
+import { DarkStyle } from '../../themes'
+import { banner } from '../../json'
+import Hero from './'
 
-storiesOf('Components/Banner', module)
+storiesOf('Hero Banner', module)
 .add('Copy', () => (
-	<Banner.Inner dark>
-		<Banner.Title>{ home.banner.title }</Banner.Title>
-		<Banner.SubTitle>{ home.banner.subtitle }</Banner.SubTitle>
-	</Banner.Inner>
+	<Hero.Inner>
+		<DarkStyle />
+		<Hero.Title>{ banner.title }</Hero.Title>
+		<Hero.SubTitle>{ banner.subtitle }</Hero.SubTitle>
+	</Hero.Inner>
 ))
 .add('Image', () => (
-	<Banner.Image src={ home.banner.img } alt={ home.banner.alt } />
+	<Hero.Image src={ banner.img } alt={ banner.alt } />
 ))

@@ -86,7 +86,6 @@ export const Logo = styled.img`
 		if (page === 'signup') return css`width: 75px; padding: 1em 0;`
 		if (page === 'login') return css`width: 75px; padding: 1em 0;`
 		if (page === 'browse') return css`width: 85px;`
-		return css`background: red;`
 	}}
 
 	@media ${ screen.tablet.sm } {

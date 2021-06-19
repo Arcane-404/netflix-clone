@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/react'
 import BrowseNavBarContainer from './'
 
-storiesOf('Containers/NavBar', module)
+storiesOf('NavBar', module)
 .add('Browse', () => <BrowseNavBarContainer />)

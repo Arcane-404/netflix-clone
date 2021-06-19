@@ -26,8 +26,6 @@ export const Inner = styled.div`
 	margin: auto;
 	padding: 0.938em 0;
 
-	${({ dark }) => dark && css`background: #000;`}
-
 	@media ${	screen.tablet.sm } {
 		padding: 1.875em 0;
 	}
